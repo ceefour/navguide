@@ -16,23 +16,30 @@ angular.module('starter.controllers', [])
     $scope.calcRoute = function() {
         var route = JasaMarga.findRoute($scope.tollRoutes, $scope.gateIn.ruas_tol_id, $scope.gateIn.gt_sequence,
                             $scope.gateOut.ruas_tol_id, $scope.gateOut.gt_sequence);
-        for (var i = 1; i < route.length - 1; i++) {
+        var latlngs = [];
+        for (var i = 0; i < route.length; i++) {
             var r = route[i];
-            var icon;
-            switch (r.kind) {
-            case 'in':
-                icon = OSM.inIcon();
-                break;
-            case 'out':
-                icon = OSM.outIcon();
-                break;
-            default:
-                icon = OSM.passXsIcon();
+            var latlng = new L.LatLng(r.gate.lat, r.gate.long, true);
+            latlngs.push(latlng);
+            if (i > 0 && i < route.length - 1) {
+                var icon;
+                switch (r.kind) {
+                case 'in':
+                    icon = OSM.inIcon();
+                    break;
+                case 'out':
+                    icon = OSM.outIcon();
+                    break;
+                default:
+                    icon = OSM.passXsIcon();
+                }
+                OSM.map().addLayer(new L.Marker(latlng,
+                                                {title: r.kind + ' ' + r.gate.ruas_tol_id + '-' + r.gate.gt_sequence + ': ' + r.gate.gerbang_tol_name,
+                                                icon: icon}));
             }
-            OSM.map().addLayer(new L.Marker(new L.LatLng(r.gate.lat, r.gate.long, true),
-                                            {title: r.kind + ' ' + r.gate.ruas_tol_id + '-' + r.gate.gt_sequence + ': ' + r.gate.gerbang_tol_name,
-                                            icon: icon}));
         }
+        var polyline = L.polyline(latlngs, {color: 'red'}).addTo(OSM.map());
+        OSM.map().fitBounds(polyline.getBounds());
     };
 })
 

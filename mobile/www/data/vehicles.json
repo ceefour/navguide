@@ -1,0 +1,502 @@
+[
+  {
+    "vehicleId":"avanza2014",
+    "brand":"Toyota",
+    "model":"Avanza",
+    "year":2014,
+    "vehicleType":"GOL I",
+    "vehicleCategory":"Mobil Sedang",
+    "fuelEfficiency":15.31,
+    "avgSpeed":60
+  },
+  {
+    "vehicleId":"avanza2013",
+    "brand":"Toyota",
+    "model":"Avanza",
+    "year":2013,
+    "vehicleType":"GOL I",
+    "vehicleCategory":"Mobil Sedang",
+    "fuelEfficiency":14,
+    "avgSpeed":58
+  },
+  {
+    "vehicleId":"avanza2012",
+    "brand":"Toyota",
+    "model":"Avanza",
+    "year":2012,
+    "vehicleType":"GOL I",
+    "vehicleCategory":"Mobil Sedang",
+    "fuelEfficiency":13,
+    "avgSpeed":56
+  },
+  {
+    "vehicleId":"avanza2011",
+    "brand":"Toyota",
+    "model":"Avanza",
+    "year":2011,
+    "vehicleType":"GOL I",
+    "vehicleCategory":"Mobil Sedang",
+    "fuelEfficiency":12,
+    "avgSpeed":54
+  },
+  {
+    "vehicleId":"avanza2010",
+    "brand":"Toyota",
+    "model":"Avanza",
+    "year":2010,
+    "vehicleType":"GOL I",
+    "vehicleCategory":"Mobil Sedang",
+    "fuelEfficiency":11,
+    "avgSpeed":52
+  },
+  {
+    "vehicleId":"xenia2014",
+    "brand":"Daihatsu",
+    "model":"Xenia",
+    "year":2014,
+    "vehicleType":"GOL I",
+    "vehicleCategory":"Mobil Sedang",
+    "fuelEfficiency":15.31,
+    "avgSpeed":60
+  },
+  {
+    "vehicleId":"xenia2013",
+    "brand":"Daihatsu",
+    "model":"Xenia",
+    "year":2013,
+    "vehicleType":"GOL I",
+    "vehicleCategory":"Mobil Sedang",
+    "fuelEfficiency":14,
+    "avgSpeed":58
+  },
+  {
+    "vehicleId":"xenia2012",
+    "brand":"Daihatsu",
+    "model":"Xenia",
+    "year":2012,
+    "vehicleType":"GOL I",
+    "vehicleCategory":"Mobil Sedang",
+    "fuelEfficiency":13,
+    "avgSpeed":56
+  },
+  {
+    "vehicleId":"xenia2011",
+    "brand":"Daihatsu",
+    "model":"Xenia",
+    "year":2011,
+    "vehicleType":"GOL I",
+    "vehicleCategory":"Mobil Sedang",
+    "fuelEfficiency":12,
+    "avgSpeed":54
+  },
+  {
+    "vehicleId":"xenia2010",
+    "brand":"Daihatsu",
+    "model":"Xenia",
+    "year":2010,
+    "vehicleType":"GOL I",
+    "vehicleCategory":"Mobil Sedang",
+    "fuelEfficiency":11,
+    "avgSpeed":52
+  },
+  {
+    "vehicleId":"jazz2014",
+    "brand":"Honda",
+    "model":"Jazz",
+    "year":2014,
+    "vehicleType":"GOL I",
+    "vehicleCategory":"Mobil Sedang",
+    "fuelEfficiency":13,
+    "avgSpeed":70
+  },
+  {
+    "vehicleId":"jazz2013",
+    "brand":"Honda",
+    "model":"Jazz",
+    "year":2013,
+    "vehicleType":"GOL I",
+    "vehicleCategory":"Mobil Sedang",
+    "fuelEfficiency":12,
+    "avgSpeed":67
+  },
+  {
+    "vehicleId":"jazz2012",
+    "brand":"Honda",
+    "model":"Jazz",
+    "year":2012,
+    "vehicleType":"GOL I",
+    "vehicleCategory":"Mobil Sedang",
+    "fuelEfficiency":11,
+    "avgSpeed":63
+  },
+  {
+    "vehicleId":"jazz2011",
+    "brand":"Honda",
+    "model":"Jazz",
+    "year":2011,
+    "vehicleType":"GOL I",
+    "vehicleCategory":"Mobil Sedang",
+    "fuelEfficiency":10,
+    "avgSpeed":60
+  },
+  {
+    "vehicleId":"jazz2010",
+    "brand":"Honda",
+    "model":"Jazz",
+    "year":2010,
+    "vehicleType":"GOL I",
+    "vehicleCategory":"Mobil Sedang",
+    "fuelEfficiency":9,
+    "avgSpeed":57
+  },
+  {
+    "vehicleId":"fortuner2014",
+    "brand":"Toyota",
+    "model":"Fortuner",
+    "year":2014,
+    "vehicleType":"GOL I",
+    "vehicleCategory":"Jip",
+    "fuelEfficiency":11,
+    "avgSpeed":70
+  },
+  {
+    "vehicleId":"fortuner2013",
+    "brand":"Toyota",
+    "model":"Fortuner",
+    "year":2013,
+    "vehicleType":"GOL I",
+    "vehicleCategory":"Jip",
+    "fuelEfficiency":10,
+    "avgSpeed":67
+  },
+  {
+    "vehicleId":"fortuner2012",
+    "brand":"Toyota",
+    "model":"Fortuner",
+    "year":2012,
+    "vehicleType":"GOL I",
+    "vehicleCategory":"Jip",
+    "fuelEfficiency":9,
+    "avgSpeed":63
+  },
+  {
+    "vehicleId":"fortuner2011",
+    "brand":"Toyota",
+    "model":"Fortuner",
+    "year":2011,
+    "vehicleType":"GOL I",
+    "vehicleCategory":"Jip",
+    "fuelEfficiency":8,
+    "avgSpeed":60
+  },
+  {
+    "vehicleId":"fortuner2010",
+    "brand":"Toyota",
+    "model":"Fortuner",
+    "year":2010,
+    "vehicleType":"GOL I",
+    "vehicleCategory":"Jip",
+    "fuelEfficiency":7,
+    "avgSpeed":57
+  },
+  {
+    "vehicleId":"strada2014",
+    "brand":"Mitsubishi",
+    "model":"Strada Triton",
+    "year":2014,
+    "vehicleType":"GOL I",
+    "vehicleCategory":"Pick Up",
+    "fuelEfficiency":10,
+    "avgSpeed":58
+  },
+  {
+    "vehicleId":"strada2013",
+    "brand":"Mitsubishi",
+    "model":"Strada Triton",
+    "year":2013,
+    "vehicleType":"GOL I",
+    "vehicleCategory":"Pick Up",
+    "fuelEfficiency":9,
+    "avgSpeed":57
+  },
+  {
+    "vehicleId":"strada2012",
+    "brand":"Mitsubishi",
+    "model":"Strada Triton",
+    "year":2012,
+    "vehicleType":"GOL I",
+    "vehicleCategory":"Pick Up",
+    "fuelEfficiency":8,
+    "avgSpeed":56
+  },
+  {
+    "vehicleId":"strada2011",
+    "brand":"Mitsubishi",
+    "model":"Strada Triton",
+    "year":2011,
+    "vehicleType":"GOL I",
+    "vehicleCategory":"Pick Up",
+    "fuelEfficiency":7,
+    "avgSpeed":55
+  },
+  {
+    "vehicleId":"strada2010",
+    "brand":"Mitsubishi",
+    "model":"Strada Triton",
+    "year":2010,
+    "vehicleType":"GOL I",
+    "vehicleCategory":"Pick Up",
+    "fuelEfficiency":6,
+    "avgSpeed":54
+  },
+  {
+    "vehicleId":"volvobus2014",
+    "brand":"Volvo",
+    "model":"Bus",
+    "year":2014,
+    "vehicleType":"GOL I",
+    "vehicleCategory":"Bus",
+    "fuelEfficiency":8,
+    "avgSpeed":60
+  },
+  {
+    "vehicleId":"volvobus2013",
+    "brand":"Volvo",
+    "model":"Bus",
+    "year":2013,
+    "vehicleType":"GOL I",
+    "vehicleCategory":"Bus",
+    "fuelEfficiency":7,
+    "avgSpeed":58
+  },
+  {
+    "vehicleId":"volvobus2012",
+    "brand":"Volvo",
+    "model":"Bus",
+    "year":2012,
+    "vehicleType":"GOL I",
+    "vehicleCategory":"Bus",
+    "fuelEfficiency":6,
+    "avgSpeed":54
+  },
+  {
+    "vehicleId":"volvobus2011",
+    "brand":"Volvo",
+    "model":"Bus",
+    "year":2011,
+    "vehicleType":"GOL I",
+    "vehicleCategory":"Bus",
+    "fuelEfficiency":5,
+    "avgSpeed":50
+  },
+  {
+    "vehicleId":"volvobus2010",
+    "brand":"Volvo",
+    "model":"Bus",
+    "year":2010,
+    "vehicleType":"GOL I",
+    "vehicleCategory":"Bus",
+    "fuelEfficiency":4,
+    "avgSpeed":49
+  },
+  {
+    "vehicleId":"truk2gandar2014",
+    "brand":"Umum",
+    "model":"Truk 2 gandar",
+    "year":2014,
+    "vehicleType":"GOL II",
+    "vehicleCategory":"Truk dengan 2 (dua) gandar",
+    "fuelEfficiency":7,
+    "avgSpeed":55
+  },
+  {
+    "vehicleId":"truk2gandar2013",
+    "brand":"Umum",
+    "model":"Truk 2 gandar",
+    "year":2013,
+    "vehicleType":"GOL II",
+    "vehicleCategory":"Truk dengan 2 (dua) gandar",
+    "fuelEfficiency":6,
+    "avgSpeed":54
+  },
+  {
+    "vehicleId":"truk2gandar2012",
+    "brand":"Umum",
+    "model":"Truk 2 gandar",
+    "year":2012,
+    "vehicleType":"GOL II",
+    "vehicleCategory":"Truk dengan 2 (dua) gandar",
+    "fuelEfficiency":5,
+    "avgSpeed":53
+  },
+  {
+    "vehicleId":"truk2gandar2011",
+    "brand":"Umum",
+    "model":"Truk 2 gandar",
+    "year":2011,
+    "vehicleType":"GOL II",
+    "vehicleCategory":"Truk dengan 2 (dua) gandar",
+    "fuelEfficiency":4,
+    "avgSpeed":52
+  },
+  {
+    "vehicleId":"truk2gandar2010",
+    "brand":"Umum",
+    "model":"Truk 2 gandar",
+    "year":2010,
+    "vehicleType":"GOL II",
+    "vehicleCategory":"Truk dengan 2 (dua) gandar",
+    "fuelEfficiency":3,
+    "avgSpeed":50
+  },
+  {
+    "vehicleId":"truk3gandar2014",
+    "brand":"Umum",
+    "model":"Truk 3 gandar",
+    "year":2014,
+    "vehicleType":"GOL II",
+    "vehicleCategory":"Truk dengan 3 (tiga) gandar",
+    "fuelEfficiency":6,
+    "avgSpeed":54
+  },
+  {
+    "vehicleId":"truk3gandar2013",
+    "brand":"Umum",
+    "model":"Truk 3 gandar",
+    "year":2013,
+    "vehicleType":"GOL II",
+    "vehicleCategory":"Truk dengan 3 (tiga) gandar",
+    "fuelEfficiency":5.5,
+    "avgSpeed":53
+  },
+  {
+    "vehicleId":"truk3gandar2012",
+    "brand":"Umum",
+    "model":"Truk 3 gandar",
+    "year":2012,
+    "vehicleType":"GOL II",
+    "vehicleCategory":"Truk dengan 3 (tiga) gandar",
+    "fuelEfficiency":5,
+    "avgSpeed":52
+  },
+  {
+    "vehicleId":"truk3gandar2011",
+    "brand":"Umum",
+    "model":"Truk 3 gandar",
+    "year":2011,
+    "vehicleType":"GOL II",
+    "vehicleCategory":"Truk dengan 3 (tiga) gandar",
+    "fuelEfficiency":4.5,
+    "avgSpeed":51
+  },
+  {
+    "vehicleId":"truk3gandar2010",
+    "brand":"Umum",
+    "model":"Truk 3 gandar",
+    "year":2010,
+    "vehicleType":"GOL II",
+    "vehicleCategory":"Truk dengan 3 (tiga) gandar",
+    "fuelEfficiency":4,
+    "avgSpeed":50
+  },
+  {
+    "vehicleId":"truk4gandar2014",
+    "brand":"Umum",
+    "model":"Truk 4 gandar",
+    "year":2014,
+    "vehicleType":"GOL II",
+    "vehicleCategory":"Truk dengan 4 (empat) gandar",
+    "fuelEfficiency":5.5,
+    "avgSpeed":53
+  },
+  {
+    "vehicleId":"truk4gandar2013",
+    "brand":"Umum",
+    "model":"Truk 4 gandar",
+    "year":2013,
+    "vehicleType":"GOL II",
+    "vehicleCategory":"Truk dengan 4 (empat) gandar",
+    "fuelEfficiency":5,
+    "avgSpeed":52
+  },
+  {
+    "vehicleId":"truk4gandar2012",
+    "brand":"Umum",
+    "model":"Truk 4 gandar",
+    "year":2012,
+    "vehicleType":"GOL II",
+    "vehicleCategory":"Truk dengan 4 (empat) gandar",
+    "fuelEfficiency":4.5,
+    "avgSpeed":51
+  },
+  {
+    "vehicleId":"truk4gandar2011",
+    "brand":"Umum",
+    "model":"Truk 4 gandar",
+    "year":2011,
+    "vehicleType":"GOL II",
+    "vehicleCategory":"Truk dengan 4 (empat) gandar",
+    "fuelEfficiency":4,
+    "avgSpeed":50
+  },
+  {
+    "vehicleId":"truk4gandar2010",
+    "brand":"Umum",
+    "model":"Truk 4 gandar",
+    "year":2010,
+    "vehicleType":"GOL II",
+    "vehicleCategory":"Truk dengan 4 (empat) gandar",
+    "fuelEfficiency":3.5,
+    "avgSpeed":49
+  },
+  {
+    "vehicleId":"truk5gandar2014",
+    "brand":"Umum",
+    "model":"Truk 5 gandar",
+    "year":2014,
+    "vehicleType":"GOL II",
+    "vehicleCategory":"Truk dengan 5 (lima) gandar atau lebih",
+    "fuelEfficiency":5,
+    "avgSpeed":52
+  },
+  {
+    "vehicleId":"truk5gandar2013",
+    "brand":"Umum",
+    "model":"Truk 5 gandar",
+    "year":2013,
+    "vehicleType":"GOL II",
+    "vehicleCategory":"Truk dengan 5 (lima) gandar atau lebih",
+    "fuelEfficiency":4.6,
+    "avgSpeed":51
+  },
+  {
+    "vehicleId":"truk5gandar2012",
+    "brand":"Umum",
+    "model":"Truk 5 gandar",
+    "year":2012,
+    "vehicleType":"GOL II",
+    "vehicleCategory":"Truk dengan 5 (lima) gandar atau lebih",
+    "fuelEfficiency":4.2,
+    "avgSpeed":50
+  },
+  {
+    "vehicleId":"truk5gandar2011",
+    "brand":"Umum",
+    "model":"Truk 5 gandar",
+    "year":2011,
+    "vehicleType":"GOL II",
+    "vehicleCategory":"Truk dengan 5 (lima) gandar atau lebih",
+    "fuelEfficiency":3.8,
+    "avgSpeed":49
+  },
+  {
+    "vehicleId":"truk5gandar2010",
+    "brand":"Umum",
+    "model":"Truk 5 gandar",
+    "year":2010,
+    "vehicleType":"GOL II",
+    "vehicleCategory":"Truk dengan 5 (lima) gandar atau lebih",
+    "fuelEfficiency":3.4,
+    "avgSpeed":48
+  }
+]

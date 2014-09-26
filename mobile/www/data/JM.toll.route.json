@@ -9,7 +9,7 @@
         {"ruas_tol_id": "JM3", "gt_sequence": 1},
         {"ruas_tol_id": "JM4", "gt_sequence": 1}],
     "lat":-6.243176,
-    "long":"106.859691"
+    "long":106.859691
   },
   {
     "ruas_tol_id":"JM1",
@@ -18,7 +18,7 @@
     "km":4,
     "nearest_area":"Tebet/ Manggarai/ Pasar Minggu",
     "lat":-6.242728,
-    "long":"106.849695"
+    "long":106.849695
   },
   {
     "ruas_tol_id":"JM1",
@@ -27,7 +27,7 @@
     "km":7.6,
     "nearest_area":"Mampang / Kuningan / Menteng",
     "lat":-6.24069,
-    "long":"106.834493"
+    "long":106.834493
   },
   {
     "ruas_tol_id":"JM1",
@@ -36,7 +36,7 @@
     "km":8.8,
     "nearest_area":"Semanggi/Senayan/ Kebayoran",
     "lat":-6.223846,
-    "long":"106.815577"
+    "long":106.815577
   },
   {
     "ruas_tol_id":"JM1",
@@ -45,7 +45,7 @@
     "km":9.4,
     "nearest_area":"Bendungan Hilir / Senayan /  Kebayoran",
     "lat":-6.2308136,
-    "long":"106.8202937"
+    "long":106.8202937
   },
   {
     "ruas_tol_id":"JM1",
@@ -54,7 +54,7 @@
     "km":10.1,
     "nearest_area":"Slipi/ Palmerah/ Tanah Abang",
     "lat":-6.204926,
-    "long":"106.801402"
+    "long":106.801402
   },
   {
     "ruas_tol_id":"JM1",
@@ -63,7 +63,7 @@
     "km":11.4,
     "nearest_area":"Slipi/ Palmerah/ Tanah Abang",
     "lat":-6.1996173,
-    "long":"106.7984833"
+    "long":106.7984833
   },
   {
     "ruas_tol_id":"JM1",
@@ -72,7 +72,7 @@
     "km":14,
     "nearest_area":"Tomang / Grogol",
     "lat":-6.16807565,
-    "long":"106.7881393"
+    "long":106.7881393
   },
   {
     "ruas_tol_id":"JM1",
@@ -84,7 +84,7 @@
         {"ruas_tol_id": "JM5", "gt_sequence": 1}
     ],
     "lat":-6.157999295,
-    "long":"106.7919622"
+    "long":106.7919622
   },
   {
     "ruas_tol_id":"JM1",
@@ -93,7 +93,7 @@
     "km":17.6,
     "nearest_area":"Angke/ Pejagalan/ Glodok",
     "lat":-6.142463669,
-    "long":"106.7879355"
+    "long":106.7879355
   },
   {
     "ruas_tol_id":"JM1",
@@ -105,7 +105,7 @@
       {"ruas_tol_id": "JM2", "gt_sequence": 1}
     ],
     "lat":-6.123665941,
-    "long":"106.7768064"
+    "long":106.7768064
   },
   {
     "ruas_tol_id":"JM2",
@@ -117,7 +117,7 @@
         {"ruas_tol_id": "JM1", "gt_sequence": 11}
     ],
     "lat":-6.123665941,
-    "long":"106.7768064"
+    "long":106.7768064
   },
   {
     "ruas_tol_id":"JM2",
@@ -126,7 +126,7 @@
     "km":21.5,
     "nearest_area":"Gerbang tol utama (arah JIRR)",
     "lat":-6.121800232,
-    "long":"106.7685635"
+    "long":106.7685635
   },
   {
     "ruas_tol_id":"JM2",
@@ -135,7 +135,7 @@
     "km":25.5,
     "nearest_area":"Kamal/ Jalan Tol Lingkar Luar Jakarta",
     "lat":-6.1171716,
-    "long":"106.7341089"
+    "long":106.7341089
   },
   {
     "ruas_tol_id":"JM2",
@@ -144,7 +144,7 @@
     "km":31,
     "nearest_area":"GT utama (arah Dadap/ Benda/ Rawa Bokor/ Bandara Internasional Soekarno/Hatta)",
     "lat":-6.105671639,
-    "long":"106.6965151"
+    "long":106.6965151
   },
   {
     "ruas_tol_id":"JM3",
@@ -156,7 +156,7 @@
         {"ruas_tol_id": "JM1", "gt_sequence": 1}
     ],
     "lat":-6.243176,
-    "long":"106.859691"
+    "long":106.859691
   },
   {
     "ruas_tol_id":"JM3",
@@ -165,7 +165,7 @@
     "km":8,
     "nearest_area":"Jalan Tol Lingkar Luar Jakarta/ Jalan Tol Jakarta/Serpong/ Jalan Tol Jakarta/Cikampek",
     "lat":-6.312137332,
-    "long":"106.8923757"
+    "long":106.8923757
   },
   {
     "ruas_tol_id":"JM3",
@@ -174,7 +174,7 @@
     "km":13,
     "nearest_area":"Cibubur/ Cileungsi/ Cikeas",
     "lat":-6.365778166,
-    "long":"106.8949449"
+    "long":106.8949449
   },
   {
     "ruas_tol_id":"JM3",
@@ -183,7 +183,7 @@
     "km":14,
     "nearest_area":"Gerbang awal arah Bogor/Ciawi",
     "lat":-6.368912986,
-    "long":"106.8951648"
+    "long":106.8951648
   },
   {
     "ruas_tol_id":"JM3",
@@ -192,7 +192,7 @@
     "km":16,
     "nearest_area":"Cisalak, Depok, Margonda, Jalan Tol Cinere-Jagorawi",
     "lat":-6.377595299,
-    "long":"106.8873733"
+    "long":106.8873733
   },
   {
     "ruas_tol_id":"JM3",
@@ -201,7 +201,7 @@
     "km":19,
     "nearest_area":"Cimanggis, Cikeas",
     "lat":-6.421084,
-    "long":"106.893721"
+    "long":106.893721
   },
   {
     "ruas_tol_id":"JM3",
@@ -210,7 +210,7 @@
     "km":19,
     "nearest_area":"Gerbang akhir (arah Jakarta)",
     "lat":-6.411836,
-    "long":"106.89788"
+    "long":106.89788
   },
   {
     "ruas_tol_id":"JM3",
@@ -237,7 +237,7 @@
     "km":34,
     "nearest_area":"IPSC, Sirkuit Sentul, Sentul, Nanggewer",
     "lat":-6.531939,
-    "long":"106.853051"
+    "long":106.853051
   },
   {
     "ruas_tol_id":"JM3",
@@ -276,7 +276,7 @@
         {"ruas_tol_id": "JM1", "gt_sequence": 1}
     ],
     "lat":-6.243176,
-    "long":"106.859691"
+    "long":106.859691
   },
   {
     "ruas_tol_id":"JM4",
@@ -288,7 +288,7 @@
         {"ruas_tol_id": "JM3", "gt_sequence": 1}
     ],
     "lat":-6.245211782,
-    "long":"106.8890333"
+    "long":106.8890333
   },
   {
     "ruas_tol_id":"JM4",
@@ -297,7 +297,7 @@
     "km":9.5,
     "nearest_area":"Jalan Tol Lingkar Luar Jakarta",
     "lat":-6.255712403,
-    "long":"106.9604436"
+    "long":106.9604436
   },
   {
     "ruas_tol_id":"JM4",
@@ -306,7 +306,7 @@
     "km":13,
     "nearest_area":"Bekasi Barat, Pekayon",
     "lat":-6.251568182,
-    "long":"106.9865799"
+    "long":106.9865799
   },
   {
     "ruas_tol_id":"JM4",
@@ -315,7 +315,7 @@
     "km":16,
     "nearest_area":"Bekasi Timur, Bulak Kapal, Bantar Gebang",
     "lat":-6.261880376,
-    "long":"107.0175233"
+    "long":107.0175233
   },
   {
     "ruas_tol_id":"JM4",
@@ -324,7 +324,7 @@
     "km":21,
     "nearest_area":"Tambun, Mustika Jaya, Setu",
     "lat":-6.278502155,
-    "long":"107.0509185"
+    "long":107.0509185
   },
   {
     "ruas_tol_id":"JM4",
@@ -333,7 +333,7 @@
     "km":24,
     "nearest_area":"Cibitung, Kawasan Industri MM 2100",
     "lat":-6.282411,
-    "long":"107.085092"
+    "long":107.085092
   },
   {
     "ruas_tol_id":"JM4",
@@ -342,7 +342,7 @@
     "km":29,
     "nearest_area":"Pintu gerbang utama Gerbang awal <arah Cikampek, Bandung> dan Gerbang akhir <arah Jakarta, Bogor>",
     "lat":-6.303163072,
-    "long":"107.1205831"
+    "long":107.1205831
   },
   {
     "ruas_tol_id":"JM4",
@@ -351,7 +351,7 @@
     "km":31,
     "nearest_area":"Cikarang Barat, Lemahabang",
     "lat":-6.311627086,
-    "long":"107.1377297"
+    "long":107.1377297
   },
   {
     "ruas_tol_id":"JM4",
@@ -360,7 +360,7 @@
     "km":37,
     "nearest_area":"Cikarang Pusat, Pasirranji, Sukamahi",
     "lat":-6.341823885,
-    "long":"107.1856293"
+    "long":107.1856293
   },
   {
     "ruas_tol_id":"JM4",
@@ -369,7 +369,7 @@
     "km":47,
     "nearest_area":"Karawang Barat, Kawasan Industri KIIC, Rengasdengklok",
     "lat":-6.345589121,
-    "long":"107.2709082"
+    "long":107.2709082
   },
   {
     "ruas_tol_id":"JM4",
@@ -378,7 +378,7 @@
     "km":54,
     "nearest_area":"Karawang Timur, Klari, Kawasan Industri Surya Cipta",
     "lat":-6.356730207,
-    "long":"107.3359364"
+    "long":107.3359364
   },
   {
     "ruas_tol_id":"JM4",
@@ -390,7 +390,7 @@
       {"ruas_tol_id": "JM6", "gt_sequence": 1}
       ],
     "lat":-6.426958437,
-    "long":"107.4415388"
+    "long":107.4415388
   },
   {
     "ruas_tol_id":"JM4",
@@ -399,7 +399,7 @@
     "km":68,
     "nearest_area":"Bukit Indah, Kawasan Industri KIKC, Indotaisei, Dawuan, Cikampek Barat",
     "lat":-6.415982757,
-    "long":"107.4147674"
+    "long":107.4147674
   },
   {
     "ruas_tol_id":"JM4",
@@ -411,7 +411,7 @@
         {"ruas_tol_id": "JM7", "gt_sequence": 1}
          ],
     "lat":-6.204432496,
-    "long":"106.8119699"
+    "long":106.8119699
   },
   {
     "ruas_tol_id":"JM5",
@@ -423,7 +423,7 @@
         {"ruas_tol_id": "JM1", "gt_sequence": 9}
     ],
     "lat":-6.181627553,
-    "long":"106.7935091"
+    "long":106.7935091
   },
   {
     "ruas_tol_id":"JM5",
@@ -432,7 +432,7 @@
     "km":3.5,
     "nearest_area":"Kebon Jeruk, Kedoya",
     "lat":-6.190059982,
-    "long":"106.7671523"
+    "long":106.7671523
   },
   {
     "ruas_tol_id":"JM5",
@@ -441,7 +441,7 @@
     "km":6,
     "nearest_area":"Kembangan, Meruya Ilir, Joglo",
     "lat":-6.193737846,
-    "long":"106.7409572"
+    "long":106.7409572
   },
   {
     "ruas_tol_id":"JM5",
@@ -450,7 +450,7 @@
     "km":7.3,
     "nearest_area":"JORR",
     "lat":-6.191471957,
-    "long":"106.7370006"
+    "long":106.7370006
   },
   {
     "ruas_tol_id":"JM5",
@@ -459,7 +459,7 @@
     "km":18.5,
     "nearest_area":"Tangerang, Serpong",
     "lat":-6.223070432,
-    "long":"106.6376352"
+    "long":106.6376352
   },
   {
     "ruas_tol_id":"JM5",
@@ -468,7 +468,7 @@
     "km":20.1,
     "nearest_area":"Lippo Village, Legok, Binong",
     "lat":-6.226824715,
-    "long":"106.6141605"
+    "long":106.6141605
   },
   {
     "ruas_tol_id":"JM5",
@@ -477,7 +477,7 @@
     "km":21,
     "nearest_area":"Lippo Village, Legok, Binong",
     "lat":-6.223411732,
-    "long":"106.6216922"
+    "long":106.6216922
   },
   {
     "ruas_tol_id":"JM5",
@@ -486,7 +486,7 @@
     "km":26,
     "nearest_area":"Bitung, Curung",
     "lat":-6.222461506,
-    "long":"106.6356496"
+    "long":106.6356496
   },
   {
     "ruas_tol_id":"JM6",
@@ -495,7 +495,7 @@
     "km":0,
     "nearest_area":"Purwakarta, Sadang, Subang",
     "lat":-6.426958437,
-    "long":"107.4415388"
+    "long":107.4415388
   },
   {
     "ruas_tol_id":"JM6",
@@ -507,7 +507,7 @@
         {"ruas_tol_id": "JM4", "gt_sequence": 13}
          ],
     "lat":-6.506341101,
-    "long":"107.4495736"
+    "long":107.4495736
   },
   {
     "ruas_tol_id":"JM6",
@@ -516,7 +516,7 @@
     "km":8,
     "nearest_area":"Purwakarta, Jatiluhur, Ciganea",
     "lat":-6.566139896,
-    "long":"107.431188"
+    "long":107.431188
   },
   {
     "ruas_tol_id":"JM6",
@@ -525,7 +525,7 @@
     "km":47,
     "nearest_area":"Padalarang, Kota Baru Parahyangan, Cikalongwetan, Cianjur, Sukabumi",
     "lat":-6.85665627,
-    "long":"107.4946391"
+    "long":107.4946391
   },
   {
     "ruas_tol_id":"JM6",
@@ -534,7 +534,7 @@
     "km":51,
     "nearest_area":"Baros, Cimahi, Leuwigajah",
     "lat":-6.89712099,
-    "long":"107.5420654"
+    "long":107.5420654
   },
   {
     "ruas_tol_id":"JM6",
@@ -543,7 +543,7 @@
     "km":51,
     "nearest_area":"Cimahi, Pasteur, Lembang, Bandung Kota",
     "lat":-6.890810115,
-    "long":"107.5758719"
+    "long":107.5758719
   },
   {
     "ruas_tol_id":"JM6",
@@ -552,7 +552,7 @@
     "km":58,
     "nearest_area":" Pasir Koja, Leuwi Panjang, Bandung Kota",
     "lat":-6.931399991,
-    "long":"107.5727031"
+    "long":107.5727031
   },
   {
     "ruas_tol_id":"JM6",
@@ -561,7 +561,7 @@
     "km":60,
     "nearest_area":"Kopo, Soreang, Ciwidey, Bandung Kota",
     "lat":-6.956460398,
-    "long":"107.5811291"
+    "long":107.5811291
   },
   {
     "ruas_tol_id":"JM6",
@@ -570,7 +570,7 @@
     "km":62,
     "nearest_area":"Mohammad Toha, Banjaran, Pangalengan, Bandung Kota",
     "lat":-6.956588197,
-    "long":"107.6096892"
+    "long":107.6096892
   },
   {
     "ruas_tol_id":"JM6",
@@ -579,7 +579,7 @@
     "km":65,
     "nearest_area":"  Buah Batu, Dayeuhkolot, Ciparay, Majalaya, Bandung Kota",
     "lat":-6.961827895,
-    "long":"107.6375628"
+    "long":107.6375628
   },
   {
     "ruas_tol_id":"JM6",
@@ -588,7 +588,7 @@
     "km":79,
     "nearest_area":"Gerbang akhir (ke Cileunyi, Jatinangor, Sumedang, Cirebon, Garut, Tasikmalaya, Ciamis, Banjar, Pangandaran, Purwokerto, Yogyakarta, Solo, Blitar, Kediri, Malang, Jember, Banyuwangi) (arah Cileunyi)\nGerbang awal (arah Bandung/Jakarta)",
     "lat":-6.944196565,
-    "long":"107.7478249"
+    "long":107.7478249
   },
   {
     "ruas_tol_id":"JM7",

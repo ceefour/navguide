@@ -1,5 +1,23 @@
-<ion-view title="Account">
+<ion-view title="Pengaturan">
   <ion-content class="padding">
-    <h1>Account</h1>
+      <div class="list">
+          <label class="item item-input item-select">
+              <span class="input-label">Kendaraan</span>
+              <select ng-model="vehicle"
+                      ng-options="v.brand + ' ' + v.model + ' (' + v.year + ')' group by v.brand for v in vehicles" ng-change="vehicleChanged(vehicle)"></select>
+          </label>
+          <label class="item item-input">
+              <span class="input-label">Golongan</span>
+              <input type="text" ng-model="vehicle.vehicleType" readonly="readonly"/>
+          </label>
+          <label class="item item-input">
+              <span class="input-label">BBM</span>
+              <input type="number" ng-model="vehicle.fuelEfficiency" readonly="readonly"/> &nbsp; km/L
+          </label>
+          <label class="item item-input">
+              <span class="input-label">Kecepatan rata-rata</span>
+              <input type="number" ng-model="vehicle.avgSpeed" readonly="readonly"/> &nbsp; km/jam
+          </label>
+      </div>
   </ion-content>
 </ion-view>

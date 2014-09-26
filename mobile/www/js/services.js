@@ -106,6 +106,26 @@ angular.module('starter.services', [])
     };
 })
 
+.factory('MoreData', function($http, $log) {
+    return {
+        vehicles: function() {
+            return $http({url: 'data/vehicles.json'});
+        },
+    };
+})
+
+.factory('Settings', function($log) {
+    return {
+        getVehicle: function() {
+            var vehicleJson = window.localStorage.getItem('vehicle');
+            return vehicleJson ? JSON.parse(vehicleJson) : null;
+        },
+        setVehicle: function(vehicle) {
+            window.localStorage.setItem('vehicle', JSON.stringify(vehicle));
+        },
+    };
+})
+
 .factory('OSM', function() {
     var map;
     var ajaxRequest;

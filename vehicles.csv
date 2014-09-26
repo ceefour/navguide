@@ -1,0 +1,51 @@
+"vehicleId","brand","model","year","vehicleType","vehicleCategory","fuelEfficiency","avgSpeed"
+"avanza2014","Toyota","Avanza",2014,"GOL I","Mobil Sedang",15.31,60
+"avanza2013","Toyota","Avanza",2013,"GOL I","Mobil Sedang",14,58
+"avanza2012","Toyota","Avanza",2012,"GOL I","Mobil Sedang",13,56
+"avanza2011","Toyota","Avanza",2011,"GOL I","Mobil Sedang",12,54
+"avanza2010","Toyota","Avanza",2010,"GOL I","Mobil Sedang",11,52
+"xenia2014","Daihatsu","Xenia",2014,"GOL I","Mobil Sedang",15.31,60
+"xenia2013","Daihatsu","Xenia",2013,"GOL I","Mobil Sedang",14,58
+"xenia2012","Daihatsu","Xenia",2012,"GOL I","Mobil Sedang",13,56
+"xenia2011","Daihatsu","Xenia",2011,"GOL I","Mobil Sedang",12,54
+"xenia2010","Daihatsu","Xenia",2010,"GOL I","Mobil Sedang",11,52
+"jazz2014","Honda","Jazz",2014,"GOL I","Mobil Sedang",13,70
+"jazz2013","Honda","Jazz",2013,"GOL I","Mobil Sedang",12,67
+"jazz2012","Honda","Jazz",2012,"GOL I","Mobil Sedang",11,63
+"jazz2011","Honda","Jazz",2011,"GOL I","Mobil Sedang",10,60
+"jazz2010","Honda","Jazz",2010,"GOL I","Mobil Sedang",9,57
+"fortuner2014","Toyota","Fortuner",2014,"GOL I","Jip",11,70
+"fortuner2013","Toyota","Fortuner",2013,"GOL I","Jip",10,67
+"fortuner2012","Toyota","Fortuner",2012,"GOL I","Jip",9,63
+"fortuner2011","Toyota","Fortuner",2011,"GOL I","Jip",8,60
+"fortuner2010","Toyota","Fortuner",2010,"GOL I","Jip",7,57
+"strada2014","Mitsubishi","Strada Triton",2014,"GOL I","Pick Up",10,58
+"strada2013","Mitsubishi","Strada Triton",2013,"GOL I","Pick Up",9,57
+"strada2012","Mitsubishi","Strada Triton",2012,"GOL I","Pick Up",8,56
+"strada2011","Mitsubishi","Strada Triton",2011,"GOL I","Pick Up",7,55
+"strada2010","Mitsubishi","Strada Triton",2010,"GOL I","Pick Up",6,54
+"volvobus2014","Volvo","Bus",2014,"GOL I","Bus",8,60
+"volvobus2013","Volvo","Bus",2013,"GOL I","Bus",7,58
+"volvobus2012","Volvo","Bus",2012,"GOL I","Bus",6,54
+"volvobus2011","Volvo","Bus",2011,"GOL I","Bus",5,50
+"volvobus2010","Volvo","Bus",2010,"GOL I","Bus",4,49
+"truk2gandar2014","Umum","Truk 2 gandar",2014,"GOL II","Truk dengan 2 (dua) gandar",7,55
+"truk2gandar2013","Umum","Truk 2 gandar",2013,"GOL II","Truk dengan 2 (dua) gandar",6,54
+"truk2gandar2012","Umum","Truk 2 gandar",2012,"GOL II","Truk dengan 2 (dua) gandar",5,53
+"truk2gandar2011","Umum","Truk 2 gandar",2011,"GOL II","Truk dengan 2 (dua) gandar",4,52
+"truk2gandar2010","Umum","Truk 2 gandar",2010,"GOL II","Truk dengan 2 (dua) gandar",3,50
+"truk3gandar2014","Umum","Truk 3 gandar",2014,"GOL II","Truk dengan 3 (tiga) gandar",6,54
+"truk3gandar2013","Umum","Truk 3 gandar",2013,"GOL II","Truk dengan 3 (tiga) gandar",5.5,53
+"truk3gandar2012","Umum","Truk 3 gandar",2012,"GOL II","Truk dengan 3 (tiga) gandar",5,52
+"truk3gandar2011","Umum","Truk 3 gandar",2011,"GOL II","Truk dengan 3 (tiga) gandar",4.5,51
+"truk3gandar2010","Umum","Truk 3 gandar",2010,"GOL II","Truk dengan 3 (tiga) gandar",4,50
+"truk4gandar2014","Umum","Truk 4 gandar",2014,"GOL II","Truk dengan 4 (empat) gandar",5.5,53
+"truk4gandar2013","Umum","Truk 4 gandar",2013,"GOL II","Truk dengan 4 (empat) gandar",5,52
+"truk4gandar2012","Umum","Truk 4 gandar",2012,"GOL II","Truk dengan 4 (empat) gandar",4.5,51
+"truk4gandar2011","Umum","Truk 4 gandar",2011,"GOL II","Truk dengan 4 (empat) gandar",4,50
+"truk4gandar2010","Umum","Truk 4 gandar",2010,"GOL II","Truk dengan 4 (empat) gandar",3.5,49
+"truk5gandar2014","Umum","Truk 5 gandar",2014,"GOL II","Truk dengan 5 (lima) gandar atau lebih",5,52
+"truk5gandar2013","Umum","Truk 5 gandar",2013,"GOL II","Truk dengan 5 (lima) gandar atau lebih",4.6,51
+"truk5gandar2012","Umum","Truk 5 gandar",2012,"GOL II","Truk dengan 5 (lima) gandar atau lebih",4.2,50
+"truk5gandar2011","Umum","Truk 5 gandar",2011,"GOL II","Truk dengan 5 (lima) gandar atau lebih",3.8,49
+"truk5gandar2010","Umum","Truk 5 gandar",2010,"GOL II","Truk dengan 5 (lima) gandar atau lebih",3.4,48

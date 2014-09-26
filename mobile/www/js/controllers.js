@@ -1,6 +1,20 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope, $log, OSM, JasaMarga) {
+.controller('DashCtrl', function($scope, $log, OSM, JasaMarga, MoreData, Settings) {
+    
+    $scope.fuelEfficiency = 9.91; // 23.3 mpg
+    $scope.vehicle = Settings.getVehicle();
+    if ($scope.vehicle != null) {
+        $log.info('Saved vehicle is', $scope.vehicle);
+        $scope.fuelEfficiency = $scope.vehicle.fuelEfficiency;
+    } else {
+        MoreData.vehicles().success(function(data) {
+            $scope.vehicle = data[0];
+            $log.info('Setting default vehicle as', $scope.vehicle.vehicleId);
+            Settings.setVehicle($scope.vehicle);
+            $scope.fuelEfficiency = $scope.vehicle.fuelEfficiency;
+        });
+    }
     
     OSM.setUp();
     OSM.setGateInLayer(-6.890810115, 107.5758719, 'Pasteur');
@@ -17,6 +31,8 @@ angular.module('starter.controllers', [])
         var route = JasaMarga.findRoute($scope.tollRoutes, $scope.gateIn.ruas_tol_id, $scope.gateIn.gt_sequence,
                             $scope.gateOut.ruas_tol_id, $scope.gateOut.gt_sequence);
         var latlngs = [];
+        var lastCp = null;
+        var distance = 0;
         for (var i = 0; i < route.length; i++) {
             var r = route[i];
             var latlng = new L.LatLng(r.gate.lat, r.gate.long, true);
@@ -37,9 +53,22 @@ angular.module('starter.controllers', [])
                                                 {title: r.kind + ' ' + r.gate.ruas_tol_id + '-' + r.gate.gt_sequence + ': ' + r.gate.gerbang_tol_name,
                                                 icon: icon}));
             }
+            // calc distance
+            if (lastCp != null) {
+                distance += lastCp.distance( new geo.Point([r.gate.lat, r.gate.long]) );
+            }
+            lastCp = new geo.Point([r.gate.lat, r.gate.long]);
         }
         var polyline = L.polyline(latlngs, {color: 'red'}).addTo(OSM.map());
         OSM.map().fitBounds(polyline.getBounds());
+        $scope.fuelConsumption = (distance / 1000) / $scope.fuelEfficiency;
+        $scope.duration = (distance / 1000) / $scope.vehicle.avgSpeed;
+        $scope.durationHours = parseInt($scope.duration, 10);
+        $scope.durationMins = Math.round($scope.duration * 60) % 60;
+        $log.info('Distance over', route.length, 'checkpoints is', distance, 'm',
+                 'fuel', $scope.fuelConsumption, 'L',
+                 'Duration', $scope.duration, '(', $scope.durationHours, ':', $scope.durationMins, ')');
+        $scope.distanceKm = distance / 1000;
     };
 })
 
@@ -51,5 +80,16 @@ angular.module('starter.controllers', [])
   $scope.friend = Friends.get($stateParams.friendId);
 })
 
-.controller('AccountCtrl', function($scope) {
+.controller('AccountCtrl', function($scope, $log, MoreData, Settings) {
+    var vehicleId = Settings.getVehicle().vehicleId;
+    $log.debug('Saved vehicle is', vehicleId);
+    MoreData.vehicles().success(function(data) {
+        $log.debug('Loaded', data.length, 'vehicles');
+        $scope.vehicles = data;
+        $scope.vehicle = _.find($scope.vehicles, function(v) { return v.vehicleId == vehicleId; });
+    });
+    $scope.vehicleChanged = function(vehicle) {
+        $log.info('Saving vehicle', vehicle);
+        Settings.setVehicle(vehicle);
+    };
 });

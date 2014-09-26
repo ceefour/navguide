@@ -1,5 +1,23 @@
-<ion-view title="Dashboard">
+<ion-view title="LewatTol">
   <ion-content class="padding">
-    <h1>Dash</h1>
+      <div class="list">
+          <label class="item item-input item-select item-stacked-label">
+              <div class-"input-label">Gerbang Masuk:</div>
+              <select ng-model="gateIn" ng-options="tollRoute.gerbang_tol_name + ' - ' + tollRoute.nearest_area group by tollRoute.ruas_tol_id for tollRoute in tollRoutes" required="required">
+                  <option disabled="disabled"></option>
+              </select>
+          </label>
+          <label class="item item-input item-select item-stacked-label">
+              <div class-"input-label">Gerbang Keluar:</div>
+              <select ng-model="gateOut" ng-options="tollRoute.gerbang_tol_name + ' - ' + tollRoute.nearest_area group by tollRoute.ruas_tol_id for tollRoute in tollRoutes" required="required">
+                  <option disabled="disabled"></option>
+              </select>
+          </label>
+          <button ng-click="calcRoute()">Cek</button>
+          {{gateIn.gerbang_tol_name}} {{gateIn.lat}} {{gateIn.long}} -- 
+          {{gateOut.gerbang_tol_name}} {{gateOut.lat}} {{gateOut.long}}
+      </div>
+      <div style="width: 100%; height: 200px" id="map">
+      </div>
   </ion-content>
 </ion-view>

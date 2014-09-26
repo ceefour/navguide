@@ -1,0 +1,784 @@
+[
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM1",
+        "gt_sequence":1}
+      ],
+    "gerbang_tol_name":"GT-CAWANG",
+    "km":0,
+    "nearest_area":"Cawang/Bandara Halim/ Kampung Melayu",
+    "ruas_tol_intersection":"JM3|JM4",
+    "lat":-6.243176,
+    "long":"106.859691"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM1",
+        "gt_sequence":2}
+      ],
+    "gerbang_tol_name":"GT-TEBET",
+    "km":4,
+    "nearest_area":"Tebet/ Manggarai/ Pasar Minggu",
+    "ruas_tol_intersection":"",
+    "lat":-6.242728,
+    "long":"106.849695"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM1",
+        "gt_sequence":3}
+        ],
+    "gerbang_tol_name":"GT-KUNINGAN",
+    "km":7.6,
+    "nearest_area":"Mampang / Kuningan / Menteng",
+    "ruas_tol_intersection":"",
+    "lat":-6.24069,
+    "long":"106.834493"
+  },
+  {
+    "routes": [ {
+        "ruas_tol_id":"JM1",
+        "gt_sequence":4}
+      ],
+    "gerbang_tol_name":"GT-SEMANGGI",
+    "km":8.8,
+    "nearest_area":"Semanggi/Senayan/ Kebayoran",
+    "ruas_tol_intersection":"",
+    "lat":-6.223846,
+    "long":"106.815577"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM1",
+        "gt_sequence":5}
+        ],
+    "gerbang_tol_name":"GT-SENAYAN",
+    "km":9.4,
+    "nearest_area":"Bendungan Hilir / Senayan /  Kebayoran",
+    "ruas_tol_intersection":"",
+    "lat":-6.2308136,
+    "long":"106.8202937"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM1",
+        "gt_sequence":6}
+        ],
+    "gerbang_tol_name":"GT-PEJOMPONGAN",
+    "km":10.1,
+    "nearest_area":"Slipi/ Palmerah/ Tanah Abang",
+    "ruas_tol_intersection":"",
+    "lat":-6.204926,
+    "long":"106.801402"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM1",
+        "gt_sequence":7}
+        ],
+    "gerbang_tol_name":"GT-SLIPI",
+    "km":11.4,
+    "nearest_area":"Slipi/ Palmerah/ Tanah Abang",
+    "ruas_tol_intersection":"",
+    "lat":-6.1996173,
+    "long":"106.7984833"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM1",
+        "gt_sequence":8}
+        ],
+    "gerbang_tol_name":"GT-TANJUNG DUREN",
+    "km":14,
+    "nearest_area":"Tomang / Grogol",
+    "ruas_tol_intersection":"",
+    "lat":-6.16807565,
+    "long":"106.7881393"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM1",
+        "gt_sequence":9}
+        ],
+    "gerbang_tol_name":"GT-TOMANG",
+    "km":16,
+    "nearest_area":"Grogol/ Tomang/ Jalan Tol Jakarta/Tangerang",
+    "ruas_tol_intersection":"JM5",
+    "lat":-6.157999295,
+    "long":"106.7919622"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM1",
+        "gt_sequence":10}
+        ],
+    "gerbang_tol_name":"GT-ANGKE ",
+    "km":17.6,
+    "nearest_area":"Angke/ Pejagalan/ Glodok",
+    "ruas_tol_intersection":"",
+    "lat":-6.142463669,
+    "long":"106.7879355"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM1",
+        "gt_sequence":11},
+         {"ruas_tol_id":"JM2",
+        "gt_sequence":1}
+        ],
+    "gerbang_tol_name":"GT-PLUIT",
+    "km":20.4,
+    "nearest_area":"Kapuk Muara/ Pantai Indah Kapuk/ Jalan Tol Prof. Dr. Sedyatmo / Jalan Tol Cawang/Pluit/ Jalan Tol Pelabuhan",
+    "ruas_tol_intersections": ["JM1", "JM2"],
+    "lat":-6.123665941,
+    "long":"106.7768064"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM2",
+        "gt_sequence":2}
+        ],
+    "gerbang_tol_name":"GT-KAPUK",
+    "km":21.5,
+    "nearest_area":"Gerbang tol utama (arah JIRR)",
+    "ruas_tol_intersection":"",
+    "lat":-6.121800232,
+    "long":"106.7685635"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM2",
+        "gt_sequence":3}
+        ],
+    "gerbang_tol_name":"GT- KAMAL",
+    "km":25.5,
+    "nearest_area":"Kamal/ Jalan Tol Lingkar Luar Jakarta",
+    "ruas_tol_intersection":"",
+    "lat":-6.1171716,
+    "long":"106.7341089"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM2",
+        "gt_sequence":4}
+        ],
+    "gerbang_tol_name":"GT-CENGKARENG",
+    "km":31,
+    "nearest_area":"GT utama (arah Dadap/ Benda/ Rawa Bokor/ Bandara Internasional Soekarno/Hatta)",
+    "ruas_tol_intersection":"",
+    "lat":-6.105671639,
+    "long":"106.6965151"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM3",
+        "gt_sequence":1}
+        ],
+    "gerbang_tol_name":"GT-CAWANG",
+    "km":0,
+    "nearest_area":"Tebet/ Semanggi/ Bandara Soekarno/Hatta/ Jatinegara/ Kelapa Gading/ Tanjung Priok/ Ancol",
+    "ruas_tol_intersection":"JM1",
+    "lat":-6.243176,
+    "long":"106.859691"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM3",
+        "gt_sequence":2}
+        ],
+    "gerbang_tol_name":"GT-PASAR REBO",
+    "km":8,
+    "nearest_area":"Jalan Tol Lingkar Luar Jakarta/ Jalan Tol Jakarta/Serpong/ Jalan Tol Jakarta/Cikampek",
+    "ruas_tol_intersection":"",
+    "lat":-6.312137332,
+    "long":"106.8923757"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM3",
+        "gt_sequence":3}
+        ],
+    "gerbang_tol_name":"GT-CIBUBUR",
+    "km":13,
+    "nearest_area":"Cibubur/ Cileungsi/ Cikeas",
+    "ruas_tol_intersection":"",
+    "lat":-6.365778166,
+    "long":"106.8949449"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM3",
+        "gt_sequence":4}
+          ],
+    "gerbang_tol_name":"GT-CIBUBUR UTAMA",
+    "km":14,
+    "nearest_area":"Gerbang awal arah Bogor/Ciawi",
+    "ruas_tol_intersection":"",
+    "lat":-6.368912986,
+    "long":"106.8951648"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM3",
+        "gt_sequence":5}
+          ],
+    "gerbang_tol_name":"GT-CISALAK",
+    "km":16,
+    "nearest_area":"Cisalak, Depok, Margonda, Jalan Tol Cinere-Jagorawi",
+    "ruas_tol_intersection":"",
+    "lat":-6.377595299,
+    "long":"106.8873733"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM3",
+        "gt_sequence":6}
+        ],
+    "gerbang_tol_name":"GT-CIMANGGIS",
+    "km":19,
+    "nearest_area":"Cimanggis, Cikeas",
+    "ruas_tol_intersection":"",
+    "lat":-6.421084,
+    "long":"106.893721"
+  },
+  {
+      "routes": [ {
+          "ruas_tol_id":"JM3",
+        "gt_sequence":7}
+        ],
+    "gerbang_tol_name":"GT-CIMANGGIS UTAMA",
+    "km":19,
+    "nearest_area":"Gerbang akhir (arah Jakarta)",
+    "ruas_tol_intersection":"",
+    "lat":-6.411836,
+    "long":"106.89788"
+  },
+  {
+      "routes": [ {      
+        "ruas_tol_id":"JM3",
+        "gt_sequence":8}
+    ],
+    "gerbang_tol_name":"GT-GUNUNG PUTRI ",
+    "km":24,
+    "nearest_area":"Gunung Putri, Karanggan, Cikeas                         ",
+    "ruas_tol_intersection":"",
+    "lat":-6.461339,
+    "long":"106.889183�"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM3",
+        "gt_sequence":9}
+        ],
+    "gerbang_tol_name":"GT-CITEUREUP ",
+    "km":27,
+    "nearest_area":"Citeureup, Cibinong                                     ",
+    "ruas_tol_intersection":"",
+    "lat":-6.484186,
+    "long":"106.873656"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM3",
+        "gt_sequence":10}
+        ],
+    "gerbang_tol_name":"GT-SENTUL ",
+    "km":34,
+    "nearest_area":"IPSC, Sirkuit Sentul, Sentul, Nanggewer                 ",
+    "ruas_tol_intersection":"",
+    "lat":-6.531939,
+    "long":"106.853051"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM3",
+        "gt_sequence":11}
+        ],
+    "gerbang_tol_name":"GT-SENTUL SELATAN",
+    "km":37,
+    "nearest_area":"Sentul City, Kedung Halang, Jalan Tol Lingkar Luar Bogor",
+    "ruas_tol_intersection":"",
+    "lat":-6.562177,
+    "long":"106.845322"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM3",
+        "gt_sequence":12}
+    ],  
+    "gerbang_tol_name":"GT-BOGOR",
+    "km":42,
+    "nearest_area":"Gerbang akhir (ke Bogor Kota, Kebun Raya)",
+    "ruas_tol_intersection":"",
+    "lat":-6.597429,
+    "long":"106.817603"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM3",
+        "gt_sequence":13}
+        ],
+    "gerbang_tol_name":"GT-CIAWI",
+    "km":44,
+    "nearest_area":"Ciawi, Sukabumi, Gadog, Cisarua, Puncak, Taman Safari, Cianjur, Padalarang dan Bandung",
+    "ruas_tol_intersection":"",
+    "lat":-6.631115,
+    "long":"106.839057"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM4",
+        "gt_sequence":1}
+        ],
+    "gerbang_tol_name":"GT-CAWANG",
+    "km":0,
+    "nearest_area":"Jatinegara, Tanjung Priok, Grogol, Kelapa Gading, Jalan Tol Lingkar Dalam Jakarta, Bandara Internasional Soekarno-Hatta, Pelabuhan Tanjung Priok",
+    "ruas_tol_intersection":"JM1",
+    "lat":-6.243176,
+    "long":"106.859691"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM4",
+        "gt_sequence":2}
+        ],
+    "gerbang_tol_name":"GT-HALIM",
+    "km":1,
+    "nearest_area":"Cawang, Cililitan, Halim PK, Jalan Tol Jagorawi, Bandar Udara Halim Perdanakusuma",
+    "ruas_tol_intersection":"JM3",
+    "lat":-6.245211782,
+    "long":"106.8890333"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM4",
+        "gt_sequence":3}
+        ],
+    "gerbang_tol_name":"GT-CIKUNIR",
+    "km":9.5,
+    "nearest_area":"Jalan Tol Lingkar Luar Jakarta",
+    "ruas_tol_intersection":"",
+    "lat":-6.255712403,
+    "long":"106.9604436"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM4",
+        "gt_sequence":4}
+        ],
+    "gerbang_tol_name":"GT-BEKASI BARAT",
+    "km":13,
+    "nearest_area":"Bekasi Barat, Pekayon",
+    "ruas_tol_intersection":"",
+    "lat":-6.251568182,
+    "long":"106.9865799"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM4",
+        "gt_sequence":5}
+        ],
+    "gerbang_tol_name":"GT-BEKASI TIMUR",
+    "km":16,
+    "nearest_area":"Bekasi Timur, Bulak Kapal, Bantar Gebang",
+    "ruas_tol_intersection":"",
+    "lat":-6.261880376,
+    "long":"107.0175233"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM4",
+        "gt_sequence":6}
+    ],
+    "gerbang_tol_name":"GT-TAMBUN ",
+    "km":21,
+    "nearest_area":"Tambun, Mustika Jaya, Setu",
+    "ruas_tol_intersection":"",
+    "lat":-6.278502155,
+    "long":"107.0509185"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM4",
+        "gt_sequence":7}
+                ],
+    "gerbang_tol_name":"GT-CIBITUNG ",
+    "km":24,
+    "nearest_area":"Cibitung, Kawasan Industri MM 2100",
+    "ruas_tol_intersection":"",
+    "lat":-6.282411,
+    "long":"107.085092"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM4",
+        "gt_sequence":8}
+                ],
+    "gerbang_tol_name":"GT-CIKARANG UTAMA ",
+    "km":29,
+    "nearest_area":"Pintu gerbang utama Gerbang awal <arah Cikampek, Bandung> dan Gerbang akhir <arah Jakarta, Bogor>",
+    "ruas_tol_intersection":"",
+    "lat":-6.303163072,
+    "long":"107.1205831"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM4",
+        "gt_sequence":9}
+                ],
+    "gerbang_tol_name":"GT-CIKARANG BARAT ",
+    "km":31,
+    "nearest_area":"Cikarang Barat, Lemahabang",
+    "ruas_tol_intersection":"",
+    "lat":-6.311627086,
+    "long":"107.1377297"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM4",
+        "gt_sequence":10}
+                ],
+    "gerbang_tol_name":"GT-CIKARANG TIMUR ",
+    "km":37,
+    "nearest_area":"Cikarang Pusat, Pasirranji, Sukamahi",
+    "ruas_tol_intersection":"",
+    "lat":-6.341823885,
+    "long":"107.1856293"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM4",
+        "gt_sequence":11}
+                ],
+    "gerbang_tol_name":"GT-KARAWANG BARAT",
+    "km":47,
+    "nearest_area":"Karawang Barat, Kawasan Industri KIIC, Rengasdengklok",
+    "ruas_tol_intersection":"",
+    "lat":-6.345589121,
+    "long":"107.2709082"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM4",
+        "gt_sequence":12}
+                ],
+    "gerbang_tol_name":"GT-KARAWANG TIMUR",
+    "km":54,
+    "nearest_area":"Karawang Timur, Klari, Kawasan Industri Surya Cipta",
+    "ruas_tol_intersection":"",
+    "lat":-6.356730207,
+    "long":"107.3359364"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM4",
+        "gt_sequence":13}
+                ],
+    "gerbang_tol_name":"GT-DAWUAN INTERCHANGE",
+    "km":67,
+    "nearest_area":"Jalan Tol Cipularang, Jalan Tol Purbaleunyi",
+    "ruas_tol_intersection":"JM6",
+    "lat":-6.426958437,
+    "long":"107.4415388"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM4",
+        "gt_sequence":14}
+                ],
+    "gerbang_tol_name":"GT-KALIHURIP",
+    "km":68,
+    "nearest_area":"Bukit Indah, Kawasan Industri KIKC, Indotaisei, Dawuan, Cikampek Barat",
+    "ruas_tol_intersection":"",
+    "lat":-6.415982757,
+    "long":"107.4147674"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM4",
+        "gt_sequence":15}
+                ],
+    "gerbang_tol_name":"GT-CIKAMPEK",
+    "km":73,
+    "nearest_area":"Gerbang Akhir Arah Cikampek, Gerbang Awal Arah Jakarta",
+    "ruas_tol_intersection":"JM7",
+    "lat":-6.204432496,
+    "long":"106.8119699"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM5",
+        "gt_sequence":1}
+        ],
+    "gerbang_tol_name":"GT-TOMANG",
+    "km":0.1,
+    "nearest_area":"Dalam Kota ",
+    "ruas_tol_intersection":"JM1",
+    "lat":-6.181627553,
+    "long":"106.7935091"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM5",
+        "gt_sequence":2}
+                ],
+    "gerbang_tol_name":"GT-KEBON JERUK",
+    "km":3.5,
+    "nearest_area":"Kebon Jeruk, Kedoya",
+    "ruas_tol_intersection":"",
+    "lat":-6.190059982,
+    "long":"106.7671523"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM5",
+        "gt_sequence":3}
+                ],
+    "gerbang_tol_name":"GT-MERUYA",
+    "km":6,
+    "nearest_area":"Kembangan, Meruya Ilir, Joglo",
+    "ruas_tol_intersection":"",
+    "lat":-6.193737846,
+    "long":"106.7409572"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM5",
+        "gt_sequence":4}
+                ],
+    "gerbang_tol_name":"GT-MERUYA UTARA",
+    "km":7.3,
+    "nearest_area":"JORR",
+    "ruas_tol_intersection":"",
+    "lat":-6.191471957,
+    "long":"106.7370006"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM5",
+        "gt_sequence":5}
+                ],
+    "gerbang_tol_name":"GT-TANGERANG",
+    "km":18.5,
+    "nearest_area":"Tangerang, Serpong",
+    "ruas_tol_intersection":"",
+    "lat":-6.223070432,
+    "long":"106.6376352"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM5",
+        "gt_sequence":6}
+                ],
+    "gerbang_tol_name":"GT-KARAWACI BARAT",
+    "km":20.1,
+    "nearest_area":"Lippo Village, Legok, Binong",
+    "ruas_tol_intersection":"",
+    "lat":-6.226824715,
+    "long":"106.6141605"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM5",
+        "gt_sequence":7}
+                ],
+    "gerbang_tol_name":"GT-KARAWACI TIMUR",
+    "km":21,
+    "nearest_area":"Lippo Village, Legok, Binong",
+    "ruas_tol_intersection":"",
+    "lat":-6.223411732,
+    "long":"106.6216922"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM5",
+        "gt_sequence":8}
+                ],
+    "gerbang_tol_name":"GT-TANGERANG BARAT",
+    "km":26,
+    "nearest_area":"Bitung, Curung",
+    "ruas_tol_intersection":"",
+    "lat":-6.222461506,
+    "long":"106.6356496"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM6",
+        "gt_sequence":1}
+                ],
+    "gerbang_tol_name":"GT-DAWUAN INTERCHANGE",
+    "km":0,
+    "nearest_area":"Purwakarta, Sadang, Subang",
+    "ruas_tol_intersection":"",
+    "lat":-6.426958437,
+    "long":"107.4415388"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM6",
+        "gt_sequence":2}
+                ],
+    "gerbang_tol_name":"GT-SADANG",
+    "km":1,
+    "nearest_area":"Purwakarta, Sadang, Subang",
+    "ruas_tol_intersection":"JM4",
+    "lat":-6.506341101,
+    "long":"107.4495736"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM6",
+        "gt_sequence":3}
+                ],
+    "gerbang_tol_name":"GT-JATILUHUR",
+    "km":8,
+    "nearest_area":"Purwakarta, Jatiluhur, Ciganea",
+    "ruas_tol_intersection":"",
+    "lat":-6.566139896,
+    "long":"107.431188"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM6",
+        "gt_sequence":4}
+                ],
+    "gerbang_tol_name":"GT-PADALARANG",
+    "km":47,
+    "nearest_area":"Padalarang, Kota Baru Parahyangan, Cikalongwetan, Cianjur, Sukabumi",
+    "ruas_tol_intersection":"",
+    "lat":-6.85665627,
+    "long":"107.4946391"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM6",
+        "gt_sequence":5
+      },
+    "gerbang_tol_name":"GT-BAROS",
+    "km":51,
+    "nearest_area":"Baros, Cimahi, Leuwigajah",
+    "ruas_tol_intersection":"",
+    "lat":-6.89712099,
+    "long":"107.5420654"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM6",
+        "gt_sequence":6}
+                ],
+    "gerbang_tol_name":"GT-PASTEUR",
+    "km":51,
+    "nearest_area":"Cimahi, Pasteur, Lembang, Bandung Kota",
+    "ruas_tol_intersection":"",
+    "lat":-6.890810115,
+    "long":"107.5758719"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM6",
+        "gt_sequence":7}
+                ],
+    "gerbang_tol_name":"GT-PASIR KOJA",
+    "km":58,
+    "nearest_area":" Pasir Koja, Leuwi Panjang, Bandung Kota",
+    "ruas_tol_intersection":"",
+    "lat":-6.931399991,
+    "long":"107.5727031"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM6",
+        "gt_sequence":8}
+                ],
+    "gerbang_tol_name":"GT-KOPO",
+    "km":60,
+    "nearest_area":"Kopo, Soreang, Ciwidey, Bandung Kota",
+    "ruas_tol_intersection":"",
+    "lat":-6.956460398,
+    "long":"107.5811291"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM6",
+        "gt_sequence":9}
+                ],
+    "gerbang_tol_name":"GT-M TOHA",
+    "km":62,
+    "nearest_area":"Mohammad Toha, Banjaran, Pangalengan, Bandung Kota",
+    "ruas_tol_intersection":"",
+    "lat":-6.956588197,
+    "long":"107.6096892"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM6",
+        "gt_sequence":10}
+                ],
+    "gerbang_tol_name":"GT-BUAH BATU",
+    "km":65,
+    "nearest_area":"  Buah Batu, Dayeuhkolot, Ciparay, Majalaya, Bandung Kota",
+    "ruas_tol_intersection":"",
+    "lat":-6.961827895,
+    "long":"107.6375628"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM6",
+        "gt_sequence":11}
+                ],
+    "gerbang_tol_name":"GT-CILEUNYI",
+    "km":79,
+    "nearest_area":"Gerbang akhir (ke Cileunyi, Jatinangor, Sumedang, Cirebon, Garut, Tasikmalaya, Ciamis, Banjar, Pangandaran, Purwokerto, Yogyakarta, Solo, Blitar, Kediri, Malang, Jember, Banyuwangi) (arah Cileunyi)\nGerbang awal (arah Bandung/Jakarta)",
+    "ruas_tol_intersection":"",
+    "lat":-6.944196565,
+    "long":"107.7478249"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM7",
+        "gt_sequence":1}
+                ],
+    "gerbang_tol_name":"GT-PALIMANAN",
+    "km":1,
+    "nearest_area":"Jalan Tol Cikampek-Palimanan ",
+    "ruas_tol_intersection":"JM4",
+    "lat":-6.697598468,
+    "long":"108.4815359"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM7",
+        "gt_sequence":2}
+                ],
+    "gerbang_tol_name":"GT-PLUMBON",
+    "km":5,
+    "nearest_area":"Harjamukti, Cirebon",
+    "ruas_tol_intersection":"",
+    "lat":-6.699126844,
+    "long":"108.4836429"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM7",
+        "gt_sequence":3}
+                ],
+    "gerbang_tol_name":"GT-CIPERNA",
+    "km":8,
+    "nearest_area":"Stasiun Cirebon",
+    "ruas_tol_intersection":"",
+    "lat":-6.724070629,
+    "long":"108.5105683"
+  },
+  {
+      "routes": [ {
+        "ruas_tol_id":"JM7",
+        "gt_sequence":4}
+                ],
+    "gerbang_tol_name":"GT-KANCI",
+    "km":14,
+    "nearest_area":"Kanci",
+    "ruas_tol_intersection":"",
+    "lat":-6.799625938,
+    "long":"108.6171913"
+  }
+]

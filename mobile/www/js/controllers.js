@@ -14,8 +14,25 @@ angular.module('starter.controllers', [])
     });
     
     $scope.calcRoute = function() {
-        JasaMarga.findRoute($scope.tollRoutes, $scope.gateIn.ruas_tol_id, $scope.gateIn.gt_sequence,
+        var route = JasaMarga.findRoute($scope.tollRoutes, $scope.gateIn.ruas_tol_id, $scope.gateIn.gt_sequence,
                             $scope.gateOut.ruas_tol_id, $scope.gateOut.gt_sequence);
+        for (var i = 1; i < route.length - 1; i++) {
+            var r = route[i];
+            var icon;
+            switch (r.kind) {
+            case 'in':
+                icon = OSM.inIcon();
+                break;
+            case 'out':
+                icon = OSM.outIcon();
+                break;
+            default:
+                icon = OSM.passXsIcon();
+            }
+            OSM.map().addLayer(new L.Marker(new L.LatLng(r.gate.lat, r.gate.long, true),
+                                            {title: r.kind + ' ' + r.gate.ruas_tol_id + '-' + r.gate.gt_sequence + ': ' + r.gate.gerbang_tol_name,
+                                            icon: icon}));
+        }
     };
 })
 

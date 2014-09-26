@@ -15,8 +15,12 @@ angular.module('starter.services', [])
             return $http({url: 'data/JM.toll.route.json'});
         },
         getGate: function(tollRoutes, segment, gateSeq) {
-            return _.find(tollRoutes, function(el) {
+            var gate = _.find(tollRoutes, function(el) {
                 return el.ruas_tol_id == segment && el.gt_sequence == gateSeq; });
+            if (gate == null) {
+                throw "Cannot find gate " + segment + " " + gateSeq;
+            }
+            return gate;
         },
         findRoute: function(tollRoutes, segmentOrigin, gateSeqOrigin,
                              segmentDest, gateSeqDest) {
@@ -27,43 +31,65 @@ angular.module('starter.services', [])
             var visitedSegments = [gateOrigin.ruas_tol_id];
             var route = this.findRouteNest(tollRoutes, gateOrigin, gateDest, visitedSegments);
             if (route != null) {
+                route.unshift({kind: 'in', gate: gateOrigin});
                 $log.info('Found route:', _.map(route, function(cp) {
                     return cp.kind + ' ' + cp.gate.ruas_tol_id + '_' + cp.gate.gt_sequence;
                 }));
+                return route;
             } else {
                 $log.error('Route not found!');
             }
         },
         /**
+         * get the passes as array, excluding both origin and dest
+         */
+        getPasses: function(tollRoutes, origin, dest) {
+            var passes = [];
+            if (dest.gt_sequence > origin.gt_sequence) {
+                for (var gtseq = origin.gt_sequence + 1; gtseq < dest.gt_sequence; gtseq++) {
+                    passes.push({kind: 'pass', gate: this.getGate(tollRoutes, origin.ruas_tol_id, gtseq)});
+                }
+            }
+            if (dest.gt_sequence < origin.gt_sequence) {
+                for (var gtseq = origin.gt_sequence - 1; gtseq > dest.gt_sequence; gtseq--) {
+                    passes.push({kind: 'pass', gate: this.getGate(tollRoutes, origin.ruas_tol_id, gtseq)});
+                }
+            }
+            return passes;
+        },
+        /**
          * visitedSegments must contain, at least, the origin's ruas_tol_id
          */
         findRouteNest: function(tollRoutes, origin, dest, visitedSegments) {
-            var JasaMarga = this;
             // if origin and dest is the same segment then simply iterate:
             if (origin.ruas_tol_id == dest.ruas_tol_id) {
-                $log.debug('same origin at', origin.ruas_tol_id, 'visited', visitedSegments);
-                return [{kind: 'out', gate: dest}]; // got it!
+                $log.debug('same origin at', origin.ruas_tol_id, origin.gt_sequence, '->', dest.gt_sequence,
+                           'visited', visitedSegments);
+                var route = this.getPasses(tollRoutes, origin, dest);
+                route.push({kind: 'out', gate: dest});
+                return route; // got it!
             } else {
                 // if different segments then check if we can use another segment
                 for (var exitSeq = 1; exitSeq <= segmentGateCounts[origin.ruas_tol_id]; exitSeq++) {
-                    var exitGate = JasaMarga.getGate(tollRoutes, origin.ruas_tol_id, exitSeq);
+                    var exitGate = this.getGate(tollRoutes, origin.ruas_tol_id, exitSeq);
                     if (exitGate.ruas_tol_intersection) {
                         for (var i in exitGate.ruas_tol_intersection) {
                             var el = exitGate.ruas_tol_intersection[i];
                             
                             var visited = visitedSegments.indexOf(el.ruas_tol_id) >= 0;
                             if (!visited) {
-                                var transitGate = JasaMarga.getGate(tollRoutes, el.ruas_tol_id, el.gt_sequence);
+                                var transitGate = this.getGate(tollRoutes, el.ruas_tol_id, el.gt_sequence);
                                 var newVisitedSegments = visitedSegments.slice(0);
                                 $log.debug(el, newVisitedSegments);
                                 newVisitedSegments.push(el.ruas_tol_id);
                                 $log.debug('Exiting', exitGate.ruas_tol_id, exitGate.gt_sequence,
                                            'transiting', transitGate.ruas_tol_id, transitGate.gt_sequence,
                                            'visited', newVisitedSegments);
-                                var route = JasaMarga.findRouteNest(tollRoutes, transitGate, dest, newVisitedSegments);
-                                if (route != null) {
-                                    route.unshift({kind: 'out', gate: exitGate}, 
-                                                  {kind: 'in', gate: transitGate});
+                                var transitRoute = this.findRouteNest(tollRoutes, transitGate, dest, newVisitedSegments);
+                                if (transitRoute != null) {
+                                    var route = this.getPasses(tollRoutes, origin, exitGate);
+                                    route.push({kind: 'out', gate: exitGate}, {kind: 'in', gate: transitGate});
+                                    route = route.concat(transitRoute);
                                     $log.debug('Got inner route exiting', exitGate.ruas_tol_id, exitGate.gt_sequence,
                                            'transiting', transitGate.ruas_tol_id, transitGate.gt_sequence,
                                            'visited', newVisitedSegments);
@@ -86,10 +112,49 @@ angular.module('starter.services', [])
     var plotlist;
     var plotlayers=[];
     
+    var originIcon = L.icon({
+        iconUrl: 'img/place-origin41.png',
+        iconRetinaUrl: 'img/place-origin82.png',
+        iconSize: [41, 41],
+        iconAnchor: [20, 40]
+    });
+    var destIcon = L.icon({
+        iconUrl: 'img/place-dest41.png',
+        iconRetinaUrl: 'img/place-dest82.png',
+        iconSize: [41, 41],
+        iconAnchor: [20, 40]
+    });
+    var inIcon = L.icon({
+        iconUrl: 'img/place-in41.png',
+        iconSize: [41, 41],
+        iconAnchor: [33, 22]
+    });
+    var outIcon = L.icon({
+        iconUrl: 'img/place-out41.png',
+        iconSize: [41, 41],
+        iconAnchor: [33, 22]
+    });
+    var passIcon = L.icon({
+        iconUrl: 'img/place-pass41.png',
+        iconSize: [41, 41],
+        iconAnchor: [20, 37]
+    });
+    var passXsIcon = L.icon({
+        iconUrl: 'img/place-pass20.png',
+        iconSize: [20, 20],
+        iconAnchor: [10, 18]
+    });
+    
     var gateInLayer = null;
     var gateOutLayer = null;
 
     return {
+        originIcon: function() { return originIcon; },
+        destIcon: function() { return destIcon; },
+        passIcon: function() { return passIcon; },
+        passXsIcon: function() { return passXsIcon; },
+        inIcon: function() { return inIcon; },
+        outIcon: function() { return outIcon; },
         setUp: function() {
             // set up the map
             map = new L.Map('map');
@@ -108,13 +173,13 @@ angular.module('starter.services', [])
         gateOutLayer: function() { return gateOutLayer; },
         setGateInLayer: function(lat, lng, title) {
             if (gateInLayer != null) map.removeLayer(gateInLayer);
-            gateInLayer = new L.Marker(new L.LatLng(lat, lng, true), {title: title});
+            gateInLayer = new L.Marker(new L.LatLng(lat, lng, true), {title: title, icon: originIcon});
             map.addLayer(gateInLayer);
             return gateInLayer;
         },
         setGateOutLayer: function(lat, lng, title) {
             if (gateOutLayer != null) map.removeLayer(gateOutLayer);
-            gateOutLayer = new L.Marker(new L.LatLng(lat, lng, true), {title: title});
+            gateOutLayer = new L.Marker(new L.LatLng(lat, lng, true), {title: title, icon: destIcon});
             map.addLayer(gateOutLayer);
             return gateOutLayer;
         },

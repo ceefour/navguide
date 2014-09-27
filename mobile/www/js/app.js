@@ -60,6 +60,17 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       }
     })
+
+    .state('tab.bpjs', {
+      url: '/bpjs',
+      views: {
+        'tab-bpjs': {
+          templateUrl: 'templates/tab-bpjs.html',
+          controller: 'BpjsCtrl'
+        }
+      }
+    })
+  
     .state('tab.friend-detail', {
       url: '/friend/:friendId',
       views: {

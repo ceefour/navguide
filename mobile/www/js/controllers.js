@@ -17,7 +17,7 @@ angular.module('starter.controllers', [])
         });
     }
     
-    OSM.setUp('mapdash');
+    OSM.setUp('mapdash', -6.6, 107.0, 8);
     
     $scope.$watch('form.gateIn', function(newV, oldV) {
         if ($scope.form.gateIn) {
@@ -118,10 +118,11 @@ angular.module('starter.controllers', [])
 })
 
 .controller('RestAreasCtrl', function($scope, $log, JasaMarga, OSM) {
-    OSM.setUp('maprestareas');
+    OSM.setUp('maprestareas', -6.4, 107.0, 8);
     $scope.vmodel = {toll: null};
     $scope.updateMap = function() {
         if ($scope.vmodel.toll) {
+            OSM.clear();
             var filtered = _.filter($scope.restAreas, function(ra) { return ra.ruas_tol == $scope.vmodel.toll.ruas_tol_id; });
             $log.debug('Filtered rest areas:', filtered);
             for (var i = 0; i < filtered.length; i++) {
@@ -143,6 +144,37 @@ angular.module('starter.controllers', [])
         $scope.updateMap();
     });
     $scope.$watch('vmodel.toll', $scope.updateMap);
+})
+
+.controller('BpjsCtrl', function($scope, $log, BPJS, OSM) {
+    OSM.setUp('mapbpjs', -6.92, 107.6, 12);
+    $scope.vmodel = {faskesType: null};
+    $scope.updateMap = function() {
+        if ($scope.vmodel.faskesType) {
+            OSM.clear();
+            var filtered = _.filter($scope.faskesGeos, function(faskes) { 
+                return $scope.vmodel.faskesType.id == faskes.type; });
+            $log.debug('Filtered faskes:', filtered);
+            for (var i = 0; i < filtered.length; i++) {
+                var faskes = $scope.faskesGeos[i];
+                var latlng = new L.LatLng(faskes.lat, faskes.long, true);    
+                OSM.addMarker(latlng,
+                    {title: faskes.name, icon: OSM.bpjsIcon()});
+            }
+        }
+    };
+    BPJS.faskesTypes().success(function(data) {
+        $scope.faskesTypes = data;
+        $log.debug('got', $scope.faskesTypes.length, 'faskes types');
+        $scope.vmodel = {faskesType: $scope.faskesTypes[10]};
+        $scope.updateMap();
+    });
+    BPJS.faskesGeos().success(function(data) {
+        $scope.faskesGeos = data;
+        $log.debug('got', $scope.faskesGeos.length, 'faskes geos');
+        $scope.updateMap();
+    });
+    $scope.$watch('vmodel.faskesType', $scope.updateMap);
 })
 
 .controller('FriendDetailCtrl', function($scope, $stateParams, Friends) {

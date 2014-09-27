@@ -1,0 +1,27 @@
+<ion-view title="Faskes Tercakup BPJS">
+    <ion-header-bar class="bar-subheader" style="height: 14em">
+      <label class="item item-input item-select">
+          <span class="input-label">Jenis</span>
+          <select ng-model="vmodel.faskesType" ng-options="faskesType.jenis for faskesType in faskesTypes"></select>
+      </label>
+        <div id="mapbpjs" style="height: 12em">
+        </div>
+    </ion-header-bar>
+  <ion-content style="margin-top: 12em">
+    <ion-list>
+      <ion-item ng-repeat="faskes in faskesGeos | filter:vmodel.faskesType.id" type="item-text-wrap">
+          <div class="row">
+              <div class="col"><strong>{{faskes.name}}</strong></div>
+              <div class="col" style="text-align: right">
+                  <span ng-show="faskes.telephone"><i class="icon ion-ios7-telephone" title="Telepon"></i> {{faskes.telephone}}</span>
+                </div>
+          </div>
+          <div class="row">
+              <div class="col"><small>
+                  <i class="icon ion-map" title="Alamat"></i> {{faskes.address}}
+              </small></div>
+          </div>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

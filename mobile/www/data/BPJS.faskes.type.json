@@ -1,0 +1,92 @@
+[
+  {
+    "tipe_faskes":"Tingkat Pertama",
+    "id":"P1",
+    "jenis":"Puskesmas"
+  },
+  {
+    "tipe_faskes":"Tingkat Pertama",
+    "id":"P2",
+    "jenis":"Dokter Umum Praktik Mandiri"
+  },
+  {
+    "tipe_faskes":"Tingkat Pertama",
+    "id":"P3",
+    "jenis":"Dokter Gigi/Klinik Gigi"
+  },
+  {
+    "tipe_faskes":"Tingkat Pertama",
+    "id":"P4",
+    "jenis":"Klinik Pratama"
+  },
+  {
+    "tipe_faskes":"Tingkat Pertama",
+    "id":"P5",
+    "jenis":"Faskes Tk1 TNI"
+  },
+  {
+    "tipe_faskes":"Tingkat Pertama",
+    "id":"P6",
+    "jenis":"Faskes Tk1 POLRI"
+  },
+  {
+    "tipe_faskes":"Tingkat Pertama",
+    "id":"P7",
+    "jenis":"RS Klas D Pratama/RS Bersalin/Balai Pengobatan"
+  },
+  {
+    "tipe_faskes":"Tingkat Lanjutan",
+    "id":"L1",
+    "jenis":"RSUP/RSUD"
+  },
+  {
+    "tipe_faskes":"Tingkat Lanjutan",
+    "id":"L2",
+    "jenis":"RS TNI"
+  },
+  {
+    "tipe_faskes":"Tingkat Lanjutan",
+    "id":"L3",
+    "jenis":"RS POLRI"
+  },
+  {
+    "tipe_faskes":"Tingkat Lanjutan",
+    "id":"L4",
+    "jenis":"RS SWASTA"
+  },
+  {
+    "tipe_faskes":"Tingkat Lanjutan",
+    "id":"L5",
+    "jenis":"RS Khusus Pemerintah"
+  },
+  {
+    "tipe_faskes":"Tingkat Lanjutan",
+    "id":"L6",
+    "jenis":"KLINIK UTAMA/BALAI KESEHATAN MASYARAKAT/PRAKTIK DOKTER SPESIALIS"
+  },
+  {
+    "tipe_faskes":"Penunjang",
+    "id":"S1",
+    "jenis":"APOTEK"
+  },
+  {
+    "tipe_faskes":"Penunjang",
+    "id":"S2",
+    "jenis":"LAB"
+  },
+  {
+    "tipe_faskes":"Penunjang",
+    "id":"S3",
+    "jenis":"OPTIK"
+  },
+  {
+    "tipe_faskes":"Penunjang",
+    "id":"S4",
+    "jenis":"BIDAN/PERAWAT"
+  },
+  {
+    "tipe_faskes":"Penunjang",
+    "id":"S5",
+    "jenis":"FASKES PENUNJANG LAIN"
+  }
+]

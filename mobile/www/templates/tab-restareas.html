@@ -1,6 +1,7 @@
 <ion-view title="Rest Area">
     <ion-header-bar class="bar-subheader" style="height: 14em">
-      <label class="item item-input">
+      <label class="item item-input item-select">
+          <span class="input-label">Tol</span>
           <select ng-model="vmodel.toll" ng-options="toll.ruas_tol + ' (' + toll.ruas_tol_id + ')' for toll in tolls"></select>
       </label>
         <div id="maprestareas" style="height: 12em">
@@ -24,6 +25,15 @@
           <div class="row">
               <div class="col"><small>
                   <i class="icon ion-model-s" title="Parkir"></i> {{restArea.parkir}}
+              </small></div>
+              <div class="col"><small>
+                  <i class="ion icon-funnel"></i> {{restArea.spbu.indexOf('Pertamax')>=0 ? 'Pertamax' : 'Premium'}}
+              </small></div>
+              <div class="col"><small>
+                  <i class="ion icon-arrow-up-c"></i> {{restArea.tempat_ibadah.indexOf('Masjid')>=0 ? 'Masjid' : 'Mushola'}}
+              </small></div>
+              <div class="col"><small>
+                  <i class="ion icon-coffee"></i> {{restArea.tempat_makan.indexOf('Pujasera')>=0 ? 'Pujasera' : 'Kantin'}}
               </small></div>
           </div>
       </ion-item>

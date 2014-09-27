@@ -186,6 +186,17 @@ angular.module('starter.services', [])
     };
 })
 
+.factory('BPJS', function($http, $log) {
+    return {
+        faskesGeos: function() {
+            return $http({url: 'data/BPJS.faskes.branch.bandung.geolocated.json'});
+        },
+        faskesTypes: function() {
+            return $http({url: 'data/BPJS.faskes.type.json'});
+        },
+    };
+})
+
 .factory('MoreData', function($http, $log) {
     return {
         vehicles: function() {
@@ -250,6 +261,11 @@ angular.module('starter.services', [])
         iconSize: [32, 37],
         iconAnchor: [15, 34]
     });
+    var bpjsIcon = L.icon({
+        iconUrl: 'img/place-bpjs37.png',
+        iconSize: [32, 37],
+        iconAnchor: [15, 34]
+    });
     
     var gateInLayer = null;
     var gateOutLayer = null;
@@ -262,7 +278,11 @@ angular.module('starter.services', [])
         inIcon: function() { return inIcon; },
         outIcon: function() { return outIcon; },
         restAreaIcon: function() { return restAreaIcon; },
-        setUp: function(elId) {
+        bpjsIcon: function() { return bpjsIcon; },
+        /**
+         * For toll, use -6.6, 107.0, 8
+         */
+        setUp: function(elId, lat, lng, zoom) {
             // set up the map
             map = new L.Map(elId);
 
@@ -272,7 +292,7 @@ angular.module('starter.services', [])
             var osm = new L.TileLayer(osmUrl, {minZoom: 8, maxZoom: 12, attribution: osmAttrib});		
 
             // start the map in middle
-            map.setView(new L.LatLng(-6.6, 107.0), 8);
+            map.setView(new L.LatLng(lat, lng), zoom);
             map.addLayer(osm);
         },
         map: function() { return map; },

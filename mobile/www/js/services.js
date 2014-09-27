@@ -262,9 +262,9 @@ angular.module('starter.services', [])
         inIcon: function() { return inIcon; },
         outIcon: function() { return outIcon; },
         restAreaIcon: function() { return restAreaIcon; },
-        setUp: function() {
+        setUp: function(elId) {
             // set up the map
-            map = new L.Map('map');
+            map = new L.Map(elId);
 
             // create the tile layer with correct attribution
             var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';

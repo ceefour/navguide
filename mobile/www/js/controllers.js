@@ -17,10 +17,21 @@ angular.module('starter.controllers', [])
         });
     }
     
-    OSM.setUp();
-    $scope.$watch('[form.gateIn, form.gateOut]', function(newV, oldV) {
-        if ($scope.form.gateIn && $scope.form.gateOut) {
+    OSM.setUp('mapdash');
+    
+    $scope.$watch('form.gateIn', function(newV, oldV) {
+        if ($scope.form.gateIn) {
             OSM.setGateInLayer($scope.form.gateIn.lat, $scope.form.gateIn.long, $scope.form.gateIn.gerbang_tol_name);
+            // too edge!
+//            var latlngs = [
+//                new L.LatLng($scope.form.gateIn.lat, $scope.form.gateIn.long, true),
+//                new L.LatLng($scope.form.gateOut.lat, $scope.form.gateOut.long, true) ];
+//            var polyline = L.polyline(latlngs, {color: 'red'});
+//            OSM.map().fitBounds(polyline.getBounds());
+        }
+    });
+    $scope.$watch('form.gateOut', function(newV, oldV) {
+        if ($scope.form.gateOut) {
             OSM.setGateOutLayer($scope.form.gateOut.lat, $scope.form.gateOut.long, $scope.form.gateOut.gerbang_tol_name);
             // too edge!
 //            var latlngs = [
@@ -107,7 +118,7 @@ angular.module('starter.controllers', [])
 })
 
 .controller('RestAreasCtrl', function($scope, $log, JasaMarga, OSM) {
-    OSM.setUp();
+    OSM.setUp('maprestareas');
     $scope.vmodel = {toll: null};
     $scope.updateMap = function() {
         if ($scope.vmodel.toll) {

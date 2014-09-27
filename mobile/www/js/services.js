@@ -141,16 +141,19 @@ angular.module('starter.services', [])
             $log.info(segments.length, "segments:",
                 _.map(segments, function(r) { 
                     return r.origin.ruas_tol_id + ' ' + r.origin.gt_sequence + '->' + r.dest.gt_sequence; }));
+            var cost = {total: 0};
             for (var i in segments) {
                 var segment = segments[i];
                 var fare = this.lookupFare(tollFares, vehicleType, segment.origin.ruas_tol_id, 
                                 segment.origin.gt_sequence, segment.dest.gt_sequence);
                 segment.fare = fare;
+                cost.total += fare;
                 $log.debug(segment.origin.ruas_tol_id, ' ', segment.origin.gt_sequence, '->', segment.dest.gt_sequence,
                            vehicleType,
-                           '=', segment.fare);
+                           '=', segment.fare, '(', cost.total, 'so far)');
             }
-            var cost = {segments: segments};
+            cost.segments = segments;
+            return cost;
         },
         lookupFare: function(tollFares, vehicleType, segment, inGate, outGate) {
             var fare = _.find(tollFares, function(f) {

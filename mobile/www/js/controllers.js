@@ -91,7 +91,8 @@ angular.module('starter.controllers', [])
                  'Duration', $scope.duration, '(', $scope.durationHours, ':', $scope.durationMins, ')');
         $scope.distanceKm = distance / 1000;
         
-        JasaMarga.findFare($scope.tollFares, $scope.vehicle.vehicleType, route);
+        $scope.cost = JasaMarga.findFare($scope.tollFares, $scope.vehicle.vehicleType, route);
+        $log.info('Cost:', $scope.cost);
     };
 })
 

@@ -20,17 +20,26 @@
           <div class="item">
             <button class="button button-positive" ng-click="calcRoute()">Cek</button>
           </div>
-          <div class="item">
-          {{form.gateIn.gerbang_tol_name}} {{form.gateIn.lat}} {{form.gateIn.long}} -- 
-          {{form.gateOut.gerbang_tol_name}} {{form.gateOut.lat}} {{form.gateOut.long}}
-          </div>
-          <div class="item" ng-show="distanceKm">
-              Jarak: {{distanceKm | number:0}} km &middot;
-              BBM: {{vehicle.fuel}} {{fuelConsumption | number:1}} L × Rp{{fuelUnitPrice | number:0}} = Rp{{fuelPrice | number:0}}
-              &middot; Waktu: <span ng-show="durationHours > 0">{{durationHours}} jam</span><span ng-show="durationMins > 0"> {{durationMins}} menit</span>
-          </div>
       </div>
       <div style="width: 100%; height: 24em" id="map">
+      </div>
+      <h2>Rute &amp; Tarif</h2>
+      <div class="list">
+          <div class="item item-stable" ng-show="distanceKm">
+              <div class="row responsive-sm">
+                  <div class="col" title="Jarak"><i class="icon ion-ios7-paperplane"></i> <strong>{{distanceKm | number:0}}</strong> km</div>
+                  <div class="col col-50" title="Lama Perjalanan"><i class="icon ion-clock"></i> <strong><span ng-show="durationHours > 0">{{durationHours}} jam</span><span ng-show="durationMins > 0"> {{durationMins}} menit</span></strong></div>
+                  <div class="col" title="Total Biaya Tol"><i class="icon ion-pricetag"></i> Rp{{cost.total|number:0}}</div>
+              </div>
+              <div>
+                  <i class="icon ion-model-s" title="BBM"></i> {{vehicle.fuel}} <strong>{{fuelConsumption | number:1}} L</strong> × Rp{{fuelUnitPrice | number:0}} = <strong>Rp{{fuelPrice | number:0}}</strong>
+              </div>
+          </div>
+                  <!--th>Masuk</th><th>Keluar</th><th>Tarif</th><th>via</th><th>Jarak</th><th>Waktu</th><th>BBM</th-->
+          <div class="item" ng-repeat="fare in cost.segments">
+              <p><strong>{{fare.origin.gerbang_tol_name}}</strong> → <strong>{{fare.dest.gerbang_tol_name}}</strong></p>
+              <p><i class="icon ion-pricetag" title="Tarif Tol"></i> Rp{{fare.fare|number:0}}</p>
+          </div>
       </div>
   </ion-content>
 </ion-view>

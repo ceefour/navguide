@@ -11,8 +11,14 @@ angular.module('starter.services', [])
         'JM7': 4
     };
     return {
+        tolls: function() {
+            return $http({url: 'data/JM.toll.list.json'});
+        },
         tollRoute: function() {
             return $http({url: 'data/JM.toll.route.json'});
+        },
+        restAreas: function() {
+            return $http({url: 'data/JM.toll.restarea.json'});
         },
         getGate: function(tollRoutes, segment, gateSeq) {
             var gate = _.find(tollRoutes, function(el) {
@@ -239,6 +245,11 @@ angular.module('starter.services', [])
         iconSize: [20, 20],
         iconAnchor: [10, 18]
     });
+    var restAreaIcon = L.icon({
+        iconUrl: 'img/place-restarea37.png',
+        iconSize: [32, 37],
+        iconAnchor: [15, 34]
+    });
     
     var gateInLayer = null;
     var gateOutLayer = null;
@@ -250,6 +261,7 @@ angular.module('starter.services', [])
         passXsIcon: function() { return passXsIcon; },
         inIcon: function() { return inIcon; },
         outIcon: function() { return outIcon; },
+        restAreaIcon: function() { return restAreaIcon; },
         setUp: function() {
             // set up the map
             map = new L.Map('map');
@@ -278,6 +290,7 @@ angular.module('starter.services', [])
                 plotlayers = _.without(plotlayers, gateInLayer);
             }
             gateInLayer = new L.Marker(new L.LatLng(lat, lng, true), {title: title, icon: originIcon});
+            gateInLayer.bindPopup(title);
             map.addLayer(gateInLayer);
             plotlayers.push(gateInLayer);
             return gateInLayer;
@@ -288,6 +301,7 @@ angular.module('starter.services', [])
                 plotlayers = _.without(plotlayers, gateOutLayer);
             }
             gateOutLayer = new L.Marker(new L.LatLng(lat, lng, true), {title: title, icon: destIcon});
+            gateOutLayer.bindPopup(title);
             map.addLayer(gateOutLayer);
             plotlayers.push(gateOutLayer);
             return gateOutLayer;
@@ -297,6 +311,15 @@ angular.module('starter.services', [])
             plotlayers.push(layer);
             return layer;
         },
+        /**
+         * options is title and icon
+         */
+        addMarker: function(latlng, options) {
+            var layer = new L.Marker(latlng, options);
+            layer.bindPopup(options.title);
+            this.addLayer(layer);
+            return layer;
+        }
     };
 })
     

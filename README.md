@@ -16,3 +16,6 @@ By: [Stephen Hutchings](http://typicons.com/)
 
 Snipicons: Creative Commons (Attribution-Noncommercial 3.0 Unported)
 By: [Snip Master](https://www.iconfinder.com/snipicons)
+
+Google Maps Icons: Creative Commons (Attribution-Share Alike 3.0 Unported)
+By: [Nicolas Mollet](http://mapicons.nicolasmollet.com/)

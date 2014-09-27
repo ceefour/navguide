@@ -51,12 +51,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     })
 
-    .state('tab.friends', {
-      url: '/friends',
+    .state('tab.restareas', {
+      url: '/restareas',
       views: {
-        'tab-friends': {
-          templateUrl: 'templates/tab-friends.html',
-          controller: 'FriendsCtrl'
+        'tab-restareas': {
+          templateUrl: 'templates/tab-restareas.html',
+          controller: 'RestAreasCtrl'
         }
       }
     })

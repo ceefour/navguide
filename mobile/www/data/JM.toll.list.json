@@ -1,0 +1,51 @@
+[
+  {
+    "ruas_tol_id":"JM1",
+    "ruas_tol":"DALAM_KOTA",
+    "connected_node":"CAWANG-TOMANG-CENGKARENG",
+    "length":23.55,
+    "description":"Tol dalam kota Bagian dari Ruas JIRR, Menghubungkan Cawang-Tomang-Cengkareng"
+  },
+  {
+    "ruas_tol_id":"JM2",
+    "ruas_tol":"SEDYATMO",
+    "connected_node":"BANDARA-JIRR-JORR",
+    "length":12,
+    "description":"Menghubungkan Jakarta dengan Bandara Sukarno Hatta"
+  },
+  {
+    "ruas_tol_id":"JM3",
+    "ruas_tol":"JAGORAWI",
+    "connected_node":"JAKARTA-BOGOR-CIAWI",
+    "length":59,
+    "description":"Menghubungkan Jakarta-Cibubur-Citeureup-Bogor-Ciawi"
+  },
+  {
+    "ruas_tol_id":"JM4",
+    "ruas_tol":"CIKAMPEK",
+    "connected_node":"JAKARTA-JIRR-JORR-BEKASI-PURBALEUNYI",
+    "length":83,
+    "description":"Menghubungkan Jakarta-Bekasi-Bandung"
+  },
+  {
+    "ruas_tol_id":"JM5",
+    "ruas_tol":"JANGER",
+    "connected_node":"JAKARTA-TANGERANG",
+    "length":33,
+    "description":"Menghubungkan Tol Dalam Kota-Tangerang Merak"
+  },
+  {
+    "ruas_tol_id":"JM6",
+    "ruas_tol":"PURBALEUNYI",
+    "connected_node":"JAKARTA-PURWAKARTA-BANDUNG-PADELEUNYI",
+    "length":123,
+    "description":"Menghubungkan Jakarta-Bandung via Cipularang"
+  },
+  {
+    "ruas_tol_id":"JM7",
+    "ruas_tol":"PALIKANCI",
+    "connected_node":"PALIMANAN-KANCI",
+    "length":26.3,
+    "description":"Menghubungkan Cikampek dan Pantura"
+  }
+]

@@ -18,38 +18,42 @@
               &middot; {{vehicle.avgSpeed}} km/jam
           </label>
           <div class="item">
-            <button class="button button-positive" ng-click="calcRoute()">Cek</button>
+            <button class="button button-positive" ng-click="calcRoute()"><i class="icon ion-refresh"></i> Cari Rute</button>
           </div>
       </div>
-      <div style="width: 100%; height: 24em" id="map">
+      <div style="width: 100%; height: 24em; margin-bottom: 1em" id="map">
       </div>
-      <h2>Rute &amp; Tarif</h2>
-      <div class="list">
-          <div class="item item-calm" ng-show="distanceKm">
-              <div class="row responsive-sm">
-                  <div class="col" title="Jarak"><i class="icon ion-ios7-paperplane"></i> <strong>{{distanceKm | number:0}}</strong> km</div>
-                  <div class="col col-50" title="Lama Perjalanan"><i class="icon ion-clock"></i> <strong><span ng-show="durationHours > 0">{{durationHours}} jam</span><span ng-show="durationMins > 0"> {{durationMins}} menit</span></strong></div>
-                  <div class="col" title="Total Biaya Tol"><i class="icon ion-pricetag"></i> Rp{{cost.total|number:0}}</div>
-              </div>
-              <div>
-                  <i class="icon ion-model-s" title="BBM"></i> {{vehicle.fuel}} <strong>{{fuelConsumption | number:1}} L</strong> × Rp{{fuelUnitPrice | number:0}} = <strong>Rp{{fuelPrice | number:0}}</strong>
-              </div>
-          </div>
-                  <!--th>Masuk</th><th>Keluar</th><th>Tarif</th><th>via</th><th>Jarak</th><th>Waktu</th><th>BBM</th-->
-          <div class="item" ng-repeat="segment in cost.segments">
-              <div><strong>{{segment.origin.gerbang_tol_name}}</strong> → <strong>{{segment.dest.gerbang_tol_name}}</strong></div>
-              <div class="row responsive-sm">
-                  <div class="col" title="Jarak di Ruas"><i class="icon ion-ios7-paperplane"></i> {{segment.distanceKm | number:0}} km</div>
-                  <div class="col" title="Lama di Ruas"><i class="icon ion-clock"></i> <span ng-show="segment.durationHours > 0">{{segment.durationHours}}j</span><span ng-show="segment.durationMins > 0"> {{segment.durationMins}}m</span></div>
-                  <div class="col" title="Tarif Tol"><i class="icon ion-pricetag"></i> Rp{{segment.fare|number:0}}</div>
-                  <div class="col-40">
-                      <i class="icon ion-model-s" title="BBM"></i> {{segment.fuelConsumption | number:1}} L</strong> = Rp{{segment.fuelPrice | number:0}}
+      
+      <div ng-show="cost">
+          <h2>Rute &amp; Tarif</h2>
+          <div class="list">
+              <div class="item item-calm" ng-show="distanceKm">
+                  <div class="row responsive-sm">
+                      <div class="col" title="Jarak"><i class="icon ion-ios7-paperplane"></i> <strong>{{distanceKm | number:0}}</strong> km</div>
+                      <div class="col col-50" title="Lama Perjalanan"><i class="icon ion-clock"></i> <strong><span ng-show="durationHours > 0">{{durationHours}} jam</span><span ng-show="durationMins > 0"> {{durationMins}} menit</span></strong></div>
+                      <div class="col" title="Total Biaya Tol"><i class="icon ion-pricetag"></i> Rp{{cost.total|number:0}}</div>
+                  </div>
+                  <div>
+                      <i class="icon ion-model-s" title="BBM"></i> {{vehicle.fuel}} <strong>{{fuelConsumption | number:1}} L</strong> × Rp{{fuelUnitPrice | number:0}} = <strong>Rp{{fuelPrice | number:0}}</strong>
                   </div>
               </div>
-              <p style="white-space: normal">
-                  <small ng-repeat="via in segment.vias">KM&nbsp;{{via.km}}&nbsp;{{via.gerbang_tol_name}} <span ng-show="!$last">» </span></small>
-              </p>
+                      <!--th>Masuk</th><th>Keluar</th><th>Tarif</th><th>via</th><th>Jarak</th><th>Waktu</th><th>BBM</th-->
+              <div class="item" ng-repeat="segment in cost.segments">
+                  <div><strong>{{segment.origin.gerbang_tol_name}}</strong> → <strong>{{segment.dest.gerbang_tol_name}}</strong></div>
+                  <div class="row responsive-sm">
+                      <div class="col" title="Jarak di Ruas"><i class="icon ion-ios7-paperplane"></i> {{segment.distanceKm | number:0}} km</div>
+                      <div class="col" title="Lama di Ruas"><i class="icon ion-clock"></i> <span ng-show="segment.durationHours > 0">{{segment.durationHours}}j</span><span ng-show="segment.durationMins > 0"> {{segment.durationMins}}m</span></div>
+                      <div class="col" title="Tarif Tol"><i class="icon ion-pricetag"></i> Rp{{segment.fare|number:0}}</div>
+                      <div class="col-40">
+                          <i class="icon ion-model-s" title="BBM"></i> {{segment.fuelConsumption | number:1}} L</strong> = Rp{{segment.fuelPrice | number:0}}
+                      </div>
+                  </div>
+                  <p style="white-space: normal">
+                      <small ng-repeat="via in segment.vias">KM&nbsp;{{via.km}}&nbsp;{{via.gerbang_tol_name}} <span ng-show="!$last">» </span></small>
+                  </p>
+              </div>
           </div>
       </div>
+    
   </ion-content>
 </ion-view>

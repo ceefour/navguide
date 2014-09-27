@@ -18,13 +18,23 @@ angular.module('starter.controllers', [])
     }
     
     OSM.setUp();
+    $scope.$watch('[form.gateIn, form.gateOut]', function(newV, oldV) {
+        if ($scope.form.gateIn && $scope.form.gateOut) {
+            OSM.setGateInLayer($scope.form.gateIn.lat, $scope.form.gateIn.long, $scope.form.gateIn.gerbang_tol_name);
+            OSM.setGateOutLayer($scope.form.gateOut.lat, $scope.form.gateOut.long, $scope.form.gateOut.gerbang_tol_name);
+            // too edge!
+//            var latlngs = [
+//                new L.LatLng($scope.form.gateIn.lat, $scope.form.gateIn.long, true),
+//                new L.LatLng($scope.form.gateOut.lat, $scope.form.gateOut.long, true) ];
+//            var polyline = L.polyline(latlngs, {color: 'red'});
+//            OSM.map().fitBounds(polyline.getBounds());
+        }
+    });
     
     JasaMarga.tollRoute().success(function(data) {
         $scope.tollRoutes = data;
         $scope.form = {gateIn: JasaMarga.getGate($scope.tollRoutes, 'JM5', 7),
             gateOut: JasaMarga.getGate($scope.tollRoutes, 'JM6', 10)};
-        OSM.setGateInLayer($scope.form.gateIn.lat, $scope.form.gateIn.long, $scope.form.gateIn.gerbang_tol_name);
-        OSM.setGateOutLayer($scope.form.gateOut.lat, $scope.form.gateOut.long, $scope.form.gateOut.gerbang_tol_name);
     });
     JasaMarga.tollFare().success(function(data) {
         $scope.tollFares = data;
@@ -47,13 +57,13 @@ angular.module('starter.controllers', [])
             var latlng = new L.LatLng(r.gate.lat, r.gate.long, true);
             latlngs.push(latlng);
             if (i == 0) {
-                OSM.addLayer(new L.Marker(latlng,
+                OSM.addMarker(latlng,
                     {title: 'Awal ' + r.gate.ruas_tol_id + '-' + r.gate.gt_sequence + ': ' + r.gate.gerbang_tol_name,
-                    icon: OSM.originIcon()}));
+                    icon: OSM.originIcon()});
             } else if (i == route.length - 1) {
-                OSM.addLayer(new L.Marker(latlng,
+                OSM.addMarker(latlng,
                     {title: 'Tujuan ' + r.gate.ruas_tol_id + '-' + r.gate.gt_sequence + ': ' + r.gate.gerbang_tol_name,
-                    icon: OSM.destIcon()}));
+                    icon: OSM.destIcon()});
             } else if (i > 0 && i < route.length - 1) {
                 var icon;
                 switch (r.kind) {
@@ -96,8 +106,32 @@ angular.module('starter.controllers', [])
     };
 })
 
-.controller('FriendsCtrl', function($scope, Friends) {
-  $scope.friends = Friends.all();
+.controller('RestAreasCtrl', function($scope, $log, JasaMarga, OSM) {
+    OSM.setUp();
+    $scope.vmodel = {toll: null};
+    $scope.updateMap = function() {
+        if ($scope.vmodel.toll) {
+            var filtered = _.filter($scope.restAreas, function(ra) { return ra.ruas_tol == $scope.vmodel.toll.ruas_tol_id; });
+            $log.debug('Filtered rest areas:', filtered);
+            for (var i = 0; i < filtered.length; i++) {
+                var ra = $scope.restAreas[i];
+                var latlng = new L.LatLng(ra.lat, ra.long, true);    
+                OSM.addMarker(latlng,
+                    {title: ra.ruas_tol + ' KM ' + ra.km + ' (' + ra.type + ')',
+                    icon: OSM.restAreaIcon()});
+            }
+        }
+    };
+    JasaMarga.tolls().success(function(data) {
+        $scope.tolls = data;
+        $scope.vmodel = {toll: $scope.tolls[5]};
+        $scope.updateMap();
+    });
+    JasaMarga.restAreas().success(function(data) {
+        $scope.restAreas = data;
+        $scope.updateMap();
+    });
+    $scope.$watch('vmodel.toll', $scope.updateMap);
 })
 
 .controller('FriendDetailCtrl', function($scope, $stateParams, Friends) {

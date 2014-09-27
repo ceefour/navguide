@@ -1,0 +1,32 @@
+<ion-view title="Rest Area">
+    <ion-header-bar class="bar-subheader" style="height: 14em">
+      <label class="item item-input">
+          <select ng-model="vmodel.toll" ng-options="toll.ruas_tol + ' (' + toll.ruas_tol_id + ')' for toll in tolls"></select>
+      </label>
+        <div id="map" style="height: 12em">
+        </div>
+    </ion-header-bar>
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="restArea in restAreas | filter:vmodel.toll.ruas_tol_id" type="item-text-wrap">
+          <div class="row">
+              <div class="col"><strong>{{restArea.ruas_tol}} KM {{restArea.km}} ({{restArea.type}})</strong></div>
+              <div class="col" style="text-align: left">
+                  <i class="icon ion-card" ng-show="restArea.atm == 'Ya'" title="ATM"></i>
+                  <i class="icon ion-bag" ng-show="restArea.mini_market == 'Ya'" title="Minimarket"></i>
+                    <i class="icon ion-help-buoy" ng-show="restArea.poliklinik == 'Ya'" title="Poliklinik"></i>
+                    <i class="icon ion-alert-circled" ng-show="restArea.pos_polis == 'Ya'" title="Pos Polisi"></i>
+                    <i class="icon ion-wrench" ng-show="restArea.bengkel == 'Ya'" title="Bengkel"></i>
+                    <span title="Toilet" ng-show="restArea.toilet == 'Ya'">
+                        <i class="icon ion-man"></i><i class="icon ion-woman"></i></span>
+                </div>
+          </div>
+          <div class="row">
+              <div class="col"><small>
+                  <i class="icon ion-model-s" title="Parkir"></i> {{restArea.parkir}}
+              </small></div>
+          </div>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

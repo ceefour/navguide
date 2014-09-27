@@ -103,6 +103,26 @@ angular.module('starter.services', [])
                 return null;
             }
         },
+        tollFare: function() {
+            return $http({url: 'data/JM.toll.fare.json'});
+        },
+        findFare: function(tollFares, route) {
+            var segments = [];
+            var lastIn = route[0].gate;
+            for (var i = 1; i < route.length; i++) {
+                var r = route[i];
+                if (r.kind == 'out') {
+                    segments.push({origin: lastIn, dest: r.gate});
+                    lastIn = null;
+                }
+                if (r.kind == 'in') {
+                    lastIn = r.gate;
+                }
+            }
+            $log.info(segments.length, "segments:",
+                _.map(segments, function(r) { 
+                    return r.origin.ruas_tol_id + ' ' + r.origin.gt_sequence + '->' + r.dest.gt_sequence; }));
+        }
     };
 })
 
@@ -110,6 +130,9 @@ angular.module('starter.services', [])
     return {
         vehicles: function() {
             return $http({url: 'data/vehicles.json'});
+        },
+        fuels: function() {
+            return $http({url: 'data/fuels.json'});
         },
     };
 })

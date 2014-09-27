@@ -26,6 +26,12 @@ angular.module('starter.controllers', [])
         $scope.gateOut = JasaMarga.getGate($scope.tollRoutes, 'JM6', 10);
         OSM.setGateOutLayer($scope.gateOut.lat, $scope.gateOut.long, $scope.gateOut.gerbang_tol_name);
     });
+    JasaMarga.tollFare().success(function(data) {
+        $scope.tollFares = data;
+    });
+    MoreData.fuels().success(function(data) {
+        $scope.fuels = data;
+    });
     
     $scope.calcRoute = function() {
         var route = JasaMarga.findRoute($scope.tollRoutes, $scope.gateIn.ruas_tol_id, $scope.gateIn.gt_sequence,
@@ -65,10 +71,14 @@ angular.module('starter.controllers', [])
         $scope.duration = (distance / 1000) / $scope.vehicle.avgSpeed;
         $scope.durationHours = parseInt($scope.duration, 10);
         $scope.durationMins = Math.round($scope.duration * 60) % 60;
+        $scope.fuelUnitPrice = $scope.fuels[ $scope.vehicle.fuel ];
+        $scope.fuelPrice = $scope.fuelConsumption * $scope.fuelUnitPrice;
         $log.info('Distance over', route.length, 'checkpoints is', distance, 'm',
-                 'fuel', $scope.fuelConsumption, 'L',
+                 'fuel', $scope.fuelConsumption, 'L ×', $scope.fuelUnitPrice, '=', $scope.fuelPrice,
                  'Duration', $scope.duration, '(', $scope.durationHours, ':', $scope.durationMins, ')');
         $scope.distanceKm = distance / 1000;
+        
+        JasaMarga.findFare($scope.tollFares, route);
     };
 })
 

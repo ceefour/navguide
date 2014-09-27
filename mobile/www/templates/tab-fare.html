@@ -14,7 +14,7 @@
           <label class="item item-input">
               <span class="input-label">Kendaraan:</span>
               {{vehicle.brand}} {{vehicle.model}} ({{vehicle.year}}) &middot; {{vehicle.vehicleType}}
-              &middot; {{vehicle.fuel}} {{vehicle.fuelEfficiency}} km/L
+              &middot; {{vehicle.fuelEfficiency}} km/L
               &middot; {{vehicle.avgSpeed}} km/jam
           </label>
           <div class="item">
@@ -26,7 +26,7 @@
           </div>
           <div class="item" ng-show="distanceKm">
               Jarak: {{distanceKm | number:0}} km &middot;
-              BBM: {{vehicle.fuel}} {{fuelConsumption | number:1}} L × Rp{{fuelUnitPrice | number:0}} = Rp{{fuelPrice | number:0}}
+              BBM: {{fuelConsumption | number:1}} liter
               &middot; Waktu: {{durationHours}} jam<span ng-show="durationMins > 0"> {{durationMins}} menit</span>
           </div>
       </div>

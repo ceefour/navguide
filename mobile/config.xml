@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.ionicframework.lewattol987358" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>lewattol</name>
+<widget id="com.hendyirawan.lewattol" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>LewatTol</name>
   <description>
-        An Ionic Framework and Cordova project.
+        LewatTol, pembantu perjalanan Anda di jalan tol.
     </description>
-  <author email="hi@ionicframework" href="http://ionicframework.com/">
-      Ionic Framework Team
+  <author email="ceefour666@gmail.com" href="http://www.hendyirawan.com/">
+      Hendy Irawan
     </author>
   <content src="index.html"/>
   <access origin="*"/>
@@ -16,4 +16,8 @@
   <feature name="StatusBar">
     <param name="ios-package" value="CDVStatusBar" onload="true"/>
   </feature>
+  <icon src="icon/icon-128.png" width="128" height="128"/>
+  <platform name="android">
+    <icon src="res/android/xhdpi.png" density="xhdpi"/>
+  </platform>
 </widget>

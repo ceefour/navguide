@@ -71,16 +71,26 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     })
   
-    .state('tab.friend-detail', {
-      url: '/friend/:friendId',
+    .state('tab.realtime', {
+      url: '/realtime',
       views: {
-        'tab-friends': {
-          templateUrl: 'templates/friend-detail.html',
-          controller: 'FriendDetailCtrl'
+        'tab-realtime': {
+          templateUrl: 'templates/tab-realtime.html',
+          controller: 'RealtimeCtrl'
         }
       }
     })
-
+  
+    .state('tab.tracker', {
+      url: '/tracker',
+      views: {
+        'tab-tracker': {
+          templateUrl: 'templates/tab-tracker.html',
+          controller: 'TrackerCtrl'
+        }
+      }
+    })
+  
     .state('tab.account', {
       url: '/account',
       views: {

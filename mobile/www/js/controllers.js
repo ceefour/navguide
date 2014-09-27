@@ -118,7 +118,7 @@ angular.module('starter.controllers', [])
 })
 
 .controller('RestAreasCtrl', function($scope, $log, JasaMarga, OSM) {
-    OSM.setUp('maprestareas', -6.4, 107.0, 8);
+    OSM.setUp('maprestareas', -6.6, 107.4, 8);
     $scope.vmodel = {toll: null};
     $scope.updateMap = function() {
         if ($scope.vmodel.toll) {
@@ -126,7 +126,7 @@ angular.module('starter.controllers', [])
             var filtered = _.filter($scope.restAreas, function(ra) { return ra.ruas_tol == $scope.vmodel.toll.ruas_tol_id; });
             $log.debug('Filtered rest areas:', filtered);
             for (var i = 0; i < filtered.length; i++) {
-                var ra = $scope.restAreas[i];
+                var ra = filtered[i];
                 var latlng = new L.LatLng(ra.lat, ra.long, true);    
                 OSM.addMarker(latlng,
                     {title: ra.ruas_tol + ' KM ' + ra.km + ' (' + ra.type + ')',
@@ -156,7 +156,7 @@ angular.module('starter.controllers', [])
                 return $scope.vmodel.faskesType.id == faskes.type; });
             $log.debug('Filtered faskes:', filtered);
             for (var i = 0; i < filtered.length; i++) {
-                var faskes = $scope.faskesGeos[i];
+                var faskes = filtered[i];
                 var latlng = new L.LatLng(faskes.lat, faskes.long, true);    
                 OSM.addMarker(latlng,
                     {title: faskes.name, icon: OSM.bpjsIcon()});
@@ -177,8 +177,12 @@ angular.module('starter.controllers', [])
     $scope.$watch('vmodel.faskesType', $scope.updateMap);
 })
 
-.controller('FriendDetailCtrl', function($scope, $stateParams, Friends) {
-  $scope.friend = Friends.get($stateParams.friendId);
+.controller('RealtimeCtrl', function($scope, $log, JasaMarga, OSM) {
+    OSM.setUp('maprealtime', -6.6, 107.0, 8);
+})
+
+.controller('TrackerCtrl', function($scope, $log, JasaMarga, OSM) {
+    OSM.setUp('maptracker', -6.6, 107.0, 8);
 })
 
 .controller('AccountCtrl', function($scope, $log, MoreData, Settings) {

@@ -2,6 +2,7 @@ angular.module('starter.controllers', [])
 
 .controller('DashCtrl', function($scope, $log, OSM, JasaMarga, MoreData, Settings) {
     
+    $scope.form = {};
     $scope.fuelEfficiency = 9.91; // 23.3 mpg
     $scope.vehicle = Settings.getVehicle();
     if ($scope.vehicle != null) {
@@ -17,14 +18,13 @@ angular.module('starter.controllers', [])
     }
     
     OSM.setUp();
-    OSM.setGateInLayer(-6.890810115, 107.5758719, 'Pasteur');
     
     JasaMarga.tollRoute().success(function(data) {
         $scope.tollRoutes = data;
-        $scope.gateIn = JasaMarga.getGate($scope.tollRoutes, 'JM5', 7);
-        OSM.setGateInLayer($scope.gateIn.lat, $scope.gateIn.long, $scope.gateIn.gerbang_tol_name);
-        $scope.gateOut = JasaMarga.getGate($scope.tollRoutes, 'JM6', 10);
-        OSM.setGateOutLayer($scope.gateOut.lat, $scope.gateOut.long, $scope.gateOut.gerbang_tol_name);
+        $scope.form = {gateIn: JasaMarga.getGate($scope.tollRoutes, 'JM5', 7),
+            gateOut: JasaMarga.getGate($scope.tollRoutes, 'JM6', 10)};
+        OSM.setGateInLayer($scope.form.gateIn.lat, $scope.form.gateIn.long, $scope.form.gateIn.gerbang_tol_name);
+        OSM.setGateOutLayer($scope.form.gateOut.lat, $scope.form.gateOut.long, $scope.form.gateOut.gerbang_tol_name);
     });
     JasaMarga.tollFare().success(function(data) {
         $scope.tollFares = data;
@@ -34,8 +34,11 @@ angular.module('starter.controllers', [])
     });
     
     $scope.calcRoute = function() {
-        var route = JasaMarga.findRoute($scope.tollRoutes, $scope.gateIn.ruas_tol_id, $scope.gateIn.gt_sequence,
-                            $scope.gateOut.ruas_tol_id, $scope.gateOut.gt_sequence);
+        $log.info('Calculating', $scope.form.gateIn.ruas_tol_id, $scope.form.gateIn.gt_sequence, '-->',
+                            $scope.form.gateOut.ruas_tol_id, $scope.form.gateOut.gt_sequence);
+        OSM.clear();
+        var route = JasaMarga.findRoute($scope.tollRoutes, $scope.form.gateIn.ruas_tol_id, $scope.form.gateIn.gt_sequence,
+                            $scope.form.gateOut.ruas_tol_id, $scope.form.gateOut.gt_sequence);
         var latlngs = [];
         var lastCp = null;
         var distance = 0;
@@ -43,7 +46,15 @@ angular.module('starter.controllers', [])
             var r = route[i];
             var latlng = new L.LatLng(r.gate.lat, r.gate.long, true);
             latlngs.push(latlng);
-            if (i > 0 && i < route.length - 1) {
+            if (i == 0) {
+                OSM.addLayer(new L.Marker(latlng,
+                    {title: 'Awal ' + r.gate.ruas_tol_id + '-' + r.gate.gt_sequence + ': ' + r.gate.gerbang_tol_name,
+                    icon: OSM.originIcon()}));
+            } else if (i == route.length - 1) {
+                OSM.addLayer(new L.Marker(latlng,
+                    {title: 'Tujuan ' + r.gate.ruas_tol_id + '-' + r.gate.gt_sequence + ': ' + r.gate.gerbang_tol_name,
+                    icon: OSM.destIcon()}));
+            } else if (i > 0 && i < route.length - 1) {
                 var icon;
                 switch (r.kind) {
                 case 'in':
@@ -55,9 +66,10 @@ angular.module('starter.controllers', [])
                 default:
                     icon = OSM.passXsIcon();
                 }
-                OSM.map().addLayer(new L.Marker(latlng,
-                                                {title: r.kind + ' ' + r.gate.ruas_tol_id + '-' + r.gate.gt_sequence + ': ' + r.gate.gerbang_tol_name,
-                                                icon: icon}));
+                OSM.addLayer(new L.Marker(latlng,
+                    {title: r.kind + ' km ' + r.gate.km + ' ' + r.gate.ruas_tol_id + '-' + r.gate.gt_sequence +
+                     ': ' + r.gate.gerbang_tol_name,
+                    icon: icon}));
             }
             // calc distance
             if (lastCp != null) {
@@ -65,7 +77,8 @@ angular.module('starter.controllers', [])
             }
             lastCp = new geo.Point([r.gate.lat, r.gate.long]);
         }
-        var polyline = L.polyline(latlngs, {color: 'red'}).addTo(OSM.map());
+        var polyline = L.polyline(latlngs, {color: 'red'});
+        OSM.addLayer(polyline);
         OSM.map().fitBounds(polyline.getBounds());
         $scope.fuelConsumption = (distance / 1000) / $scope.fuelEfficiency;
         $scope.duration = (distance / 1000) / $scope.vehicle.avgSpeed;
@@ -78,7 +91,7 @@ angular.module('starter.controllers', [])
                  'Duration', $scope.duration, '(', $scope.durationHours, ':', $scope.durationMins, ')');
         $scope.distanceKm = distance / 1000;
         
-        JasaMarga.findFare($scope.tollFares, route);
+        JasaMarga.findFare($scope.tollFares, $scope.vehicle.vehicleType, route);
     };
 })
 

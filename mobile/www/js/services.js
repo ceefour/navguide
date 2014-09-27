@@ -69,7 +69,12 @@ angular.module('starter.services', [])
                 route.push({kind: 'out', gate: dest});
                 return route; // got it!
             } else {
-                // if different segments then check if we can use another segment
+                // if different segments then check if what other segments we can use, and find the shortest route
+                var bestRoute = null;
+                var bestGateCount = null;
+                var bestExitGate = null;
+                var bestTransitGate = null;
+                var bestNewVisitedSegments = null;
                 for (var exitSeq = 1; exitSeq <= segmentGateCounts[origin.ruas_tol_id]; exitSeq++) {
                     var exitGate = this.getGate(tollRoutes, origin.ruas_tol_id, exitSeq);
                     if (exitGate.ruas_tol_intersection) {
@@ -80,33 +85,47 @@ angular.module('starter.services', [])
                             if (!visited) {
                                 var transitGate = this.getGate(tollRoutes, el.ruas_tol_id, el.gt_sequence);
                                 var newVisitedSegments = visitedSegments.slice(0);
-                                $log.debug(el, newVisitedSegments);
+                                //$log.debug(el, newVisitedSegments);
                                 newVisitedSegments.push(el.ruas_tol_id);
                                 $log.debug('Exiting', exitGate.ruas_tol_id, exitGate.gt_sequence,
                                            'transiting', transitGate.ruas_tol_id, transitGate.gt_sequence,
                                            'visited', newVisitedSegments);
                                 var transitRoute = this.findRouteNest(tollRoutes, transitGate, dest, newVisitedSegments);
-                                if (transitRoute != null) {
+                                var gateCount = _.filter(transitRoute, function(r) { return r.kind == 'in'; }).length;
+                                if (transitRoute != null && (bestRoute == null || gateCount < bestGateCount)) {
                                     var route = this.getPasses(tollRoutes, origin, exitGate);
                                     route.push({kind: 'out', gate: exitGate}, {kind: 'in', gate: transitGate});
                                     route = route.concat(transitRoute);
-                                    $log.debug('Got inner route exiting', exitGate.ruas_tol_id, exitGate.gt_sequence,
-                                           'transiting', transitGate.ruas_tol_id, transitGate.gt_sequence,
-                                           'visited', newVisitedSegments);
-                                    return route;
+//                                    $log.debug('Got', gateCount, 'gates route exiting',
+//                                               exitGate.ruas_tol_id, exitGate.gt_sequence,
+//                                           'transiting', transitGate.ruas_tol_id, transitGate.gt_sequence,
+//                                           'visited', newVisitedSegments);
+                                    bestRoute = route;
+                                    bestGateCount = gateCount;
+                                    bestExitGate = exitGate;
+                                    bestTransitGate = transitGate;
+                                    bestNewVisitedSegments = newVisitedSegments;
                                 }
                             }
                         }
                     }
                 }
-                // failed :(
-                return null;
+                // either bestRoute or failed
+                if (bestRoute != null) {
+                    $log.debug('Got', bestGateCount, 'gates route exiting', bestExitGate.ruas_tol_id, bestExitGate.gt_sequence,
+                           'transiting', bestTransitGate.ruas_tol_id, bestTransitGate.gt_sequence,
+                           'visited', bestNewVisitedSegments);
+                }
+                return bestRoute;
             }
         },
         tollFare: function() {
             return $http({url: 'data/JM.toll.fare.json'});
         },
-        findFare: function(tollFares, route) {
+        /**
+         * Calculate Fares for a complete route.
+         */
+        findFare: function(tollFares, vehicleType, route) {
             var segments = [];
             var lastIn = route[0].gate;
             for (var i = 1; i < route.length; i++) {
@@ -122,7 +141,28 @@ angular.module('starter.services', [])
             $log.info(segments.length, "segments:",
                 _.map(segments, function(r) { 
                     return r.origin.ruas_tol_id + ' ' + r.origin.gt_sequence + '->' + r.dest.gt_sequence; }));
-        }
+            for (var i in segments) {
+                var segment = segments[i];
+                var fare = this.lookupFare(tollFares, vehicleType, segment.origin.ruas_tol_id, 
+                                segment.origin.gt_sequence, segment.dest.gt_sequence);
+                segment.fare = fare;
+                $log.debug(segment.origin.ruas_tol_id, ' ', segment.origin.gt_sequence, '->', segment.dest.gt_sequence,
+                           vehicleType,
+                           '=', segment.fare);
+            }
+            var cost = {segments: segments};
+        },
+        lookupFare: function(tollFares, vehicleType, segment, inGate, outGate) {
+            var fare = _.find(tollFares, function(f) {
+                return f.ruas_tol_id == segment &&
+                    (f.gt_sequence1.indexOf(inGate) >= 0 && f.gt_sequence2.indexOf(outGate) >= 0
+                     || f.gt_sequence2.indexOf(inGate) >= 0 && f.gt_sequence1.indexOf(outGate) >= 0);
+            });
+            if (!fare) {
+                throw "Cannot find fare for " + vehicleType + " " + segment + " " + inGate + "->" + outGate;
+            }
+            return fare[ vehicleType.toLowerCase() ];
+        },
     };
 })
 
@@ -151,8 +191,6 @@ angular.module('starter.services', [])
 
 .factory('OSM', function() {
     var map;
-    var ajaxRequest;
-    var plotlist;
     var plotlayers=[];
     
     var originIcon = L.icon({
@@ -214,17 +252,30 @@ angular.module('starter.services', [])
         map: function() { return map; },
         gateInLayer: function() { return gateInLayer; },
         gateOutLayer: function() { return gateOutLayer; },
+        clear: function() {
+            plotlayers.forEach(function(l) {
+                map.removeLayer(l);
+            });
+            plotlayers = [];
+        },
         setGateInLayer: function(lat, lng, title) {
             if (gateInLayer != null) map.removeLayer(gateInLayer);
             gateInLayer = new L.Marker(new L.LatLng(lat, lng, true), {title: title, icon: originIcon});
             map.addLayer(gateInLayer);
+            plotlayers.push(gateInLayer);
             return gateInLayer;
         },
         setGateOutLayer: function(lat, lng, title) {
             if (gateOutLayer != null) map.removeLayer(gateOutLayer);
             gateOutLayer = new L.Marker(new L.LatLng(lat, lng, true), {title: title, icon: destIcon});
             map.addLayer(gateOutLayer);
+            plotlayers.push(gateInLayer);
             return gateOutLayer;
+        },
+        addLayer: function(layer) {
+            map.addLayer(layer);
+            plotlayers.push(layer);
+            return layer;
         },
     };
 })

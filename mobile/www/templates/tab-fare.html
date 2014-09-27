@@ -3,12 +3,12 @@
       <div class="list">
           <label class="item item-input item-select item-stacked-label">
               <div class="input-label">Gerbang Masuk:</div>
-              <select ng-model="gateIn" ng-options="tollRoute.gerbang_tol_name + ' - ' + tollRoute.nearest_area group by tollRoute.ruas_tol_id for tollRoute in tollRoutes" required="required">
+              <select ng-model="form.gateIn" ng-options="tollRoute.gerbang_tol_name + ' - ' + tollRoute.nearest_area group by tollRoute.ruas_tol_id for tollRoute in tollRoutes" required="required">
               </select>
           </label>
           <label class="item item-input item-select item-stacked-label">
               <div class="input-label">Gerbang Keluar:</div>
-              <select ng-model="gateOut" ng-options="tollRoute.gerbang_tol_name + ' - ' + tollRoute.nearest_area group by tollRoute.ruas_tol_id for tollRoute in tollRoutes" required="required">
+              <select ng-model="form.gateOut" ng-options="tollRoute.gerbang_tol_name + ' - ' + tollRoute.nearest_area group by tollRoute.ruas_tol_id for tollRoute in tollRoutes" required="required">
               </select>
           </label>
           <label class="item item-input">
@@ -21,8 +21,8 @@
             <button class="button button-positive" ng-click="calcRoute()">Cek</button>
           </div>
           <div class="item">
-          {{gateIn.gerbang_tol_name}} {{gateIn.lat}} {{gateIn.long}} -- 
-          {{gateOut.gerbang_tol_name}} {{gateOut.lat}} {{gateOut.long}}
+          {{form.gateIn.gerbang_tol_name}} {{form.gateIn.lat}} {{form.gateIn.long}} -- 
+          {{form.gateOut.gerbang_tol_name}} {{form.gateOut.lat}} {{form.gateOut.long}}
           </div>
           <div class="item" ng-show="distanceKm">
               Jarak: {{distanceKm | number:0}} km &middot;

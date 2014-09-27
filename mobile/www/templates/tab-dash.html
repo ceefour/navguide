@@ -36,19 +36,19 @@
               </div>
           </div>
                   <!--th>Masuk</th><th>Keluar</th><th>Tarif</th><th>via</th><th>Jarak</th><th>Waktu</th><th>BBM</th-->
-          <div class="item" ng-repeat="fare in cost.segments">
-              <div><strong>{{fare.origin.gerbang_tol_name}}</strong> → <strong>{{fare.dest.gerbang_tol_name}}</strong></div>
+          <div class="item" ng-repeat="segment in cost.segments">
+              <div><strong>{{segment.origin.gerbang_tol_name}}</strong> → <strong>{{segment.dest.gerbang_tol_name}}</strong></div>
               <div class="row responsive-sm">
-                  <div class="col" title="Jarak di Ruas"><i class="icon ion-ios7-paperplane"></i> {{fare.distanceKm | number:0}} km</div>
-                  <div class="col" title="Lama di Ruas"><i class="icon ion-clock"></i> <span ng-show="fare.durationHours > 0">{{fare.durationHours}}j</span><span ng-show="fare.durationMins > 0"> {{fare.durationMins}}m</span></div>
-                  <div class="col" title="Tarif Tol"><i class="icon ion-pricetag"></i> Rp{{fare.fare|number:0}}</div>
-                  <div class="col-35">
-                      <i class="icon ion-model-s" title="BBM"></i> {{fare.fuelConsumption | number:1}} L</strong> = Rp{{fare.fuelPrice | number:0}}
+                  <div class="col" title="Jarak di Ruas"><i class="icon ion-ios7-paperplane"></i> {{segment.distanceKm | number:0}} km</div>
+                  <div class="col" title="Lama di Ruas"><i class="icon ion-clock"></i> <span ng-show="segment.durationHours > 0">{{segment.durationHours}}j</span><span ng-show="segment.durationMins > 0"> {{segment.durationMins}}m</span></div>
+                  <div class="col" title="Tarif Tol"><i class="icon ion-pricetag"></i> Rp{{segment.fare|number:0}}</div>
+                  <div class="col-40">
+                      <i class="icon ion-model-s" title="BBM"></i> {{segment.fuelConsumption | number:1}} L</strong> = Rp{{segment.fuelPrice | number:0}}
                   </div>
               </div>
-              <div>
-                  
-              </div>
+              <p style="white-space: normal">
+                  <small ng-repeat="via in segment.vias">KM&nbsp;{{via.km}}&nbsp;{{via.gerbang_tol_name}} <span ng-show="!$last">» </span></small>
+              </p>
           </div>
       </div>
   </ion-content>

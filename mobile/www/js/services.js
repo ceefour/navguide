@@ -128,14 +128,17 @@ angular.module('starter.services', [])
         findFare: function(tollFares, vehicle, fuelUnitPrice, route) {
             var segments = [];
             var lastIn = route[0].gate;
+            var vias = [];
             for (var i = 1; i < route.length; i++) {
                 var r = route[i];
                 if (r.kind == 'out') {
-                    segments.push({origin: lastIn, dest: r.gate});
+                    segments.push({origin: lastIn, dest: r.gate, vias: vias});
                     lastIn = null;
-                }
-                if (r.kind == 'in') {
+                    vias = [];
+                } else if (r.kind == 'in') {
                     lastIn = r.gate;
+                } else {
+                    vias.push(r.gate);
                 }
             }
             $log.info(segments.length, "segments:",
@@ -270,17 +273,23 @@ angular.module('starter.services', [])
             plotlayers = [];
         },
         setGateInLayer: function(lat, lng, title) {
-            if (gateInLayer != null) map.removeLayer(gateInLayer);
+            if (gateInLayer != null) {
+                map.removeLayer(gateInLayer);
+                plotlayers = _.without(plotlayers, gateInLayer);
+            }
             gateInLayer = new L.Marker(new L.LatLng(lat, lng, true), {title: title, icon: originIcon});
             map.addLayer(gateInLayer);
             plotlayers.push(gateInLayer);
             return gateInLayer;
         },
         setGateOutLayer: function(lat, lng, title) {
-            if (gateOutLayer != null) map.removeLayer(gateOutLayer);
+            if (gateOutLayer != null) {
+                map.removeLayer(gateOutLayer);
+                plotlayers = _.without(plotlayers, gateOutLayer);
+            }
             gateOutLayer = new L.Marker(new L.LatLng(lat, lng, true), {title: title, icon: destIcon});
             map.addLayer(gateOutLayer);
-            plotlayers.push(gateInLayer);
+            plotlayers.push(gateOutLayer);
             return gateOutLayer;
         },
         addLayer: function(layer) {

@@ -125,7 +125,7 @@ angular.module('starter.services', [])
         /**
          * Calculate Fares for a complete route.
          */
-        findFare: function(tollFares, vehicleType, route) {
+        findFare: function(tollFares, vehicle, fuelUnitPrice, route) {
             var segments = [];
             var lastIn = route[0].gate;
             for (var i = 1; i < route.length; i++) {
@@ -144,13 +144,21 @@ angular.module('starter.services', [])
             var cost = {total: 0};
             for (var i in segments) {
                 var segment = segments[i];
-                var fare = this.lookupFare(tollFares, vehicleType, segment.origin.ruas_tol_id, 
+                var fare = this.lookupFare(tollFares, vehicle.vehicleType, segment.origin.ruas_tol_id, 
                                 segment.origin.gt_sequence, segment.dest.gt_sequence);
                 segment.fare = fare;
                 cost.total += fare;
+                segment.distance = new geo.Point([segment.origin.lat, segment.origin.long])
+                    .distance(new geo.Point([segment.dest.lat, segment.dest.long]));
+                segment.distanceKm = segment.distance / 1000;
+                segment.duration = segment.distanceKm / vehicle.avgSpeed;
+                segment.durationHours = parseInt(segment.duration, 10);
+                segment.durationMins = Math.round(segment.duration * 60) % 60;
+                segment.fuelConsumption = segment.distanceKm / vehicle.fuelEfficiency;
+                segment.fuelPrice = segment.fuelConsumption * fuelUnitPrice;
                 $log.debug(segment.origin.ruas_tol_id, ' ', segment.origin.gt_sequence, '->', segment.dest.gt_sequence,
-                           vehicleType,
-                           '=', segment.fare, '(', cost.total, 'so far)');
+                           vehicle.vehicleType, '=', segment.fare, '(', cost.total, 'so far)',
+                          'distance', segment.distanceKm, 'km');
             }
             cost.segments = segments;
             return cost;

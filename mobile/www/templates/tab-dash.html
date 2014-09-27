@@ -25,7 +25,7 @@
       </div>
       <h2>Rute &amp; Tarif</h2>
       <div class="list">
-          <div class="item item-stable" ng-show="distanceKm">
+          <div class="item item-calm" ng-show="distanceKm">
               <div class="row responsive-sm">
                   <div class="col" title="Jarak"><i class="icon ion-ios7-paperplane"></i> <strong>{{distanceKm | number:0}}</strong> km</div>
                   <div class="col col-50" title="Lama Perjalanan"><i class="icon ion-clock"></i> <strong><span ng-show="durationHours > 0">{{durationHours}} jam</span><span ng-show="durationMins > 0"> {{durationMins}} menit</span></strong></div>
@@ -37,8 +37,18 @@
           </div>
                   <!--th>Masuk</th><th>Keluar</th><th>Tarif</th><th>via</th><th>Jarak</th><th>Waktu</th><th>BBM</th-->
           <div class="item" ng-repeat="fare in cost.segments">
-              <p><strong>{{fare.origin.gerbang_tol_name}}</strong> → <strong>{{fare.dest.gerbang_tol_name}}</strong></p>
-              <p><i class="icon ion-pricetag" title="Tarif Tol"></i> Rp{{fare.fare|number:0}}</p>
+              <div><strong>{{fare.origin.gerbang_tol_name}}</strong> → <strong>{{fare.dest.gerbang_tol_name}}</strong></div>
+              <div class="row responsive-sm">
+                  <div class="col" title="Jarak di Ruas"><i class="icon ion-ios7-paperplane"></i> {{fare.distanceKm | number:0}} km</div>
+                  <div class="col" title="Lama di Ruas"><i class="icon ion-clock"></i> <span ng-show="fare.durationHours > 0">{{fare.durationHours}}j</span><span ng-show="fare.durationMins > 0"> {{fare.durationMins}}m</span></div>
+                  <div class="col" title="Tarif Tol"><i class="icon ion-pricetag"></i> Rp{{fare.fare|number:0}}</div>
+                  <div class="col-35">
+                      <i class="icon ion-model-s" title="BBM"></i> {{fare.fuelConsumption | number:1}} L</strong> = Rp{{fare.fuelPrice | number:0}}
+                  </div>
+              </div>
+              <div>
+                  
+              </div>
           </div>
       </div>
   </ion-content>

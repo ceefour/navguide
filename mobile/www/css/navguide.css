@@ -1,0 +1,12 @@
+table.table {
+    width: 100%;
+}
+table.table thead {
+    background: #ddd;
+}
+table.table tbody td {
+    border: 1px solid #ccc;
+}
+table.table td {
+    padding: 0.2em 0.4em;
+}

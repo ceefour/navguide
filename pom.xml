@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<!-- Dummy POM just to make easily importable to IDE -->
-	<groupId>com.hendyirawan.lewattol</groupId>
-	<artifactId>com.hendyirawan.lewattol.parent</artifactId>
+	<groupId>com.hendyirawan.navguide</groupId>
+	<artifactId>com.hendyirawan.navguide.parent</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-	<name>LewatTol</name>
+	<name>NavGuide</name>
 	<description>Dapatkan panduan jalan tol bebas hambatan, mudah mencari rute tol melalui gerbang tol yang Anda inginkan, lengkap dengan info jarak, waktu tempuh, tarif tol, pemakaian BBM, dan biaya BBM.</description>
 
 	<modules>

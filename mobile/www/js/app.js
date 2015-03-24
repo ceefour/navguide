@@ -46,6 +46,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     })
 
+    .state('app.highway', {
+      url: '/highway',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/app-highway.html',
+          controller: 'HighwayCtrl'
+        }
+      }
+    })
+
     .state('app.restareas', {
       url: '/restareas',
       views: {

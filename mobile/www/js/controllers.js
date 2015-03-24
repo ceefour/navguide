@@ -33,7 +33,7 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('DashCtrl', function($scope, $log, OSM, JasaMarga, MoreData, Settings) {
+.controller('PublicTransportCtrl', function($scope, $log, OSM, JasaMarga, MoreData, Settings) {
     
     $scope.form = {};
     $scope.fuelEfficiency = 9.91; // 23.3 mpg

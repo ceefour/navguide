@@ -1,21 +1,15 @@
-<ion-view title="LewatTol">
+<ion-view title="Rute Transportasi Publik">
   <ion-content class="padding">
       <div class="list">
           <label class="item item-input item-select item-stacked-label">
-              <div class="input-label">Gerbang Masuk:</div>
+              <div class="input-label">Dari:</div>
               <select ng-model="form.gateIn" ng-options="tollRoute.gerbang_tol_name + ' - ' + tollRoute.nearest_area group by tollRoute.ruas_tol_id for tollRoute in tollRoutes" required="required">
               </select>
           </label>
           <label class="item item-input item-select item-stacked-label">
-              <div class="input-label">Gerbang Keluar:</div>
+              <div class="input-label">Tujuan:</div>
               <select ng-model="form.gateOut" ng-options="tollRoute.gerbang_tol_name + ' - ' + tollRoute.nearest_area group by tollRoute.ruas_tol_id for tollRoute in tollRoutes" required="required">
               </select>
-          </label>
-          <label class="item item-input">
-              <span class="input-label">Kendaraan:</span>
-              {{vehicle.brand}} {{vehicle.model}} ({{vehicle.year}}) &middot; {{vehicle.vehicleType}}
-              &middot; {{vehicle.fuel}} {{vehicle.fuelEfficiency}} km/L
-              &middot; {{vehicle.avgSpeed}} km/jam
           </label>
           <div class="item">
             <button class="button button-positive" ng-click="calcRoute()"><i class="icon ion-refresh"></i> Cari Rute</button>
@@ -24,7 +18,7 @@
 
       <div style="width: 100%; height: 24em; margin-bottom: 1em" id="mapdash">
       </div>
-      
+
       <div ng-show="cost">
           <h2>Rute &amp; Tarif</h2>
           <div class="list">
@@ -55,6 +49,6 @@
               </div>
           </div>
       </div>
-    
+
   </ion-content>
 </ion-view>

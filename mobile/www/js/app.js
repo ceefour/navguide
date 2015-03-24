@@ -39,7 +39,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     .state('app.dash', {
       url: '/dash',
       views: {
-        'tab-dash': {
+        'menuContent': {
           templateUrl: 'templates/app-dash.html',
           controller: 'DashCtrl'
         }
@@ -49,7 +49,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     .state('app.restareas', {
       url: '/restareas',
       views: {
-        'tab-restareas': {
+        'menuContent': {
           templateUrl: 'templates/app-restareas.html',
           controller: 'RestAreasCtrl'
         }
@@ -59,7 +59,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     .state('app.bpjs', {
       url: '/bpjs',
       views: {
-        'tab-bpjs': {
+        'menuContent': {
           templateUrl: 'templates/app-bpjs.html',
           controller: 'BpjsCtrl'
         }
@@ -69,7 +69,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     .state('app.realtime', {
       url: '/realtime',
       views: {
-        'tab-realtime': {
+        'menuContent': {
           templateUrl: 'templates/app-realtime.html',
           controller: 'RealtimeCtrl'
         }
@@ -79,7 +79,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     .state('app.tracker', {
       url: '/tracker',
       views: {
-        'tab-tracker': {
+        'menuContent': {
           templateUrl: 'templates/app-tracker.html',
           controller: 'TrackerCtrl'
         }
@@ -89,7 +89,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     .state('app.account', {
       url: '/account',
       views: {
-        'tab-account': {
+        'menuContent': {
           templateUrl: 'templates/app-account.html',
           controller: 'AccountCtrl'
         }
@@ -97,5 +97,5 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/dash');
+  $urlRouterProvider.otherwise('/app/dash');
 });

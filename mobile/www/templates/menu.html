@@ -14,21 +14,30 @@
 
   <ion-side-menu side="left">
     <ion-header-bar class="bar-stable">
-      <h1 class="title">Left</h1>
+      <h1 class="title">Menu</h1>
     </ion-header-bar>
     <ion-content>
       <ion-list>
-        <ion-item nav-clear menu-close ng-click="login()">
+        <!--ion-item nav-clear menu-close ng-click="login()">
           Login
+        </ion-item-->
+        <ion-item nav-clear menu-close href="#/app/dash">
+          <i class="icon ion-home"></i> Rute
         </ion-item>
-        <ion-item nav-clear menu-close href="#/app/search">
-          Search
+        <ion-item nav-clear menu-close href="#/app/restareas">
+          <i class="icon ion-happy"></i> Rest Area
         </ion-item>
-        <ion-item nav-clear menu-close href="#/app/browse">
-          Browse
+        <ion-item nav-clear menu-close href="#/app/bpjs">
+          <i class="icon ion-help-buoy"></i> Layanan Medis
         </ion-item>
-        <ion-item nav-clear menu-close href="#/app/playlists">
-          Playlists
+        <ion-item nav-clear menu-close href="#/app/realtime">
+          <i class="icon ion-clock"></i> Realtime
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/tracker">
+          <i class="icon ion-paper-airplane"></i> Tracker
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/account">
+          <i class="icon ion-gear-b"></i> Pengaturan
         </ion-item>
       </ion-list>
     </ion-content>

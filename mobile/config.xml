@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <widget id="com.hendyirawan.lewattol" version="0.2.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>LewatTol</name>
+  <name>JETI Jakarta Transit</name>
   <description>
-        LewatTol, pembantu perjalanan Anda di jalan tol.
+        Solution for Jakarta netizen. Bus and train navigation for people on the go!
     </description>
   <author email="ceefour666@gmail.com" href="http://www.hendyirawan.com/">
       Hendy Irawan

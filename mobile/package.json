@@ -1,7 +1,7 @@
 {
   "name": "navguide",
   "version": "1.0.0",
-  "description": "navguide: An Ionic project",
+  "description": "Bus and train navigation for people on the go!",
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^0.7.1",

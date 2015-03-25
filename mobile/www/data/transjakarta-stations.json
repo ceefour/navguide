@@ -1,1250 +1,1458 @@
 [
   {
-    "stationId":1,
-    "stationName":"Blok M",
-    "lat":106.801727,
-    "lng":-6.243327
+    "id":1,
+    "name":"Blok M",
+    "lat":-6.243327,
+    "lng":106.801727,
+    "comment":""
   },
   {
-    "stationId":2,
-    "stationName":"Masjid Agung",
-    "lat":106.798431,
-    "lng":-6.234957
+    "id":2,
+    "name":"Masjid Agung",
+    "lat":-6.234957,
+    "lng":106.798431,
+    "comment":""
   },
   {
-    "stationId":3,
-    "stationName":"Bundaran Senayan",
-    "lat":106.801628,
-    "lng":-6.22739
+    "id":3,
+    "name":"Bundaran Senayan",
+    "lat":-6.22739,
+    "lng":106.801628,
+    "comment":""
   },
   {
-    "stationId":4,
-    "stationName":"Gelora Bung Karno",
-    "lat":106.805804,
-    "lng":-6.224201
+    "id":4,
+    "name":"Gelora Bung Karno",
+    "lat":-6.224201,
+    "lng":106.805804,
+    "comment":""
   },
   {
-    "stationId":5,
-    "stationName":"Polda",
-    "lat":106.809686,
-    "lng":-6.221569
+    "id":5,
+    "name":"Polda",
+    "lat":-6.221569,
+    "lng":106.809686,
+    "comment":""
   },
   {
-    "stationId":6,
-    "stationName":"Bendungan Hilir",
-    "lat":106.815278,
-    "lng":-6.217154
+    "id":6,
+    "name":"Bendungan Hilir",
+    "lat":-6.217154,
+    "lng":106.815278,
+    "comment":""
   },
   {
-    "stationId":7,
-    "stationName":"Karet",
-    "lat":106.818336,
-    "lng":-6.214701
+    "id":7,
+    "name":"Karet",
+    "lat":-6.214701,
+    "lng":106.818336,
+    "comment":""
   },
   {
-    "stationId":8,
-    "stationName":"Setiabudi",
-    "lat":106.821136,
-    "lng":-6.210328
+    "id":8,
+    "name":"Setiabudi",
+    "lat":-6.210328,
+    "lng":106.821136,
+    "comment":""
   },
   {
-    "stationId":9,
-    "stationName":"Dukuh atas",
-    "lat":106.822243,
-    "lng":-6.205701
+    "id":9,
+    "name":"Dukuh atas",
+    "lat":-6.205701,
+    "lng":106.822243,
+    "comment":""
   },
   {
-    "stationId":10,
-    "stationName":"Tosari",
-    "lat":106.823145,
-    "lng":-6.198643
+    "id":10,
+    "name":"Tosari",
+    "lat":-6.198643,
+    "lng":106.823145,
+    "comment":""
   },
   {
-    "stationId":11,
-    "stationName":"Bundaran HI",
-    "lat":106.823019,
-    "lng":-6.193665
+    "id":11,
+    "name":"Bundaran HI",
+    "lat":-6.193665,
+    "lng":106.823019,
+    "comment":""
   },
   {
-    "stationId":12,
-    "stationName":"Sarinah",
-    "lat":106.822998,
-    "lng":-6.188011
+    "id":12,
+    "name":"Sarinah",
+    "lat":-6.188011,
+    "lng":106.822998,
+    "comment":""
   },
   {
-    "stationId":13,
-    "stationName":"Bank Indonesia",
-    "lat":106.822968,
-    "lng":-6.182708
+    "id":13,
+    "name":"Bank Indonesia",
+    "lat":-6.182708,
+    "lng":106.822968,
+    "comment":""
   },
   {
-    "stationId":14,
-    "stationName":"Monas",
-    "lat":106.822868,
-    "lng":-6.176257
+    "id":14,
+    "name":"Monas",
+    "lat":-6.176257,
+    "lng":106.822868,
+    "comment":""
   },
   {
-    "stationId":15,
-    "stationName":"Harmoni 1",
-    "lat":106.820422,
-    "lng":-6.165857
+    "id":15,
+    "name":"Harmoni 1",
+    "lat":-6.165857,
+    "lng":106.820422,
+    "comment":""
   },
   {
-    "stationId":16,
-    "stationName":"Harmoni 2",
-    "lat":null,
-    "lng":null
+    "id":16,
+    "name":"Harmoni 2",
+    "lat":-6.165857,
+    "lng":106.820422,
+    "comment":"copied from Harmoni 1"
   },
   {
-    "stationId":17,
-    "stationName":"Sawah Besar",
-    "lat":106.819167,
-    "lng":-6.160457
+    "id":17,
+    "name":"Sawah Besar",
+    "lat":-6.160457,
+    "lng":106.819167,
+    "comment":""
   },
   {
-    "stationId":18,
-    "stationName":"Mangga Besar",
-    "lat":106.817306,
-    "lng":-6.152182
+    "id":18,
+    "name":"Mangga Besar",
+    "lat":-6.152182,
+    "lng":106.817306,
+    "comment":""
   },
   {
-    "stationId":19,
-    "stationName":"Dumo",
-    "lat":106.816686,
-    "lng":-6.149337
+    "id":19,
+    "name":"Dumo",
+    "lat":-6.149337,
+    "lng":106.816686,
+    "comment":""
   },
   {
-    "stationId":20,
-    "stationName":"Glodok",
-    "lat":106.815538,
-    "lng":-6.144854
+    "id":20,
+    "name":"Glodok",
+    "lat":-6.144854,
+    "lng":106.815538,
+    "comment":""
   },
   {
-    "stationId":21,
-    "stationName":"Stasiun Kota",
-    "lat":106.814012,
-    "lng":-6.137797
+    "id":21,
+    "name":"Stasiun Kota",
+    "lat":-6.137797,
+    "lng":106.814012,
+    "comment":""
   },
   {
-    "stationId":22,
-    "stationName":"Pulo gadung",
-    "lat":106.909134,
-    "lng":-6.183177
+    "id":22,
+    "name":"Pulo gadung",
+    "lat":-6.183177,
+    "lng":106.909134,
+    "comment":""
   },
   {
-    "stationId":23,
-    "stationName":"Bermis",
-    "lat":106.898467,
-    "lng":-6.178209
+    "id":23,
+    "name":"Bermis",
+    "lat":-6.178209,
+    "lng":106.898467,
+    "comment":""
   },
   {
-    "stationId":24,
-    "stationName":"Pulo Mas",
-    "lat":106.892754,
-    "lng":-6.174689
+    "id":24,
+    "name":"Pulo Mas",
+    "lat":-6.174689,
+    "lng":106.892754,
+    "comment":""
   },
   {
-    "stationId":25,
-    "stationName":"Asmi",
-    "lat":106.8888,
-    "lng":-6.171777
+    "id":25,
+    "name":"Asmi",
+    "lat":-6.171777,
+    "lng":106.8888,
+    "comment":""
   },
   {
-    "stationId":26,
-    "stationName":"Pedongkelan",
-    "lat":106.882499,
-    "lng":-6.167966
+    "id":26,
+    "name":"Pedongkelan",
+    "lat":-6.167966,
+    "lng":106.882499,
+    "comment":""
   },
   {
-    "stationId":27,
-    "stationName":"Cempaka timur",
-    "lat":106.876022,
-    "lng":-6.166545
+    "id":27,
+    "name":"Cempaka timur",
+    "lat":-6.166545,
+    "lng":106.876022,
+    "comment":""
   },
   {
-    "stationId":28,
-    "stationName":"RS Islam",
-    "lat":106.870432,
-    "lng":-6.168604
+    "id":28,
+    "name":"RS Islam",
+    "lat":-6.168604,
+    "lng":106.870432,
+    "comment":""
   },
   {
-    "stationId":29,
-    "stationName":"Cempaka tengah",
-    "lat":106.866575,
-    "lng":-6.170406
+    "id":29,
+    "name":"Cempaka tengah",
+    "lat":-6.170406,
+    "lng":106.866575,
+    "comment":""
   },
   {
-    "stationId":30,
-    "stationName":"PS. Cempaka Putih",
-    "lat":106.862474,
-    "lng":-6.172342
+    "id":30,
+    "name":"PS. Cempaka Putih",
+    "lat":-6.172342,
+    "lng":106.862474,
+    "comment":""
   },
   {
-    "stationId":31,
-    "stationName":"Rawa Selatan",
-    "lat":106.858046,
-    "lng":-6.173913
+    "id":31,
+    "name":"Rawa Selatan",
+    "lat":-6.173913,
+    "lng":106.858046,
+    "comment":""
   },
   {
-    "stationId":32,
-    "stationName":"Galur",
-    "lat":106.854749,
-    "lng":-6.174422
+    "id":32,
+    "name":"Galur",
+    "lat":-6.174422,
+    "lng":106.854749,
+    "comment":""
   },
   {
-    "stationId":33,
-    "stationName":"Senen",
-    "lat":106.842583,
-    "lng":-6.178196
+    "id":33,
+    "name":"Senen",
+    "lat":-6.178196,
+    "lng":106.842583,
+    "comment":""
   },
   {
-    "stationId":34,
-    "stationName":"Atrium",
-    "lat":106.840909,
-    "lng":-6.177169
+    "id":34,
+    "name":"Atrium",
+    "lat":-6.177169,
+    "lng":106.840909,
+    "comment":""
   },
   {
-    "stationId":35,
-    "stationName":"RSPAD",
-    "lat":106.836752,
-    "lng":-6.175505
+    "id":35,
+    "name":"RSPAD",
+    "lat":-6.175505,
+    "lng":106.836752,
+    "comment":""
   },
   {
-    "stationId":36,
-    "stationName":"Deplu",
-    "lat":106.834762,
-    "lng":-6.173481
+    "id":36,
+    "name":"Deplu",
+    "lat":-6.173481,
+    "lng":106.834762,
+    "comment":""
   },
   {
-    "stationId":37,
-    "stationName":"Gambir 1",
-    "lat":106.830341,
-    "lng":-6.174526
+    "id":37,
+    "name":"Gambir 1",
+    "lat":-6.174526,
+    "lng":106.830341,
+    "comment":""
   },
   {
-    "stationId":38,
-    "stationName":"Istiqlal",
-    "lat":106.830985,
-    "lng":-6.17223
+    "id":38,
+    "name":"Istiqlal",
+    "lat":-6.17223,
+    "lng":106.830985,
+    "comment":""
   },
   {
-    "stationId":39,
-    "stationName":"Juanda",
-    "lat":106.830776,
-    "lng":-6.16807
+    "id":39,
+    "name":"Juanda",
+    "lat":-6.16807,
+    "lng":106.830776,
+    "comment":""
   },
   {
-    "stationId":40,
-    "stationName":"Pecenongan",
-    "lat":106.828185,
-    "lng":-6.167713
+    "id":40,
+    "name":"Pecenongan",
+    "lat":-6.167713,
+    "lng":106.828185,
+    "comment":""
   },
   {
-    "stationId":41,
-    "stationName":"Balai kota",
-    "lat":106.82764,
-    "lng":-6.180212
+    "id":41,
+    "name":"Balai kota",
+    "lat":-6.180212,
+    "lng":106.82764,
+    "comment":""
   },
   {
-    "stationId":42,
-    "stationName":"Gambir 2",
-    "lat":106.831092,
-    "lng":-6.178886
+    "id":42,
+    "name":"Gambir 2",
+    "lat":-6.178886,
+    "lng":106.831092,
+    "comment":""
   },
   {
-    "stationId":43,
-    "stationName":"Kwitang",
-    "lat":106.838551,
-    "lng":-6.181084
+    "id":43,
+    "name":"Kwitang",
+    "lat":-6.181084,
+    "lng":106.838551,
+    "comment":""
   },
   {
-    "stationId":44,
-    "stationName":"Kalideres",
-    "lat":106.705911,
-    "lng":-6.154609
+    "id":44,
+    "name":"Kalideres",
+    "lat":-6.154609,
+    "lng":106.705911,
+    "comment":""
   },
   {
-    "stationId":45,
-    "stationName":"Pesakih",
-    "lat":106.715232,
-    "lng":-6.154801
+    "id":45,
+    "name":"Pesakih",
+    "lat":-6.154801,
+    "lng":106.715232,
+    "comment":""
   },
   {
-    "stationId":46,
-    "stationName":"Sumur Bor",
-    "lat":106.719174,
-    "lng":-6.153049
+    "id":46,
+    "name":"Sumur Bor",
+    "lat":-6.153049,
+    "lng":106.719174,
+    "comment":""
   },
   {
-    "stationId":47,
-    "stationName":"Rawa Buaya",
-    "lat":106.72636,
-    "lng":-6.153937
+    "id":47,
+    "name":"Rawa Buaya",
+    "lat":-6.153937,
+    "lng":106.72636,
+    "comment":""
   },
   {
-    "stationId":48,
-    "stationName":"Jembatan baru",
-    "lat":106.730563,
-    "lng":-6.154843
+    "id":48,
+    "name":"Jembatan baru",
+    "lat":-6.154843,
+    "lng":106.730563,
+    "comment":""
   },
   {
-    "stationId":49,
-    "stationName":"Dispenda",
-    "lat":106.738063,
-    "lng":-6.154611
+    "id":49,
+    "name":"Dispenda",
+    "lat":-6.154611,
+    "lng":106.738063,
+    "comment":""
   },
   {
-    "stationId":50,
-    "stationName":"Jembatan gantung",
-    "lat":106.749282,
-    "lng":-6.155481
+    "id":50,
+    "name":"Jembatan gantung",
+    "lat":-6.155481,
+    "lng":106.749282,
+    "comment":""
   },
   {
-    "stationId":51,
-    "stationName":"Taman kota",
-    "lat":106.757884,
-    "lng":-6.157158
+    "id":51,
+    "name":"Taman kota",
+    "lat":-6.157158,
+    "lng":106.757884,
+    "comment":""
   },
   {
-    "stationId":52,
-    "stationName":"Indosiar",
-    "lat":106.775399,
-    "lng":-6.163457
+    "id":52,
+    "name":"Indosiar",
+    "lat":-6.163457,
+    "lng":106.775399,
+    "comment":""
   },
   {
-    "stationId":53,
-    "stationName":"Jelambar",
-    "lat":106.786699,
-    "lng":-6.166577
+    "id":53,
+    "name":"Jelambar",
+    "lat":-6.166577,
+    "lng":106.786699,
+    "comment":""
   },
   {
-    "stationId":54,
-    "stationName":"RS. Sumber waras",
-    "lat":106.79691,
-    "lng":-6.166276
+    "id":54,
+    "name":"RS. Sumber waras",
+    "lat":-6.166276,
+    "lng":106.79691,
+    "comment":""
   },
   {
-    "stationId":55,
-    "stationName":"Grogol",
-    "lat":null,
-    "lng":null
+    "id":55,
+    "name":"Grogol",
+    "lat":-6.166189,
+    "lng":106.8158705,
+    "comment":"interpolated between RS Sumber Waras and Pasar Baru"
   },
   {
-    "stationId":56,
-    "stationName":"Pasar baru",
-    "lat":106.834831,
-    "lng":-6.166102
+    "id":56,
+    "name":"Pasar baru",
+    "lat":-6.166102,
+    "lng":106.834831,
+    "comment":""
   },
   {
-    "stationId":57,
-    "stationName":"Pasar pulo gadung",
-    "lat":106.905939,
-    "lng":-6.187454
+    "id":57,
+    "name":"Pasar pulo gadung",
+    "lat":-6.187454,
+    "lng":106.905939,
+    "comment":""
   },
   {
-    "stationId":58,
-    "stationName":"Tugas",
-    "lat":106.904966,
-    "lng":-6.192361
+    "id":58,
+    "name":"Tugas",
+    "lat":-6.192361,
+    "lng":106.904966,
+    "comment":""
   },
   {
-    "stationId":59,
-    "stationName":"Layur",
-    "lat":106.898974,
-    "lng":-6.193529
+    "id":59,
+    "name":"Layur",
+    "lat":-6.193529,
+    "lng":106.898974,
+    "comment":""
   },
   {
-    "stationId":60,
-    "stationName":"Pemuda rawamangun",
-    "lat":106.89164,
-    "lng":-6.193497
+    "id":60,
+    "name":"Pemuda rawamangun",
+    "lat":-6.193497,
+    "lng":106.89164,
+    "comment":""
   },
   {
-    "stationId":61,
-    "stationName":"Veldrome",
-    "lat":106.88818,
-    "lng":-6.193494
+    "id":61,
+    "name":"Veldrome",
+    "lat":-6.193494,
+    "lng":106.88818,
+    "comment":""
   },
   {
-    "stationId":62,
-    "stationName":"Sunan giri",
-    "lat":106.883664,
-    "lng":-6.193249
+    "id":62,
+    "name":"Sunan giri",
+    "lat":-6.193249,
+    "lng":106.883664,
+    "comment":""
   },
   {
-    "stationId":63,
-    "stationName":"Uni",
-    "lat":106.880236,
-    "lng":-6.192873
+    "id":63,
+    "name":"Uni",
+    "lat":-6.192873,
+    "lng":106.880236,
+    "comment":""
   },
   {
-    "stationId":64,
-    "stationName":"Pramuka BPKP",
-    "lat":106.874034,
-    "lng":-6.192153
+    "id":64,
+    "name":"Pramuka BPKP",
+    "lat":-6.192153,
+    "lng":106.874034,
+    "comment":""
   },
   {
-    "stationId":65,
-    "stationName":"Pramuka Lia",
-    "lat":106.86859,
-    "lng":-6.192211
+    "id":65,
+    "name":"Pramuka Lia",
+    "lat":-6.192211,
+    "lng":106.86859,
+    "comment":""
   },
   {
-    "stationId":66,
-    "stationName":"Utan Kayu",
-    "lat":106.864601,
-    "lng":-6.192705
+    "id":66,
+    "name":"Utan Kayu",
+    "lat":-6.192705,
+    "lng":106.864601,
+    "comment":""
   },
   {
-    "stationId":67,
-    "stationName":"Pasar Genang",
-    "lat":106.860921,
-    "lng":-6.194443
+    "id":67,
+    "name":"Pasar Genang",
+    "lat":-6.194443,
+    "lng":106.860921,
+    "comment":""
   },
   {
-    "stationId":68,
-    "stationName":"Matraman 2",
-    "lat":106.85454,
-    "lng":-6.198955
+    "id":68,
+    "name":"Matraman 2",
+    "lat":-6.198955,
+    "lng":106.85454,
+    "comment":""
   },
   {
-    "stationId":69,
-    "stationName":"Manggarai",
-    "lat":106.847462,
-    "lng":-6.20889
+    "id":69,
+    "name":"Manggarai",
+    "lat":-6.20889,
+    "lng":106.847462,
+    "comment":""
   },
   {
-    "stationId":70,
-    "stationName":"Pasar rumput",
-    "lat":106.841156,
-    "lng":-6.20712
+    "id":70,
+    "name":"Pasar rumput",
+    "lat":-6.20712,
+    "lng":106.841156,
+    "comment":""
   },
   {
-    "stationId":71,
-    "stationName":"Halimun",
-    "lat":106.833364,
-    "lng":-6.205109
+    "id":71,
+    "name":"Halimun",
+    "lat":-6.205109,
+    "lng":106.833364,
+    "comment":""
   },
   {
-    "stationId":72,
-    "stationName":"Dukuh atas 2",
-    "lat":106.820742,
-    "lng":-6.202653
+    "id":72,
+    "name":"Dukuh atas 2",
+    "lat":-6.202653,
+    "lng":106.820742,
+    "comment":""
   },
   {
-    "stationId":73,
-    "stationName":"Kampung melayu",
-    "lat":106.866884,
-    "lng":-6.224436
+    "id":73,
+    "name":"Kampung melayu",
+    "lat":-6.224436,
+    "lng":106.866884,
+    "comment":""
   },
   {
-    "stationId":74,
-    "stationName":"pasar jatinegara",
-    "lat":106.866312,
-    "lng":-6.215722
+    "id":74,
+    "name":"pasar jatinegara",
+    "lat":-6.215722,
+    "lng":106.866312,
+    "comment":""
   },
   {
-    "stationId":75,
-    "stationName":"kebon pala",
-    "lat":106.861157,
-    "lng":-6.212837
+    "id":75,
+    "name":"kebon pala",
+    "lat":-6.212837,
+    "lng":106.861157,
+    "comment":""
   },
   {
-    "stationId":76,
-    "stationName":"slamet riyadi",
-    "lat":106.859296,
-    "lng":-6.208576
+    "id":76,
+    "name":"slamet riyadi",
+    "lat":-6.208576,
+    "lng":106.859296,
+    "comment":""
   },
   {
-    "stationId":77,
-    "stationName":"tegalan",
-    "lat":106.857115,
-    "lng":-6.202949
+    "id":77,
+    "name":"tegalan",
+    "lat":-6.202949,
+    "lng":106.857115,
+    "comment":""
   },
   {
-    "stationId":78,
-    "stationName":"matraman l",
-    "lat":106.854441,
-    "lng":-6.200008
+    "id":78,
+    "name":"matraman l",
+    "lat":-6.200008,
+    "lng":106.854441,
+    "comment":""
   },
   {
-    "stationId":79,
-    "stationName":"caroulus",
-    "lat":106.851085,
-    "lng":-6.196782
+    "id":79,
+    "name":"caroulus",
+    "lat":-6.196782,
+    "lng":106.851085,
+    "comment":""
   },
   {
-    "stationId":80,
-    "stationName":"salemba UI",
-    "lat":106.848991,
-    "lng":-6.193491
+    "id":80,
+    "name":"salemba UI",
+    "lat":-6.193491,
+    "lng":106.848991,
+    "comment":""
   },
   {
-    "stationId":81,
-    "stationName":"kramat sentioning/NU",
-    "lat":106.846027,
-    "lng":-6.188057
+    "id":81,
+    "name":"kramat sentioning/NU",
+    "lat":-6.188057,
+    "lng":106.846027,
+    "comment":""
   },
   {
-    "stationId":82,
-    "stationName":"pal putih",
-    "lat":106.844042,
-    "lng":-6.184646
+    "id":82,
+    "name":"pal putih",
+    "lat":-6.184646,
+    "lng":106.844042,
+    "comment":""
   },
   {
-    "stationId":83,
-    "stationName":"central senen",
-    "lat":106.842132,
-    "lng":-6.178161
+    "id":83,
+    "name":"central senen",
+    "lat":-6.178161,
+    "lng":106.842132,
+    "comment":""
   },
   {
-    "stationId":84,
-    "stationName":"budi utomo",
-    "lat":106.839088,
-    "lng":-6.166046
+    "id":84,
+    "name":"budi utomo",
+    "lat":-6.166046,
+    "lng":106.839088,
+    "comment":""
   },
   {
-    "stationId":85,
-    "stationName":"pasar baru timur",
-    "lat":106.838146,
-    "lng":-6.1623
+    "id":85,
+    "name":"pasar baru timur",
+    "lat":-6.1623,
+    "lng":106.838146,
+    "comment":""
   },
   {
-    "stationId":86,
-    "stationName":"jembatan merah",
-    "lat":106.834273,
-    "lng":-6.146734
+    "id":86,
+    "name":"jembatan merah",
+    "lat":-6.146734,
+    "lng":106.834273,
+    "comment":""
   },
   {
-    "stationId":87,
-    "stationName":"mangga 2 square",
-    "lat":106.832374,
-    "lng":-6.136789
+    "id":87,
+    "name":"mangga 2 square",
+    "lat":-6.136789,
+    "lng":106.832374,
+    "comment":""
   },
   {
-    "stationId":88,
-    "stationName":"pademangan",
-    "lat":106.831658,
-    "lng":-6.133741
+    "id":88,
+    "name":"pademangan",
+    "lat":-6.133741,
+    "lng":106.831658,
+    "comment":""
   },
   {
-    "stationId":89,
-    "stationName":"ancol",
-    "lat":106.830416,
-    "lng":-6.127498
+    "id":89,
+    "name":"ancol",
+    "lat":-6.127498,
+    "lng":106.830416,
+    "comment":""
   },
   {
-    "stationId":90,
-    "stationName":"Ragunan",
-    "lat":106.818805,
-    "lng":-6.305746
+    "id":90,
+    "name":"Ragunan",
+    "lat":-6.305746,
+    "lng":106.818805,
+    "comment":""
   },
   {
-    "stationId":91,
-    "stationName":"Deptan",
-    "lat":106.822051,
-    "lng":-6.294704
+    "id":91,
+    "name":"Deptan",
+    "lat":-6.294704,
+    "lng":106.822051,
+    "comment":""
   },
   {
-    "stationId":92,
-    "stationName":"SMK 57",
-    "lat":106.82352,
-    "lng":-6.291193
+    "id":92,
+    "name":"SMK 57",
+    "lat":-6.291193,
+    "lng":106.82352,
+    "comment":""
   },
   {
-    "stationId":93,
-    "stationName":"Jatipadang",
-    "lat":106.82616,
-    "lng":-6.285575
+    "id":93,
+    "name":"Jatipadang",
+    "lat":-6.285575,
+    "lng":106.82616,
+    "comment":""
   },
   {
-    "stationId":94,
-    "stationName":"Pejaten",
-    "lat":106.829673,
-    "lng":-6.278454
+    "id":94,
+    "name":"Pejaten",
+    "lat":-6.278454,
+    "lng":106.829673,
+    "comment":""
   },
   {
-    "stationId":95,
-    "stationName":"Buncit Indah",
-    "lat":106.830255,
-    "lng":-6.274332
+    "id":95,
+    "name":"Buncit Indah",
+    "lat":-6.274332,
+    "lng":106.830255,
+    "comment":""
   },
   {
-    "stationId":96,
-    "stationName":"Warung Jati",
-    "lat":106.829706,
-    "lng":-6.262366
+    "id":96,
+    "name":"Warung Jati",
+    "lat":-6.262366,
+    "lng":106.829706,
+    "comment":""
   },
   {
-    "stationId":97,
-    "stationName":"Imigrasi",
-    "lat":106.827959,
-    "lng":-6.25677
+    "id":97,
+    "name":"Imigrasi",
+    "lat":-6.25677,
+    "lng":106.827959,
+    "comment":""
   },
   {
-    "stationId":98,
-    "stationName":"Duren tiga",
-    "lat":106.826862,
-    "lng":-6.252109
+    "id":98,
+    "name":"Duren tiga",
+    "lat":-6.252109,
+    "lng":106.826862,
+    "comment":""
   },
   {
-    "stationId":99,
-    "stationName":"Mampang Prapatan",
-    "lat":106.825701,
-    "lng":-6.24209
+    "id":99,
+    "name":"Mampang Prapatan",
+    "lat":-6.24209,
+    "lng":106.825701,
+    "comment":""
   },
   {
-    "stationId":100,
-    "stationName":"Kuningan timur",
-    "lat":106.827855,
-    "lng":-6.235917
+    "id":100,
+    "name":"Kuningan timur",
+    "lat":-6.235917,
+    "lng":106.827855,
+    "comment":""
   },
   {
-    "stationId":101,
-    "stationName":"patra kuningan",
-    "lat":106.831318,
-    "lng":-6.233451
+    "id":101,
+    "name":"patra kuningan",
+    "lat":-6.233451,
+    "lng":106.831318,
+    "comment":""
   },
   {
-    "stationId":102,
-    "stationName":"dep. Kesehatan",
-    "lat":106.833203,
-    "lng":-6.228739
+    "id":102,
+    "name":"dep. Kesehatan",
+    "lat":-6.228739,
+    "lng":106.833203,
+    "comment":""
   },
   {
-    "stationId":103,
-    "stationName":"gor sumantri",
-    "lat":106.831956,
-    "lng":-6.220604
+    "id":103,
+    "name":"gor sumantri",
+    "lat":-6.220604,
+    "lng":106.831956,
+    "comment":""
   },
   {
-    "stationId":104,
-    "stationName":"karet kuningan",
-    "lat":106.830929,
-    "lng":-6.217538
+    "id":104,
+    "name":"karet kuningan",
+    "lat":-6.217538,
+    "lng":106.830929,
+    "comment":""
   },
   {
-    "stationId":105,
-    "stationName":"kuningan madya",
-    "lat":106.830443,
-    "lng":-6.212621
+    "id":105,
+    "name":"kuningan madya",
+    "lat":-6.212621,
+    "lng":106.830443,
+    "comment":""
   },
   {
-    "stationId":106,
-    "stationName":"setia budi aini",
-    "lat":106.829979,
-    "lng":-6.208282
+    "id":106,
+    "name":"setia budi aini",
+    "lat":-6.208282,
+    "lng":106.829979,
+    "comment":""
   },
   {
-    "stationId":107,
-    "stationName":"latu harhari",
-    "lat":106.827651,
-    "lng":-6.202837
+    "id":107,
+    "name":"latu harhari",
+    "lat":-6.202837,
+    "lng":106.827651,
+    "comment":""
   },
   {
-    "stationId":108,
-    "stationName":"kampung rambutan",
-    "lat":106.8816,
-    "lng":-6.309258
+    "id":108,
+    "name":"kampung rambutan",
+    "lat":-6.309258,
+    "lng":106.8816,
+    "comment":""
   },
   {
-    "stationId":109,
-    "stationName":"tanah merdeka",
-    "lat":106.873949,
-    "lng":-6.308167
+    "id":109,
+    "name":"tanah merdeka",
+    "lat":-6.308167,
+    "lng":106.873949,
+    "comment":""
   },
   {
-    "stationId":110,
-    "stationName":"makro",
-    "lat":106.865698,
-    "lng":-6.306584
+    "id":110,
+    "name":"makro",
+    "lat":-6.306584,
+    "lng":106.865698,
+    "comment":""
   },
   {
-    "stationId":111,
-    "stationName":"rs. Harapan bunda",
-    "lat":106.867973,
-    "lng":-6.301993
+    "id":111,
+    "name":"rs. Harapan bunda",
+    "lat":-6.301993,
+    "lng":106.867973,
+    "comment":""
   },
   {
-    "stationId":112,
-    "stationName":"pasar induk",
-    "lat":106.871985,
-    "lng":-6.294224
+    "id":112,
+    "name":"pasar induk",
+    "lat":-6.294224,
+    "lng":106.871985,
+    "comment":""
   },
   {
-    "stationId":113,
-    "stationName":"pasar kramatjati",
-    "lat":106.866572,
-    "lng":-6.268784
+    "id":113,
+    "name":"pasar kramatjati",
+    "lat":-6.268784,
+    "lng":106.866572,
+    "comment":""
   },
   {
-    "stationId":114,
-    "stationName":"pgc",
-    "lat":106.866353,
-    "lng":-6.26246
+    "id":114,
+    "name":"pgc",
+    "lat":-6.26246,
+    "lng":106.866353,
+    "comment":""
   },
   {
-    "stationId":115,
-    "stationName":"bkn",
-    "lat":106.869952,
-    "lng":-6.257815
+    "id":115,
+    "name":"bkn",
+    "lat":-6.257815,
+    "lng":106.869952,
+    "comment":""
   },
   {
-    "stationId":116,
-    "stationName":"cawang uki",
-    "lat":106.873544,
-    "lng":-6.250392
+    "id":116,
+    "name":"cawang uki",
+    "lat":-6.250392,
+    "lng":106.873544,
+    "comment":""
   },
   {
-    "stationId":117,
-    "stationName":"bnn",
-    "lat":106.872122,
-    "lng":-6.246297
+    "id":117,
+    "name":"bnn",
+    "lat":-6.246297,
+    "lng":106.872122,
+    "comment":""
   },
   {
-    "stationId":118,
-    "stationName":"cawang otista",
-    "lat":106.868702,
-    "lng":-6.24366
+    "id":118,
+    "name":"cawang otista",
+    "lat":-6.24366,
+    "lng":106.868702,
+    "comment":""
   },
   {
-    "stationId":119,
-    "stationName":"gelanggang remaja",
-    "lat":106.8679,
-    "lng":-6.235453
+    "id":119,
+    "name":"gelanggang remaja",
+    "lat":-6.235453,
+    "lng":106.8679,
+    "comment":""
   },
   {
-    "stationId":120,
-    "stationName":"bidadari cina",
-    "lat":106.867222,
-    "lng":-6.229739
+    "id":120,
+    "name":"bidadari cina",
+    "lat":-6.229739,
+    "lng":106.867222,
+    "comment":""
   },
   {
-    "stationId":121,
-    "stationName":"Pondok pinang",
-    "lat":106.772009,
-    "lng":-6.282173
+    "id":121,
+    "name":"Pondok pinang",
+    "lat":-6.282173,
+    "lng":106.772009,
+    "comment":""
   },
   {
-    "stationId":122,
-    "stationName":"terminal lebak bulus",
-    "lat":106.774562,
-    "lng":-6.289444
+    "id":122,
+    "name":"terminal lebak bulus",
+    "lat":-6.289444,
+    "lng":106.774562,
+    "comment":""
   },
   {
-    "stationId":123,
-    "stationName":"metro pondok indah l",
-    "lat":106.779226,
-    "lng":-6.287436
+    "id":123,
+    "name":"metro pondok indah l",
+    "lat":-6.287436,
+    "lng":106.779226,
+    "comment":""
   },
   {
-    "stationId":124,
-    "stationName":"metro pondok indah ll",
-    "lat":106.783598,
-    "lng":-6.26724
+    "id":124,
+    "name":"metro pondok indah ll",
+    "lat":-6.26724,
+    "lng":106.783598,
+    "comment":""
   },
   {
-    "stationId":125,
-    "stationName":"tanah kusir kodim",
-    "lat":106.781646,
-    "lng":-6.257007
+    "id":125,
+    "name":"tanah kusir kodim",
+    "lat":-6.257007,
+    "lng":106.781646,
+    "comment":""
   },
   {
-    "stationId":126,
-    "stationName":"kebayoran lama bungu",
-    "lat":106.781592,
-    "lng":-6.252707
+    "id":126,
+    "name":"kebayoran lama bungu",
+    "lat":-6.252707,
+    "lng":106.781592,
+    "comment":""
   },
   {
-    "stationId":127,
-    "stationName":"kebayoran lama",
-    "lat":106.783204,
-    "lng":-6.238426
+    "id":127,
+    "name":"kebayoran lama",
+    "lat":-6.238426,
+    "lng":106.783204,
+    "comment":""
   },
   {
-    "stationId":128,
-    "stationName":"simprug",
-    "lat":106.786511,
-    "lng":-6.233888
+    "id":128,
+    "name":"simprug",
+    "lat":-6.233888,
+    "lng":106.786511,
+    "comment":""
   },
   {
-    "stationId":129,
-    "stationName":"permata hijau",
-    "lat":106.783268,
-    "lng":-6.221431
+    "id":129,
+    "name":"permata hijau",
+    "lat":-6.221431,
+    "lng":106.783268,
+    "comment":""
   },
   {
-    "stationId":130,
-    "stationName":"permata hijau rs medik",
-    "lat":106.777555,
-    "lng":-6.218343
+    "id":130,
+    "name":"permata hijau rs medik",
+    "lat":-6.218343,
+    "lng":106.777555,
+    "comment":""
   },
   {
-    "stationId":131,
-    "stationName":"pos pengumben",
-    "lat":106.772277,
-    "lng":-6.212914
+    "id":131,
+    "name":"pos pengumben",
+    "lat":-6.212914,
+    "lng":106.772277,
+    "comment":""
   },
   {
-    "stationId":132,
-    "stationName":"kelapa 2 sasak",
-    "lat":106.769525,
-    "lng":-6.205539
+    "id":132,
+    "name":"kelapa 2 sasak",
+    "lat":-6.205539,
+    "lng":106.769525,
+    "comment":""
   },
   {
-    "stationId":133,
-    "stationName":"kebon jeruk",
-    "lat":106.768881,
-    "lng":-6.194294
+    "id":133,
+    "name":"kebon jeruk",
+    "lat":-6.194294,
+    "lng":106.768881,
+    "comment":""
   },
   {
-    "stationId":134,
-    "stationName":"duri kelapa",
-    "lat":106.76843,
-    "lng":-6.185249
+    "id":134,
+    "name":"duri kelapa",
+    "lat":-6.185249,
+    "lng":106.76843,
+    "comment":""
   },
   {
-    "stationId":135,
-    "stationName":"kedoya assiddiqiyah",
-    "lat":106.765848,
-    "lng":-6.17451
+    "id":135,
+    "name":"kedoya assiddiqiyah",
+    "lat":-6.17451,
+    "lng":106.765848,
+    "comment":""
   },
   {
-    "stationId":136,
-    "stationName":"kedoya green garden",
-    "lat":106.763004,
-    "lng":-6.164444
+    "id":136,
+    "name":"kedoya green garden",
+    "lat":-6.164444,
+    "lng":106.763004,
+    "comment":""
   },
   {
-    "stationId":137,
-    "stationName":"mandala",
-    "lat":106.800368,
-    "lng":-6.176865
+    "id":137,
+    "name":"mandala",
+    "lat":-6.176865,
+    "lng":106.800368,
+    "comment":""
   },
   {
-    "stationId":138,
-    "stationName":"rs tarakan",
-    "lat":106.810064,
-    "lng":-6.17115
+    "id":138,
+    "name":"rs tarakan",
+    "lat":-6.17115,
+    "lng":106.810064,
+    "comment":""
   },
   {
-    "stationId":139,
-    "stationName":"petojo",
-    "lat":106.816987,
-    "lng":-6.169964
+    "id":139,
+    "name":"petojo",
+    "lat":-6.169964,
+    "lng":106.816987,
+    "comment":""
   },
   {
-    "stationId":140,
-    "stationName":"Pluit",
-    "lat":106.791009,
-    "lng":-6.115779
+    "id":140,
+    "name":"Pluit",
+    "lat":-6.115779,
+    "lng":106.791009,
+    "comment":""
   },
   {
-    "stationId":141,
-    "stationName":"penjaringan",
-    "lat":106.792007,
-    "lng":-6.126287
+    "id":141,
+    "name":"penjaringan",
+    "lat":-6.126287,
+    "lng":106.792007,
+    "comment":""
   },
   {
-    "stationId":142,
-    "stationName":"jembatan tiga",
-    "lat":106.792699,
-    "lng":-6.13336
+    "id":142,
+    "name":"jembatan tiga",
+    "lat":-6.13336,
+    "lng":106.792699,
+    "comment":""
   },
   {
-    "stationId":143,
-    "stationName":"jembatan dua",
-    "lat":106.793509,
-    "lng":-6.143206
+    "id":143,
+    "name":"jembatan dua",
+    "lat":-6.143206,
+    "lng":106.793509,
+    "comment":""
   },
   {
-    "stationId":144,
-    "stationName":"jembatan besi",
-    "lat":106.794947,
-    "lng":-6.15207
+    "id":144,
+    "name":"jembatan besi",
+    "lat":-6.15207,
+    "lng":106.794947,
+    "comment":""
   },
   {
-    "stationId":145,
-    "stationName":"latumenten 1",
-    "lat":106.790382,
-    "lng":-6.161073
+    "id":145,
+    "name":"latumenten 1",
+    "lat":-6.161073,
+    "lng":106.790382,
+    "comment":""
   },
   {
-    "stationId":146,
-    "stationName":"grogol 1",
-    "lat":106.787804,
-    "lng":-6.167164
+    "id":146,
+    "name":"grogol 1",
+    "lat":-6.167164,
+    "lng":106.787804,
+    "comment":""
   },
   {
-    "stationId":147,
-    "stationName":"grogol 2",
-    "lat":106.788568,
-    "lng":-6.16735
+    "id":147,
+    "name":"grogol 2",
+    "lat":-6.16735,
+    "lng":106.788568,
+    "comment":""
   },
   {
-    "stationId":148,
-    "stationName":"harapan kita 2",
-    "lat":106.797074,
-    "lng":-6.185222
+    "id":148,
+    "name":"harapan kita 2",
+    "lat":-6.185222,
+    "lng":106.797074,
+    "comment":""
   },
   {
-    "stationId":149,
-    "stationName":"harapan kita 1",
-    "lat":106.796776,
-    "lng":-6.184475
+    "id":149,
+    "name":"harapan kita 1",
+    "lat":-6.184475,
+    "lng":106.796776,
+    "comment":""
   },
   {
-    "stationId":150,
-    "stationName":"slipi kemanggisan 2",
-    "lat":106.797264,
-    "lng":-6.190038
+    "id":150,
+    "name":"slipi kemanggisan 2",
+    "lat":-6.190038,
+    "lng":106.797264,
+    "comment":""
   },
   {
-    "stationId":151,
-    "stationName":"slipi kemanggisan 1",
-    "lat":106.79696,
-    "lng":-6.190075
+    "id":151,
+    "name":"slipi kemanggisan 1",
+    "lat":-6.190075,
+    "lng":106.79696,
+    "comment":""
   },
   {
-    "stationId":152,
-    "stationName":"slipi petamburan 2",
-    "lat":106.799498,
-    "lng":-6.201688
+    "id":152,
+    "name":"slipi petamburan 2",
+    "lat":-6.201688,
+    "lng":106.799498,
+    "comment":""
   },
   {
-    "stationId":153,
-    "stationName":"slipi petamburan 1",
-    "lat":106.799973,
-    "lng":-6.201933
+    "id":153,
+    "name":"slipi petamburan 1",
+    "lat":-6.201933,
+    "lng":106.799973,
+    "comment":""
   },
   {
-    "stationId":154,
-    "stationName":"icc senayan 2",
-    "lat":106.80839,
-    "lng":-6.213847
+    "id":154,
+    "name":"icc senayan 2",
+    "lat":-6.213847,
+    "lng":106.80839,
+    "comment":""
   },
   {
-    "stationId":155,
-    "stationName":"icc senayan 1",
-    "lat":106.809026,
-    "lng":-6.214151
+    "id":155,
+    "name":"icc senayan 1",
+    "lat":-6.214151,
+    "lng":106.809026,
+    "comment":""
   },
   {
-    "stationId":156,
-    "stationName":"semanggi 2",
-    "lat":106.813248,
-    "lng":-6.220423
+    "id":156,
+    "name":"semanggi 2",
+    "lat":-6.220423,
+    "lng":106.813248,
+    "comment":""
   },
   {
-    "stationId":157,
-    "stationName":"semanggi 1",
-    "lat":106.813036,
-    "lng":-6.220583
+    "id":157,
+    "name":"semanggi 1",
+    "lat":-6.220583,
+    "lng":106.813036,
+    "comment":""
   },
   {
-    "stationId":158,
-    "stationName":"gatsu lipi 1",
-    "lat":106.8174,
-    "lng":-6.226502
+    "id":158,
+    "name":"gatsu lipi 1",
+    "lat":-6.226502,
+    "lng":106.8174,
+    "comment":""
   },
   {
-    "stationId":159,
-    "stationName":"gatsu lipi 2",
-    "lat":106.817638,
-    "lng":-6.227393
+    "id":159,
+    "name":"gatsu lipi 2",
+    "lat":-6.227393,
+    "lng":106.817638,
+    "comment":""
   },
   {
-    "stationId":160,
-    "stationName":"gatsu jamsostek 1",
-    "lat":106.822045,
-    "lng":-6.233488
+    "id":160,
+    "name":"gatsu jamsostek 1",
+    "lat":-6.233488,
+    "lng":106.822045,
+    "comment":""
   },
   {
-    "stationId":161,
-    "stationName":"gatsu jamsostek 2",
-    "lat":106.821656,
-    "lng":-6.232613
+    "id":161,
+    "name":"gatsu jamsostek 2",
+    "lat":-6.232613,
+    "lng":106.821656,
+    "comment":""
   },
   {
-    "stationId":162,
-    "stationName":"kuningan barat 1",
-    "lat":106.827608,
-    "lng":-6.237192
+    "id":162,
+    "name":"kuningan barat 1",
+    "lat":-6.237192,
+    "lng":106.827608,
+    "comment":""
   },
   {
-    "stationId":163,
-    "stationName":"kuningan barat 2",
-    "lat":null,
-    "lng":null
+    "id":163,
+    "name":"kuningan barat 2",
+    "lat":-6.237192,
+    "lng":106.827608,
+    "comment":"copied from Kuningan Barat 1"
   },
   {
-    "stationId":164,
-    "stationName":"tegal parang 1",
-    "lat":106.830255,
-    "lng":-6.238847
+    "id":164,
+    "name":"tegal parang 1",
+    "lat":-6.238847,
+    "lng":106.830255,
+    "comment":""
   },
   {
-    "stationId":165,
-    "stationName":"pancoran 2",
-    "lat":106.838093,
-    "lng":-6.241543
+    "id":165,
+    "name":"pancoran 2",
+    "lat":-6.241543,
+    "lng":106.838093,
+    "comment":""
   },
   {
-    "stationId":166,
-    "stationName":"pancoran 1",
-    "lat":106.837202,
-    "lng":-6.241636
+    "id":166,
+    "name":"pancoran 1",
+    "lat":-6.241636,
+    "lng":106.837202,
+    "comment":""
   },
   {
-    "stationId":167,
-    "stationName":"tugu pancoran 1",
-    "lat":106.843865,
-    "lng":-6.243153
+    "id":167,
+    "name":"tugu pancoran 1",
+    "lat":-6.243153,
+    "lng":106.843865,
+    "comment":""
   },
   {
-    "stationId":168,
-    "stationName":"tebet 2",
-    "lat":106.852027,
-    "lng":-6.243031
+    "id":168,
+    "name":"tebet 2",
+    "lat":-6.243031,
+    "lng":106.852027,
+    "comment":""
   },
   {
-    "stationId":169,
-    "stationName":"tebet 1",
-    "lat":106.852046,
-    "lng":-6.243332
+    "id":169,
+    "name":"tebet 1",
+    "lat":-6.243332,
+    "lng":106.852046,
+    "comment":""
   },
   {
-    "stationId":170,
-    "stationName":"cikoko st cawang 2",
-    "lat":106.863499,
-    "lng":-6.242996
+    "id":170,
+    "name":"cikoko st cawang 2",
+    "lat":-6.242996,
+    "lng":106.863499,
+    "comment":""
   },
   {
-    "stationId":171,
-    "stationName":"cikoko st cawang 1",
-    "lat":106.857888,
-    "lng":-6.243375
+    "id":171,
+    "name":"cikoko st cawang 1",
+    "lat":-6.243375,
+    "lng":106.857888,
+    "comment":""
   },
   {
-    "stationId":172,
-    "stationName":"cawang ciliwung 2",
-    "lat":106.863563,
-    "lng":-6.243303
+    "id":172,
+    "name":"cawang ciliwung 2",
+    "lat":-6.243303,
+    "lng":106.863563,
+    "comment":""
   },
   {
-    "stationId":173,
-    "stationName":"cawang ciliwung 1",
-    "lat":106.85793,
-    "lng":-6.243063
+    "id":173,
+    "name":"cawang ciliwung 1",
+    "lat":-6.243063,
+    "lng":106.85793,
+    "comment":""
   },
   {
-    "stationId":174,
-    "stationName":"taman mini",
-    "lat":106.881137,
-    "lng":-6.290166
+    "id":174,
+    "name":"taman mini",
+    "lat":-6.290166,
+    "lng":106.881137,
+    "comment":""
   },
   {
-    "stationId":175,
-    "stationName":"pinang ranti",
-    "lat":106.886429,
-    "lng":-6.291246
+    "id":175,
+    "name":"pinang ranti",
+    "lat":-6.291246,
+    "lng":106.886429,
+    "comment":""
   },
   {
-    "stationId":176,
-    "stationName":"terminal priok",
-    "lat":106.88206,
-    "lng":-6.109555
+    "id":176,
+    "name":"terminal priok",
+    "lat":-6.109555,
+    "lng":106.88206,
+    "comment":""
   },
   {
-    "stationId":177,
-    "stationName":"enggano",
-    "lat":106.892381,
-    "lng":-6.11008
+    "id":177,
+    "name":"enggano",
+    "lat":-6.11008,
+    "lng":106.892381,
+    "comment":""
   },
   {
-    "stationId":178,
-    "stationName":"permai kota",
-    "lat":106.893089,
-    "lng":-6.113918
+    "id":178,
+    "name":"permai kota",
+    "lat":-6.113918,
+    "lng":106.893089,
+    "comment":""
   },
   {
-    "stationId":179,
-    "stationName":"walikota jakut",
-    "lat":106.893,
-    "lng":-6.11896
+    "id":179,
+    "name":"walikota jakut",
+    "lat":-6.11896,
+    "lng":106.893,
+    "comment":""
   },
   {
-    "stationId":180,
-    "stationName":"plumpang pertamina",
-    "lat":106.894,
-    "lng":-6.12863
+    "id":180,
+    "name":"plumpang pertamina",
+    "lat":-6.12863,
+    "lng":106.894,
+    "comment":""
   },
   {
-    "stationId":181,
-    "stationName":"sunter kelapa gading",
-    "lat":106.891,
-    "lng":-6.14265
+    "id":181,
+    "name":"sunter kelapa gading",
+    "lat":-6.14265,
+    "lng":106.891,
+    "comment":""
   },
   {
-    "stationId":182,
-    "stationName":"sudarso kodamar",
-    "lat":106.882,
-    "lng":-6.16206
+    "id":182,
+    "name":"sudarso kodamar",
+    "lat":-6.16206,
+    "lng":106.882,
+    "comment":""
   },
   {
-    "stationId":183,
-    "stationName":"sudarso cempaka mas",
-    "lat":106.879,
-    "lng":-6.16585
+    "id":183,
+    "name":"sudarso cempaka mas",
+    "lat":-6.16585,
+    "lng":106.879,
+    "comment":""
   },
   {
-    "stationId":184,
-    "stationName":"cempaka putih",
-    "lat":106.876,
-    "lng":-6.17435
+    "id":184,
+    "name":"cempaka putih",
+    "lat":-6.17435,
+    "lng":106.876,
+    "comment":""
   },
   {
-    "stationId":185,
-    "stationName":"pulo mas pacuan kuda",
-    "lat":106.876,
-    "lng":-6.17695
+    "id":185,
+    "name":"pulo mas pacuan kuda",
+    "lat":-6.17695,
+    "lng":106.876,
+    "comment":""
   },
   {
-    "stationId":186,
-    "stationName":"kayu putih rawasari",
-    "lat":106.875,
-    "lng":-6.18792
+    "id":186,
+    "name":"kayu putih rawasari",
+    "lat":-6.18792,
+    "lng":106.875,
+    "comment":""
   },
   {
-    "stationId":187,
-    "stationName":"pramuka bpkp 2",
-    "lat":106.875,
-    "lng":-6.19295
+    "id":187,
+    "name":"pramuka bpkp 2",
+    "lat":-6.19295,
+    "lng":106.875,
+    "comment":""
   },
   {
-    "stationId":188,
-    "stationName":"utan kayu rawamangun",
-    "lat":106.874,
-    "lng":-6.19761
+    "id":188,
+    "name":"utan kayu rawamangun",
+    "lat":-6.19761,
+    "lng":106.874,
+    "comment":""
   },
   {
-    "stationId":189,
-    "stationName":"ahmad yani bea cukai",
-    "lat":106.874,
-    "lng":-6.20526
+    "id":189,
+    "name":"ahmad yani bea cukai",
+    "lat":-6.20526,
+    "lng":106.874,
+    "comment":""
   },
   {
-    "stationId":190,
-    "stationName":"stasiun jatinegara",
-    "lat":106.874,
-    "lng":-6.21503
+    "id":190,
+    "name":"stasiun jatinegara",
+    "lat":-6.21503,
+    "lng":106.874,
+    "comment":""
   },
   {
-    "stationId":191,
-    "stationName":"prumpung pedati",
-    "lat":106.874,
-    "lng":-6.22034
+    "id":191,
+    "name":"prumpung pedati",
+    "lat":-6.22034,
+    "lng":106.874,
+    "comment":""
   },
   {
-    "stationId":192,
-    "stationName":"kebon nanas cipinang",
-    "lat":106.876,
-    "lng":-6.23151
+    "id":192,
+    "name":"kebon nanas cipinang",
+    "lat":-6.23151,
+    "lng":106.876,
+    "comment":""
   },
   {
-    "stationId":193,
-    "stationName":"panjaitan penas",
-    "lat":106.878,
-    "lng":-6.23907
+    "id":193,
+    "name":"panjaitan penas",
+    "lat":-6.23907,
+    "lng":106.878,
+    "comment":""
   },
   {
-    "stationId":194,
-    "stationName":"soetoyo cawang",
-    "lat":106.876,
-    "lng":-6.24467
+    "id":194,
+    "name":"soetoyo cawang",
+    "lat":-6.24467,
+    "lng":106.876,
+    "comment":""
   },
   {
-    "stationId":195,
-    "stationName":"walikota jaktim",
-    "lat":106.94545,
-    "lng":-6.2125
+    "id":195,
+    "name":"walikota jaktim",
+    "lat":-6.2125,
+    "lng":106.94545,
+    "comment":""
   },
   {
-    "stationId":196,
-    "stationName":"penggilingan",
-    "lat":106.939583,
-    "lng":-6.21425
+    "id":196,
+    "name":"penggilingan",
+    "lat":-6.21425,
+    "lng":106.939583,
+    "comment":""
   },
   {
-    "stationId":197,
-    "stationName":"perumnas klender",
-    "lat":106.9309,
-    "lng":-6.2167
+    "id":197,
+    "name":"perumnas klender",
+    "lat":-6.2167,
+    "lng":106.9309,
+    "comment":""
   },
   {
-    "stationId":198,
-    "stationName":"flyover radin inten",
-    "lat":106.924483,
-    "lng":-6.215917
+    "id":198,
+    "name":"flyover radin inten",
+    "lat":-6.215917,
+    "lng":106.924483,
+    "comment":""
   },
   {
-    "stationId":199,
-    "stationName":"buaran",
-    "lat":106.918133,
-    "lng":-6.215167
+    "id":199,
+    "name":"buaran",
+    "lat":-6.215167,
+    "lng":106.918133,
+    "comment":""
   },
   {
-    "stationId":200,
-    "stationName":"kampung sumur",
-    "lat":106.911433,
-    "lng":-6.2143
+    "id":200,
+    "name":"kampung sumur",
+    "lat":-6.2143,
+    "lng":106.911433,
+    "comment":""
   },
   {
-    "stationId":201,
-    "stationName":"flyover klender",
-    "lat":106.90255,
-    "lng":-6.21355
+    "id":201,
+    "name":"flyover klender",
+    "lat":-6.21355,
+    "lng":106.90255,
+    "comment":""
   },
   {
-    "stationId":202,
-    "stationName":"stasiun klender",
-    "lat":106.898183,
-    "lng":-6.2135
+    "id":202,
+    "name":"stasiun klender",
+    "lat":-6.2135,
+    "lng":106.898183,
+    "comment":""
   },
   {
-    "stationId":203,
-    "stationName":"cipinang",
-    "lat":106.8898,
-    "lng":-6.21365
+    "id":203,
+    "name":"cipinang",
+    "lat":-6.21365,
+    "lng":106.8898,
+    "comment":""
   },
   {
-    "stationId":204,
-    "stationName":"imigrasi jaktim",
-    "lat":106.88205,
-    "lng":-6.214667
+    "id":204,
+    "name":"imigrasi jaktim",
+    "lat":-6.214667,
+    "lng":106.88205,
+    "comment":""
   },
   {
-    "stationId":205,
-    "stationName":"ps.enjo",
-    "lat":106.877983,
-    "lng":-6.214867
+    "id":205,
+    "name":"ps.enjo",
+    "lat":-6.214867,
+    "lng":106.877983,
+    "comment":""
   },
   {
-    "stationId":206,
-    "stationName":"flyover jatinegara",
-    "lat":106.873583,
-    "lng":-6.2151
+    "id":206,
+    "name":"flyover jatinegara",
+    "lat":-6.2151,
+    "lng":106.873583,
+    "comment":""
   },
   {
-    "stationId":207,
-    "stationName":"stasiun jatinegara 2",
-    "lat":106.868867,
-    "lng":-6.21545
+    "id":207,
+    "name":"stasiun jatinegara 2",
+    "lat":-6.21545,
+    "lng":106.868867,
+    "comment":""
   },
   {
-    "stationId":208,
-    "stationName":"jatinegara rs premier",
-    "lat":106.868333,
-    "lng":-6.22195
+    "id":208,
+    "name":"jatinegara rs premier",
+    "lat":-6.22195,
+    "lng":106.868333,
+    "comment":""
   }
 ]

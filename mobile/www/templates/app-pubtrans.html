@@ -3,12 +3,12 @@
       <div class="list">
           <label class="item item-input item-select item-stacked-label">
               <div class="input-label">Dari:</div>
-              <select ng-model="form.gateIn" ng-options="station.stationName for station in stations" required="required">
+              <select ng-model="form.gateIn" ng-options="station.name for station in stations" required="required">
               </select>
           </label>
           <label class="item item-input item-select item-stacked-label">
               <div class="input-label">Tujuan:</div>
-              <select ng-model="form.gateOut" ng-options="station.stationName for station in stations" required="required">
+              <select ng-model="form.gateOut" ng-options="station.name for station in stations" required="required">
               </select>
           </label>
           <div class="item">
@@ -16,23 +16,27 @@
           </div>
       </div>
 
-      <div style="width: 100%; height: 24em; margin-bottom: 1em" id="mapdash">
+      <div style="width: 100%; height: 24em; margin-bottom: 1em" id="mappubtrans">
       </div>
 
-      <div ng-show="cost">
+      <div ng-show="distanceKm">
           <h2>Rute &amp; Tarif</h2>
           <div class="list">
               <div class="item item-calm" ng-show="distanceKm">
                   <div class="row responsive-sm">
                       <div class="col" title="Jarak"><i class="icon ion-ios7-paperplane"></i> <strong>{{distanceKm | number:1}}</strong> km</div>
                       <div class="col col-50" title="Lama Perjalanan"><i class="icon ion-clock"></i> <strong><span ng-show="durationHours > 0">{{durationHours}} jam</span><span ng-show="durationMins > 0"> {{durationMins}} menit</span></strong></div>
-                      <div class="col" title="Total Biaya Tol"><i class="icon ion-pricetag"></i> Rp{{cost.total|number:0}}</div>
-                  </div>
-                  <div>
-                      <i class="icon ion-model-s" title="BBM"></i> {{vehicle.fuel}} <strong>{{fuelConsumption | number:1}} L</strong> × Rp{{fuelUnitPrice | number:0}} = <strong>Rp{{fuelPrice | number:0}}</strong>
+                      <div class="col" title="Total Biaya" ng-show="cost"><i class="icon ion-pricetag"></i> Rp{{cost.total|number:0}}</div>
                   </div>
               </div>
-                      <!--th>Masuk</th><th>Keluar</th><th>Tarif</th><th>via</th><th>Jarak</th><th>Waktu</th><th>BBM</th-->
+              <!--th>Masuk</th><th>Keluar</th><th>Tarif</th><th>via</th><th>Jarak</th><th>Waktu</th><th>BBM</th-->
+
+              <div class="item" ng-repeat="step in steps">
+                  <div ng-show="step.kind == 'in'"><span class="calm">Naik di</span> <strong>{{step.station.name}}</strong></div>
+                  <div ng-show="step.kind == 'pass'"><span style="color: #999">Lewat</span> {{step.station.name}}</div>
+                  <div ng-show="step.kind == 'out'"><span class="energized">Turun di</span> <strong>{{step.station.name}}</strong></div>
+              </div>
+
               <div class="item" ng-repeat="segment in cost.segments">
                   <div><strong>{{segment.origin.gerbang_tol_name}}</strong> → <strong>{{segment.dest.gerbang_tol_name}}</strong></div>
                   <div class="row responsive-sm">

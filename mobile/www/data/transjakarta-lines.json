@@ -1,35 +1,46 @@
 [
   {
-    "lineId":"TJ01"
+    "id":"TJ01",
+    "stopCount":21
   },
   {
-    "lineId":"TJ02"
+    "id":"TJ02",
+    "stopCount":22
   },
   {
-    "lineId":"TJ03"
+    "id":"TJ03",
+    "stopCount":13
   },
   {
-    "lineId":"TJ04"
+    "id":"TJ04",
+    "stopCount":16
   },
   {
-    "lineId":"TJ05"
+    "id":"TJ05",
+    "stopCount":17
   },
   {
-    "lineId":"TJ06"
+    "id":"TJ06",
+    "stopCount":18
   },
   {
-    "lineId":"TJ07"
+    "id":"TJ07",
+    "stopCount":13
   },
   {
-    "lineId":"TJ08"
+    "id":"TJ08",
+    "stopCount":19
   },
   {
-    "lineId":"TJ09"
+    "id":"TJ09",
+    "stopCount":36
   },
   {
-    "lineId":"TJ10"
+    "id":"TJ10",
+    "stopCount":19
   },
   {
-    "lineId":"TJ11"
+    "id":"TJ11",
+    "stopCount":14
   }
 ]

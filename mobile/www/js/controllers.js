@@ -37,11 +37,11 @@ angular.module('starter.controllers', [])
     
     $scope.form = {};
 
-    OSM.setUp('mapdash', -6.6, 107.0, 8);
+    OSM.setUp('mappubtrans', -6.6, 107.0, 8);
 
     $scope.$watch('form.gateIn', function(newV, oldV) {
         if ($scope.form.gateIn) {
-            OSM.setGateInLayer($scope.form.gateIn.lat, $scope.form.gateIn.long, $scope.form.gateIn.gerbang_tol_name);
+            OSM.setGateInLayer($scope.form.gateIn.lat, $scope.form.gateIn.lng, $scope.form.gateIn.name);
             // too edge!
 //            var latlngs = [
 //                new L.LatLng($scope.form.gateIn.lat, $scope.form.gateIn.long, true),
@@ -52,7 +52,7 @@ angular.module('starter.controllers', [])
     });
     $scope.$watch('form.gateOut', function(newV, oldV) {
         if ($scope.form.gateOut) {
-            OSM.setGateOutLayer($scope.form.gateOut.lat, $scope.form.gateOut.long, $scope.form.gateOut.gerbang_tol_name);
+            OSM.setGateOutLayer($scope.form.gateOut.lat, $scope.form.gateOut.lng, $scope.form.gateOut.name);
             // too edge!
 //            var latlngs = [
 //                new L.LatLng($scope.form.gateIn.lat, $scope.form.gateIn.long, true),
@@ -62,43 +62,47 @@ angular.module('starter.controllers', [])
         }
     });
 
+    TransJakarta.lines().success(function(data) {
+        $scope.lines = data;
+    });
     TransJakarta.stations().success(function(data) {
         $scope.stations = data;
         $scope.form = {
             gateIn: $scope.stations[0],
-            gateOut: $scope.stations[1]
+            gateOut: $scope.stations[10]
         };
     });
     TransJakarta.routes().success(function(data) {
         $scope.routes = data;
     });
-    JasaMarga.tollFare().success(function(data) {
-        $scope.tollFares = data;
-    });
-    MoreData.fuels().success(function(data) {
-        $scope.fuels = data;
-    });
 
     $scope.calcRoute = function() {
-        $log.info('Calculating', $scope.form.gateIn.ruas_tol_id, $scope.form.gateIn.gt_sequence, '-->',
-                            $scope.form.gateOut.ruas_tol_id, $scope.form.gateOut.gt_sequence);
+        $log.info('Calculating', $scope.form.gateIn.id, $scope.form.gateIn.name, '-->',
+                            $scope.form.gateOut.id, $scope.form.gateOut.name);
         OSM.clear();
-        var route = JasaMarga.findRoute($scope.tollRoutes, $scope.form.gateIn.ruas_tol_id, $scope.form.gateIn.gt_sequence,
-                            $scope.form.gateOut.ruas_tol_id, $scope.form.gateOut.gt_sequence);
+
+        var inPoint = TransJakarta.findRoutePoint($scope.routes, $scope.form.gateIn.id);
+        var outPoint = TransJakarta.findRoutePoint($scope.routes, $scope.form.gateOut.id);
+        $log.info('Route points:', inPoint, '-->', outPoint);
+
+        var route = TransJakarta.findRoute(
+            $scope.lines, $scope.stations, $scope.routes,
+            inPoint.lineId, inPoint.positioner,
+            outPoint.lineId, outPoint.positioner);
         var latlngs = [];
         var lastCp = null;
         var distance = 0;
         for (var i = 0; i < route.length; i++) {
             var r = route[i];
-            var latlng = new L.LatLng(r.gate.lat, r.gate.long, true);
+            var latlng = new L.LatLng(r.station.lat, r.station.lng, true);
             latlngs.push(latlng);
             if (i == 0) {
                 OSM.addMarker(latlng,
-                    {title: 'Awal ' + r.gate.ruas_tol_id + '-' + r.gate.gt_sequence + ': ' + r.gate.gerbang_tol_name,
+                    {title: 'Awal ' + r.station.lineId + '-' + r.station.positioner + ': ' + r.station.name,
                     icon: OSM.originIcon()});
             } else if (i == route.length - 1) {
                 OSM.addMarker(latlng,
-                    {title: 'Tujuan ' + r.gate.ruas_tol_id + '-' + r.gate.gt_sequence + ': ' + r.gate.gerbang_tol_name,
+                    {title: 'Tujuan ' + r.station.lineId + '-' + r.station.positioner + ': ' + r.station.name,
                     icon: OSM.destIcon()});
             } else if (i > 0 && i < route.length - 1) {
                 var icon;
@@ -113,32 +117,28 @@ angular.module('starter.controllers', [])
                     icon = OSM.passXsIcon();
                 }
                 OSM.addLayer(new L.Marker(latlng,
-                    {title: r.kind + ' km ' + r.gate.km + ' ' + r.gate.ruas_tol_id + '-' + r.gate.gt_sequence +
-                     ': ' + r.gate.gerbang_tol_name,
+                    {title: r.kind + ' km ' + r.station.lineId + '-' + r.station.positioner +
+                     ': ' + r.station.name,
                     icon: icon}));
             }
             // calc distance
             if (lastCp != null) {
-                distance += lastCp.distance( new geo.Point([r.gate.lat, r.gate.long]) );
+                distance += lastCp.distance( new geo.Point([r.station.lat, r.station.lng]) );
             }
-            lastCp = new geo.Point([r.gate.lat, r.gate.long]);
+            lastCp = new geo.Point([r.station.lat, r.station.lng]);
         }
         var polyline = L.polyline(latlngs, {color: 'red'});
         OSM.addLayer(polyline);
         OSM.map().fitBounds(polyline.getBounds());
-        $scope.fuelConsumption = (distance / 1000) / $scope.fuelEfficiency;
-        $scope.duration = (distance / 1000) / $scope.vehicle.avgSpeed;
+        var avgSpeed = 20;
+        $scope.duration = (distance / 1000) / avgSpeed;
         $scope.durationHours = parseInt($scope.duration, 10);
         $scope.durationMins = Math.round($scope.duration * 60) % 60;
-        $scope.fuelUnitPrice = $scope.fuels[ $scope.vehicle.fuel ];
-        $scope.fuelPrice = $scope.fuelConsumption * $scope.fuelUnitPrice;
         $log.info('Distance over', route.length, 'checkpoints is', distance, 'm',
-                 'fuel', $scope.fuelConsumption, 'L ×', $scope.fuelUnitPrice, '=', $scope.fuelPrice,
                  'Duration', $scope.duration, '(', $scope.durationHours, ':', $scope.durationMins, ')');
         $scope.distanceKm = distance / 1000;
-
-        $scope.cost = JasaMarga.findFare($scope.tollFares, $scope.vehicle, $scope.fuelUnitPrice, route);
-        $log.info('Cost:', $scope.cost);
+        $scope.steps = route;
+        $log.debug('Steps:', $scope.steps);
     };
 })
 

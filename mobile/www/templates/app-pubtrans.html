@@ -3,12 +3,12 @@
       <div class="list">
           <label class="item item-input item-select item-stacked-label">
               <div class="input-label">Dari:</div>
-              <select ng-model="form.gateIn" ng-options="tollRoute.gerbang_tol_name + ' - ' + tollRoute.nearest_area group by tollRoute.ruas_tol_id for tollRoute in tollRoutes" required="required">
+              <select ng-model="form.gateIn" ng-options="station.stationName for station in stations" required="required">
               </select>
           </label>
           <label class="item item-input item-select item-stacked-label">
               <div class="input-label">Tujuan:</div>
-              <select ng-model="form.gateOut" ng-options="tollRoute.gerbang_tol_name + ' - ' + tollRoute.nearest_area group by tollRoute.ruas_tol_id for tollRoute in tollRoutes" required="required">
+              <select ng-model="form.gateOut" ng-options="station.stationName for station in stations" required="required">
               </select>
           </label>
           <div class="item">

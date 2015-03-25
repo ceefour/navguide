@@ -1,5 +1,19 @@
 angular.module('starter.services', [])
 
+.factory('TransJakarta', function($http, $log) {
+    return {
+        lines: function() {
+            return $http({url: 'data/transjakarta-lines.json'});
+        },
+        stations: function() {
+            return $http({url: 'data/transjakarta-stations.json'});
+        },
+        routes: function() {
+            return $http({url: 'data/transjakarta-routes.json'});
+        }
+    };
+})
+
 .factory('JasaMarga', function($http, $log) {
     var segmentGateCounts = {
         'JM1': 11,

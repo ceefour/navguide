@@ -1,1250 +1,1250 @@
 [
   {
-    "lineId":"TJ01",
     "stationId":1,
     "stationName":"Blok M",
-    "positioner":0
+    "lat":106.801727,
+    "lng":-6.243327
   },
   {
-    "lineId":"TJ01",
     "stationId":2,
     "stationName":"Masjid Agung",
-    "positioner":1
+    "lat":106.798431,
+    "lng":-6.234957
   },
   {
-    "lineId":"TJ01",
     "stationId":3,
     "stationName":"Bundaran Senayan",
-    "positioner":2
+    "lat":106.801628,
+    "lng":-6.22739
   },
   {
-    "lineId":"TJ01",
     "stationId":4,
     "stationName":"Gelora Bung Karno",
-    "positioner":3
+    "lat":106.805804,
+    "lng":-6.224201
   },
   {
-    "lineId":"TJ01",
     "stationId":5,
     "stationName":"Polda",
-    "positioner":4
+    "lat":106.809686,
+    "lng":-6.221569
   },
   {
-    "lineId":"TJ01",
     "stationId":6,
     "stationName":"Bendungan Hilir",
-    "positioner":5
+    "lat":106.815278,
+    "lng":-6.217154
   },
   {
-    "lineId":"TJ01",
     "stationId":7,
     "stationName":"Karet",
-    "positioner":6
+    "lat":106.818336,
+    "lng":-6.214701
   },
   {
-    "lineId":"TJ01",
     "stationId":8,
     "stationName":"Setiabudi",
-    "positioner":7
+    "lat":106.821136,
+    "lng":-6.210328
   },
   {
-    "lineId":"TJ01",
     "stationId":9,
     "stationName":"Dukuh atas",
-    "positioner":8
+    "lat":106.822243,
+    "lng":-6.205701
   },
   {
-    "lineId":"TJ01",
     "stationId":10,
     "stationName":"Tosari",
-    "positioner":9
+    "lat":106.823145,
+    "lng":-6.198643
   },
   {
-    "lineId":"TJ01",
     "stationId":11,
     "stationName":"Bundaran HI",
-    "positioner":10
+    "lat":106.823019,
+    "lng":-6.193665
   },
   {
-    "lineId":"TJ01",
     "stationId":12,
     "stationName":"Sarinah",
-    "positioner":11
+    "lat":106.822998,
+    "lng":-6.188011
   },
   {
-    "lineId":"TJ01",
     "stationId":13,
     "stationName":"Bank Indonesia",
-    "positioner":12
+    "lat":106.822968,
+    "lng":-6.182708
   },
   {
-    "lineId":"TJ01",
     "stationId":14,
     "stationName":"Monas",
-    "positioner":13
+    "lat":106.822868,
+    "lng":-6.176257
   },
   {
-    "lineId":"TJ01",
     "stationId":15,
     "stationName":"Harmoni 1",
-    "positioner":14
+    "lat":106.820422,
+    "lng":-6.165857
   },
   {
-    "lineId":"TJ01",
     "stationId":16,
     "stationName":"Harmoni 2",
-    "positioner":15
+    "lat":null,
+    "lng":null
   },
   {
-    "lineId":"TJ01",
     "stationId":17,
     "stationName":"Sawah Besar",
-    "positioner":16
+    "lat":106.819167,
+    "lng":-6.160457
   },
   {
-    "lineId":"TJ01",
     "stationId":18,
     "stationName":"Mangga Besar",
-    "positioner":17
+    "lat":106.817306,
+    "lng":-6.152182
   },
   {
-    "lineId":"TJ01",
     "stationId":19,
     "stationName":"Dumo",
-    "positioner":18
+    "lat":106.816686,
+    "lng":-6.149337
   },
   {
-    "lineId":"TJ01",
     "stationId":20,
     "stationName":"Glodok",
-    "positioner":19
+    "lat":106.815538,
+    "lng":-6.144854
   },
   {
-    "lineId":"TJ01",
     "stationId":21,
     "stationName":"Stasiun Kota",
-    "positioner":20
+    "lat":106.814012,
+    "lng":-6.137797
   },
   {
-    "lineId":"TJ02",
     "stationId":22,
     "stationName":"Pulo gadung",
-    "positioner":0
+    "lat":106.909134,
+    "lng":-6.183177
   },
   {
-    "lineId":"TJ02",
     "stationId":23,
     "stationName":"Bermis",
-    "positioner":1
+    "lat":106.898467,
+    "lng":-6.178209
   },
   {
-    "lineId":"TJ02",
     "stationId":24,
     "stationName":"Pulo Mas",
-    "positioner":2
+    "lat":106.892754,
+    "lng":-6.174689
   },
   {
-    "lineId":"TJ02",
     "stationId":25,
     "stationName":"Asmi",
-    "positioner":3
+    "lat":106.8888,
+    "lng":-6.171777
   },
   {
-    "lineId":"TJ02",
     "stationId":26,
     "stationName":"Pedongkelan",
-    "positioner":4
+    "lat":106.882499,
+    "lng":-6.167966
   },
   {
-    "lineId":"TJ02",
     "stationId":27,
     "stationName":"Cempaka timur",
-    "positioner":5
+    "lat":106.876022,
+    "lng":-6.166545
   },
   {
-    "lineId":"TJ02",
     "stationId":28,
     "stationName":"RS Islam",
-    "positioner":6
+    "lat":106.870432,
+    "lng":-6.168604
   },
   {
-    "lineId":"TJ02",
     "stationId":29,
     "stationName":"Cempaka tengah",
-    "positioner":7
+    "lat":106.866575,
+    "lng":-6.170406
   },
   {
-    "lineId":"TJ02",
     "stationId":30,
     "stationName":"PS. Cempaka Putih",
-    "positioner":8
+    "lat":106.862474,
+    "lng":-6.172342
   },
   {
-    "lineId":"TJ02",
     "stationId":31,
     "stationName":"Rawa Selatan",
-    "positioner":9
+    "lat":106.858046,
+    "lng":-6.173913
   },
   {
-    "lineId":"TJ02",
     "stationId":32,
     "stationName":"Galur",
-    "positioner":10
+    "lat":106.854749,
+    "lng":-6.174422
   },
   {
-    "lineId":"TJ02",
     "stationId":33,
     "stationName":"Senen",
-    "positioner":11
+    "lat":106.842583,
+    "lng":-6.178196
   },
   {
-    "lineId":"TJ02",
     "stationId":34,
     "stationName":"Atrium",
-    "positioner":12
+    "lat":106.840909,
+    "lng":-6.177169
   },
   {
-    "lineId":"TJ02",
     "stationId":35,
     "stationName":"RSPAD",
-    "positioner":13
+    "lat":106.836752,
+    "lng":-6.175505
   },
   {
-    "lineId":"TJ02",
     "stationId":36,
     "stationName":"Deplu",
-    "positioner":14
+    "lat":106.834762,
+    "lng":-6.173481
   },
   {
-    "lineId":"TJ02",
     "stationId":37,
     "stationName":"Gambir 1",
-    "positioner":15
+    "lat":106.830341,
+    "lng":-6.174526
   },
   {
-    "lineId":"TJ02",
     "stationId":38,
     "stationName":"Istiqlal",
-    "positioner":16
+    "lat":106.830985,
+    "lng":-6.17223
   },
   {
-    "lineId":"TJ02",
     "stationId":39,
     "stationName":"Juanda",
-    "positioner":17
+    "lat":106.830776,
+    "lng":-6.16807
   },
   {
-    "lineId":"TJ02",
     "stationId":40,
     "stationName":"Pecenongan",
-    "positioner":18
+    "lat":106.828185,
+    "lng":-6.167713
   },
   {
-    "lineId":"TJ02",
     "stationId":41,
     "stationName":"Balai kota",
-    "positioner":19
+    "lat":106.82764,
+    "lng":-6.180212
   },
   {
-    "lineId":"TJ02",
     "stationId":42,
     "stationName":"Gambir 2",
-    "positioner":20
+    "lat":106.831092,
+    "lng":-6.178886
   },
   {
-    "lineId":"TJ02",
     "stationId":43,
     "stationName":"Kwitang",
-    "positioner":21
+    "lat":106.838551,
+    "lng":-6.181084
   },
   {
-    "lineId":"TJ03",
     "stationId":44,
     "stationName":"Kalideres",
-    "positioner":0
+    "lat":106.705911,
+    "lng":-6.154609
   },
   {
-    "lineId":"TJ03",
     "stationId":45,
     "stationName":"Pesakih",
-    "positioner":1
+    "lat":106.715232,
+    "lng":-6.154801
   },
   {
-    "lineId":"TJ03",
     "stationId":46,
     "stationName":"Sumur Bor",
-    "positioner":2
+    "lat":106.719174,
+    "lng":-6.153049
   },
   {
-    "lineId":"TJ03",
     "stationId":47,
     "stationName":"Rawa Buaya",
-    "positioner":3
+    "lat":106.72636,
+    "lng":-6.153937
   },
   {
-    "lineId":"TJ03",
     "stationId":48,
     "stationName":"Jembatan baru",
-    "positioner":4
+    "lat":106.730563,
+    "lng":-6.154843
   },
   {
-    "lineId":"TJ03",
     "stationId":49,
     "stationName":"Dispenda",
-    "positioner":5
+    "lat":106.738063,
+    "lng":-6.154611
   },
   {
-    "lineId":"TJ03",
     "stationId":50,
     "stationName":"Jembatan gantung",
-    "positioner":6
+    "lat":106.749282,
+    "lng":-6.155481
   },
   {
-    "lineId":"TJ03",
     "stationId":51,
     "stationName":"Taman kota",
-    "positioner":7
+    "lat":106.757884,
+    "lng":-6.157158
   },
   {
-    "lineId":"TJ03",
     "stationId":52,
     "stationName":"Indosiar",
-    "positioner":8
+    "lat":106.775399,
+    "lng":-6.163457
   },
   {
-    "lineId":"TJ03",
     "stationId":53,
     "stationName":"Jelambar",
-    "positioner":9
+    "lat":106.786699,
+    "lng":-6.166577
   },
   {
-    "lineId":"TJ03",
     "stationId":54,
     "stationName":"RS. Sumber waras",
-    "positioner":10
+    "lat":106.79691,
+    "lng":-6.166276
   },
   {
-    "lineId":"TJ03",
     "stationId":55,
     "stationName":"Grogol",
-    "positioner":11
+    "lat":null,
+    "lng":null
   },
   {
-    "lineId":"TJ03",
     "stationId":56,
     "stationName":"Pasar baru",
-    "positioner":12
+    "lat":106.834831,
+    "lng":-6.166102
   },
   {
-    "lineId":"TJ04",
     "stationId":57,
     "stationName":"Pasar pulo gadung",
-    "positioner":0
+    "lat":106.905939,
+    "lng":-6.187454
   },
   {
-    "lineId":"TJ04",
     "stationId":58,
     "stationName":"Tugas",
-    "positioner":1
+    "lat":106.904966,
+    "lng":-6.192361
   },
   {
-    "lineId":"TJ04",
     "stationId":59,
     "stationName":"Layur",
-    "positioner":2
+    "lat":106.898974,
+    "lng":-6.193529
   },
   {
-    "lineId":"TJ04",
     "stationId":60,
     "stationName":"Pemuda rawamangun",
-    "positioner":3
+    "lat":106.89164,
+    "lng":-6.193497
   },
   {
-    "lineId":"TJ04",
     "stationId":61,
     "stationName":"Veldrome",
-    "positioner":4
+    "lat":106.88818,
+    "lng":-6.193494
   },
   {
-    "lineId":"TJ04",
     "stationId":62,
     "stationName":"Sunan giri",
-    "positioner":5
+    "lat":106.883664,
+    "lng":-6.193249
   },
   {
-    "lineId":"TJ04",
     "stationId":63,
     "stationName":"Uni",
-    "positioner":6
+    "lat":106.880236,
+    "lng":-6.192873
   },
   {
-    "lineId":"TJ04",
     "stationId":64,
     "stationName":"Pramuka BPKP",
-    "positioner":7
+    "lat":106.874034,
+    "lng":-6.192153
   },
   {
-    "lineId":"TJ04",
     "stationId":65,
     "stationName":"Pramuka Lia",
-    "positioner":8
+    "lat":106.86859,
+    "lng":-6.192211
   },
   {
-    "lineId":"TJ04",
     "stationId":66,
     "stationName":"Utan Kayu",
-    "positioner":9
+    "lat":106.864601,
+    "lng":-6.192705
   },
   {
-    "lineId":"TJ04",
     "stationId":67,
     "stationName":"Pasar Genang",
-    "positioner":10
+    "lat":106.860921,
+    "lng":-6.194443
   },
   {
-    "lineId":"TJ04",
     "stationId":68,
     "stationName":"Matraman 2",
-    "positioner":11
+    "lat":106.85454,
+    "lng":-6.198955
   },
   {
-    "lineId":"TJ04",
     "stationId":69,
     "stationName":"Manggarai",
-    "positioner":12
+    "lat":106.847462,
+    "lng":-6.20889
   },
   {
-    "lineId":"TJ04",
     "stationId":70,
     "stationName":"Pasar rumput",
-    "positioner":13
+    "lat":106.841156,
+    "lng":-6.20712
   },
   {
-    "lineId":"TJ04",
     "stationId":71,
     "stationName":"Halimun",
-    "positioner":14
+    "lat":106.833364,
+    "lng":-6.205109
   },
   {
-    "lineId":"TJ04",
     "stationId":72,
     "stationName":"Dukuh atas 2",
-    "positioner":15
+    "lat":106.820742,
+    "lng":-6.202653
   },
   {
-    "lineId":"TJ05",
     "stationId":73,
     "stationName":"Kampung melayu",
-    "positioner":0
+    "lat":106.866884,
+    "lng":-6.224436
   },
   {
-    "lineId":"TJ05",
     "stationId":74,
     "stationName":"pasar jatinegara",
-    "positioner":1
+    "lat":106.866312,
+    "lng":-6.215722
   },
   {
-    "lineId":"TJ05",
     "stationId":75,
     "stationName":"kebon pala",
-    "positioner":2
+    "lat":106.861157,
+    "lng":-6.212837
   },
   {
-    "lineId":"TJ05",
     "stationId":76,
     "stationName":"slamet riyadi",
-    "positioner":3
+    "lat":106.859296,
+    "lng":-6.208576
   },
   {
-    "lineId":"TJ05",
     "stationId":77,
     "stationName":"tegalan",
-    "positioner":4
+    "lat":106.857115,
+    "lng":-6.202949
   },
   {
-    "lineId":"TJ05",
     "stationId":78,
     "stationName":"matraman l",
-    "positioner":5
+    "lat":106.854441,
+    "lng":-6.200008
   },
   {
-    "lineId":"TJ05",
     "stationId":79,
     "stationName":"caroulus",
-    "positioner":6
+    "lat":106.851085,
+    "lng":-6.196782
   },
   {
-    "lineId":"TJ05",
     "stationId":80,
     "stationName":"salemba UI",
-    "positioner":7
+    "lat":106.848991,
+    "lng":-6.193491
   },
   {
-    "lineId":"TJ05",
     "stationId":81,
     "stationName":"kramat sentioning/NU",
-    "positioner":8
+    "lat":106.846027,
+    "lng":-6.188057
   },
   {
-    "lineId":"TJ05",
     "stationId":82,
     "stationName":"pal putih",
-    "positioner":9
+    "lat":106.844042,
+    "lng":-6.184646
   },
   {
-    "lineId":"TJ05",
     "stationId":83,
     "stationName":"central senen",
-    "positioner":10
+    "lat":106.842132,
+    "lng":-6.178161
   },
   {
-    "lineId":"TJ05",
     "stationId":84,
     "stationName":"budi utomo",
-    "positioner":11
+    "lat":106.839088,
+    "lng":-6.166046
   },
   {
-    "lineId":"TJ05",
     "stationId":85,
     "stationName":"pasar baru timur",
-    "positioner":12
+    "lat":106.838146,
+    "lng":-6.1623
   },
   {
-    "lineId":"TJ05",
     "stationId":86,
     "stationName":"jembatan merah",
-    "positioner":13
+    "lat":106.834273,
+    "lng":-6.146734
   },
   {
-    "lineId":"TJ05",
     "stationId":87,
     "stationName":"mangga 2 square",
-    "positioner":14
+    "lat":106.832374,
+    "lng":-6.136789
   },
   {
-    "lineId":"TJ05",
     "stationId":88,
     "stationName":"pademangan",
-    "positioner":15
+    "lat":106.831658,
+    "lng":-6.133741
   },
   {
-    "lineId":"TJ05",
     "stationId":89,
     "stationName":"ancol",
-    "positioner":16
+    "lat":106.830416,
+    "lng":-6.127498
   },
   {
-    "lineId":"TJ06",
     "stationId":90,
     "stationName":"Ragunan",
-    "positioner":0
+    "lat":106.818805,
+    "lng":-6.305746
   },
   {
-    "lineId":"TJ06",
     "stationId":91,
     "stationName":"Deptan",
-    "positioner":1
+    "lat":106.822051,
+    "lng":-6.294704
   },
   {
-    "lineId":"TJ06",
     "stationId":92,
     "stationName":"SMK 57",
-    "positioner":2
+    "lat":106.82352,
+    "lng":-6.291193
   },
   {
-    "lineId":"TJ06",
     "stationId":93,
     "stationName":"Jatipadang",
-    "positioner":3
+    "lat":106.82616,
+    "lng":-6.285575
   },
   {
-    "lineId":"TJ06",
     "stationId":94,
     "stationName":"Pejaten",
-    "positioner":4
+    "lat":106.829673,
+    "lng":-6.278454
   },
   {
-    "lineId":"TJ06",
     "stationId":95,
     "stationName":"Buncit Indah",
-    "positioner":5
+    "lat":106.830255,
+    "lng":-6.274332
   },
   {
-    "lineId":"TJ06",
     "stationId":96,
     "stationName":"Warung Jati",
-    "positioner":6
+    "lat":106.829706,
+    "lng":-6.262366
   },
   {
-    "lineId":"TJ06",
     "stationId":97,
     "stationName":"Imigrasi",
-    "positioner":7
+    "lat":106.827959,
+    "lng":-6.25677
   },
   {
-    "lineId":"TJ06",
     "stationId":98,
     "stationName":"Duren tiga",
-    "positioner":8
+    "lat":106.826862,
+    "lng":-6.252109
   },
   {
-    "lineId":"TJ06",
     "stationId":99,
     "stationName":"Mampang Prapatan",
-    "positioner":9
+    "lat":106.825701,
+    "lng":-6.24209
   },
   {
-    "lineId":"TJ06",
     "stationId":100,
     "stationName":"Kuningan timur",
-    "positioner":10
+    "lat":106.827855,
+    "lng":-6.235917
   },
   {
-    "lineId":"TJ06",
     "stationId":101,
     "stationName":"patra kuningan",
-    "positioner":11
+    "lat":106.831318,
+    "lng":-6.233451
   },
   {
-    "lineId":"TJ06",
     "stationId":102,
     "stationName":"dep. Kesehatan",
-    "positioner":12
+    "lat":106.833203,
+    "lng":-6.228739
   },
   {
-    "lineId":"TJ06",
     "stationId":103,
     "stationName":"gor sumantri",
-    "positioner":13
+    "lat":106.831956,
+    "lng":-6.220604
   },
   {
-    "lineId":"TJ06",
     "stationId":104,
     "stationName":"karet kuningan",
-    "positioner":14
+    "lat":106.830929,
+    "lng":-6.217538
   },
   {
-    "lineId":"TJ06",
     "stationId":105,
     "stationName":"kuningan madya",
-    "positioner":15
+    "lat":106.830443,
+    "lng":-6.212621
   },
   {
-    "lineId":"TJ06",
     "stationId":106,
     "stationName":"setia budi aini",
-    "positioner":16
+    "lat":106.829979,
+    "lng":-6.208282
   },
   {
-    "lineId":"TJ06",
     "stationId":107,
     "stationName":"latu harhari",
-    "positioner":17
+    "lat":106.827651,
+    "lng":-6.202837
   },
   {
-    "lineId":"TJ07",
     "stationId":108,
     "stationName":"kampung rambutan",
-    "positioner":0
+    "lat":106.8816,
+    "lng":-6.309258
   },
   {
-    "lineId":"TJ07",
     "stationId":109,
     "stationName":"tanah merdeka",
-    "positioner":1
+    "lat":106.873949,
+    "lng":-6.308167
   },
   {
-    "lineId":"TJ07",
     "stationId":110,
     "stationName":"makro",
-    "positioner":2
+    "lat":106.865698,
+    "lng":-6.306584
   },
   {
-    "lineId":"TJ07",
     "stationId":111,
     "stationName":"rs. Harapan bunda",
-    "positioner":3
+    "lat":106.867973,
+    "lng":-6.301993
   },
   {
-    "lineId":"TJ07",
     "stationId":112,
     "stationName":"pasar induk",
-    "positioner":4
+    "lat":106.871985,
+    "lng":-6.294224
   },
   {
-    "lineId":"TJ07",
     "stationId":113,
     "stationName":"pasar kramatjati",
-    "positioner":5
+    "lat":106.866572,
+    "lng":-6.268784
   },
   {
-    "lineId":"TJ07",
     "stationId":114,
     "stationName":"pgc",
-    "positioner":6
+    "lat":106.866353,
+    "lng":-6.26246
   },
   {
-    "lineId":"TJ07",
     "stationId":115,
     "stationName":"bkn",
-    "positioner":7
+    "lat":106.869952,
+    "lng":-6.257815
   },
   {
-    "lineId":"TJ07",
     "stationId":116,
     "stationName":"cawang uki",
-    "positioner":8
+    "lat":106.873544,
+    "lng":-6.250392
   },
   {
-    "lineId":"TJ07",
     "stationId":117,
     "stationName":"bnn",
-    "positioner":9
+    "lat":106.872122,
+    "lng":-6.246297
   },
   {
-    "lineId":"TJ07",
     "stationId":118,
     "stationName":"cawang otista",
-    "positioner":10
+    "lat":106.868702,
+    "lng":-6.24366
   },
   {
-    "lineId":"TJ07",
     "stationId":119,
     "stationName":"gelanggang remaja",
-    "positioner":11
+    "lat":106.8679,
+    "lng":-6.235453
   },
   {
-    "lineId":"TJ07",
     "stationId":120,
     "stationName":"bidadari cina",
-    "positioner":12
+    "lat":106.867222,
+    "lng":-6.229739
   },
   {
-    "lineId":"TJ08",
     "stationId":121,
     "stationName":"Pondok pinang",
-    "positioner":0
+    "lat":106.772009,
+    "lng":-6.282173
   },
   {
-    "lineId":"TJ08",
     "stationId":122,
     "stationName":"terminal lebak bulus",
-    "positioner":1
+    "lat":106.774562,
+    "lng":-6.289444
   },
   {
-    "lineId":"TJ08",
     "stationId":123,
     "stationName":"metro pondok indah l",
-    "positioner":2
+    "lat":106.779226,
+    "lng":-6.287436
   },
   {
-    "lineId":"TJ08",
     "stationId":124,
     "stationName":"metro pondok indah ll",
-    "positioner":3
+    "lat":106.783598,
+    "lng":-6.26724
   },
   {
-    "lineId":"TJ08",
     "stationId":125,
     "stationName":"tanah kusir kodim",
-    "positioner":4
+    "lat":106.781646,
+    "lng":-6.257007
   },
   {
-    "lineId":"TJ08",
     "stationId":126,
     "stationName":"kebayoran lama bungu",
-    "positioner":5
+    "lat":106.781592,
+    "lng":-6.252707
   },
   {
-    "lineId":"TJ08",
     "stationId":127,
     "stationName":"kebayoran lama",
-    "positioner":6
+    "lat":106.783204,
+    "lng":-6.238426
   },
   {
-    "lineId":"TJ08",
     "stationId":128,
     "stationName":"simprug",
-    "positioner":7
+    "lat":106.786511,
+    "lng":-6.233888
   },
   {
-    "lineId":"TJ08",
     "stationId":129,
     "stationName":"permata hijau",
-    "positioner":8
+    "lat":106.783268,
+    "lng":-6.221431
   },
   {
-    "lineId":"TJ08",
     "stationId":130,
     "stationName":"permata hijau rs medik",
-    "positioner":9
+    "lat":106.777555,
+    "lng":-6.218343
   },
   {
-    "lineId":"TJ08",
     "stationId":131,
     "stationName":"pos pengumben",
-    "positioner":10
+    "lat":106.772277,
+    "lng":-6.212914
   },
   {
-    "lineId":"TJ08",
     "stationId":132,
     "stationName":"kelapa 2 sasak",
-    "positioner":11
+    "lat":106.769525,
+    "lng":-6.205539
   },
   {
-    "lineId":"TJ08",
     "stationId":133,
     "stationName":"kebon jeruk",
-    "positioner":12
+    "lat":106.768881,
+    "lng":-6.194294
   },
   {
-    "lineId":"TJ08",
     "stationId":134,
     "stationName":"duri kelapa",
-    "positioner":13
+    "lat":106.76843,
+    "lng":-6.185249
   },
   {
-    "lineId":"TJ08",
     "stationId":135,
     "stationName":"kedoya assiddiqiyah",
-    "positioner":14
+    "lat":106.765848,
+    "lng":-6.17451
   },
   {
-    "lineId":"TJ08",
     "stationId":136,
     "stationName":"kedoya green garden",
-    "positioner":15
+    "lat":106.763004,
+    "lng":-6.164444
   },
   {
-    "lineId":"TJ08",
     "stationId":137,
     "stationName":"mandala",
-    "positioner":16
+    "lat":106.800368,
+    "lng":-6.176865
   },
   {
-    "lineId":"TJ08",
     "stationId":138,
     "stationName":"rs tarakan",
-    "positioner":17
+    "lat":106.810064,
+    "lng":-6.17115
   },
   {
-    "lineId":"TJ08",
     "stationId":139,
     "stationName":"petojo",
-    "positioner":18
+    "lat":106.816987,
+    "lng":-6.169964
   },
   {
-    "lineId":"TJ09",
     "stationId":140,
     "stationName":"Pluit",
-    "positioner":0
+    "lat":106.791009,
+    "lng":-6.115779
   },
   {
-    "lineId":"TJ09",
     "stationId":141,
     "stationName":"penjaringan",
-    "positioner":1
+    "lat":106.792007,
+    "lng":-6.126287
   },
   {
-    "lineId":"TJ09",
     "stationId":142,
     "stationName":"jembatan tiga",
-    "positioner":2
+    "lat":106.792699,
+    "lng":-6.13336
   },
   {
-    "lineId":"TJ09",
     "stationId":143,
     "stationName":"jembatan dua",
-    "positioner":3
+    "lat":106.793509,
+    "lng":-6.143206
   },
   {
-    "lineId":"TJ09",
     "stationId":144,
     "stationName":"jembatan besi",
-    "positioner":4
+    "lat":106.794947,
+    "lng":-6.15207
   },
   {
-    "lineId":"TJ09",
     "stationId":145,
     "stationName":"latumenten 1",
-    "positioner":5
+    "lat":106.790382,
+    "lng":-6.161073
   },
   {
-    "lineId":"TJ09",
     "stationId":146,
     "stationName":"grogol 1",
-    "positioner":6
+    "lat":106.787804,
+    "lng":-6.167164
   },
   {
-    "lineId":"TJ09",
     "stationId":147,
     "stationName":"grogol 2",
-    "positioner":7
+    "lat":106.788568,
+    "lng":-6.16735
   },
   {
-    "lineId":"TJ09",
     "stationId":148,
     "stationName":"harapan kita 2",
-    "positioner":8
+    "lat":106.797074,
+    "lng":-6.185222
   },
   {
-    "lineId":"TJ09",
     "stationId":149,
     "stationName":"harapan kita 1",
-    "positioner":9
+    "lat":106.796776,
+    "lng":-6.184475
   },
   {
-    "lineId":"TJ09",
     "stationId":150,
     "stationName":"slipi kemanggisan 2",
-    "positioner":10
+    "lat":106.797264,
+    "lng":-6.190038
   },
   {
-    "lineId":"TJ09",
     "stationId":151,
     "stationName":"slipi kemanggisan 1",
-    "positioner":11
+    "lat":106.79696,
+    "lng":-6.190075
   },
   {
-    "lineId":"TJ09",
     "stationId":152,
     "stationName":"slipi petamburan 2",
-    "positioner":12
+    "lat":106.799498,
+    "lng":-6.201688
   },
   {
-    "lineId":"TJ09",
     "stationId":153,
     "stationName":"slipi petamburan 1",
-    "positioner":13
+    "lat":106.799973,
+    "lng":-6.201933
   },
   {
-    "lineId":"TJ09",
     "stationId":154,
     "stationName":"icc senayan 2",
-    "positioner":14
+    "lat":106.80839,
+    "lng":-6.213847
   },
   {
-    "lineId":"TJ09",
     "stationId":155,
     "stationName":"icc senayan 1",
-    "positioner":15
+    "lat":106.809026,
+    "lng":-6.214151
   },
   {
-    "lineId":"TJ09",
     "stationId":156,
     "stationName":"semanggi 2",
-    "positioner":16
+    "lat":106.813248,
+    "lng":-6.220423
   },
   {
-    "lineId":"TJ09",
     "stationId":157,
     "stationName":"semanggi 1",
-    "positioner":17
+    "lat":106.813036,
+    "lng":-6.220583
   },
   {
-    "lineId":"TJ09",
     "stationId":158,
     "stationName":"gatsu lipi 1",
-    "positioner":18
+    "lat":106.8174,
+    "lng":-6.226502
   },
   {
-    "lineId":"TJ09",
     "stationId":159,
     "stationName":"gatsu lipi 2",
-    "positioner":19
+    "lat":106.817638,
+    "lng":-6.227393
   },
   {
-    "lineId":"TJ09",
     "stationId":160,
     "stationName":"gatsu jamsostek 1",
-    "positioner":20
+    "lat":106.822045,
+    "lng":-6.233488
   },
   {
-    "lineId":"TJ09",
     "stationId":161,
     "stationName":"gatsu jamsostek 2",
-    "positioner":21
+    "lat":106.821656,
+    "lng":-6.232613
   },
   {
-    "lineId":"TJ09",
     "stationId":162,
     "stationName":"kuningan barat 1",
-    "positioner":22
+    "lat":106.827608,
+    "lng":-6.237192
   },
   {
-    "lineId":"TJ09",
     "stationId":163,
     "stationName":"kuningan barat 2",
-    "positioner":23
+    "lat":null,
+    "lng":null
   },
   {
-    "lineId":"TJ09",
     "stationId":164,
     "stationName":"tegal parang 1",
-    "positioner":24
+    "lat":106.830255,
+    "lng":-6.238847
   },
   {
-    "lineId":"TJ09",
     "stationId":165,
     "stationName":"pancoran 2",
-    "positioner":25
+    "lat":106.838093,
+    "lng":-6.241543
   },
   {
-    "lineId":"TJ09",
     "stationId":166,
     "stationName":"pancoran 1",
-    "positioner":26
+    "lat":106.837202,
+    "lng":-6.241636
   },
   {
-    "lineId":"TJ09",
     "stationId":167,
     "stationName":"tugu pancoran 1",
-    "positioner":27
+    "lat":106.843865,
+    "lng":-6.243153
   },
   {
-    "lineId":"TJ09",
     "stationId":168,
     "stationName":"tebet 2",
-    "positioner":28
+    "lat":106.852027,
+    "lng":-6.243031
   },
   {
-    "lineId":"TJ09",
     "stationId":169,
     "stationName":"tebet 1",
-    "positioner":29
+    "lat":106.852046,
+    "lng":-6.243332
   },
   {
-    "lineId":"TJ09",
     "stationId":170,
     "stationName":"cikoko st cawang 2",
-    "positioner":30
+    "lat":106.863499,
+    "lng":-6.242996
   },
   {
-    "lineId":"TJ09",
     "stationId":171,
     "stationName":"cikoko st cawang 1",
-    "positioner":31
+    "lat":106.857888,
+    "lng":-6.243375
   },
   {
-    "lineId":"TJ09",
     "stationId":172,
     "stationName":"cawang ciliwung 2",
-    "positioner":32
+    "lat":106.863563,
+    "lng":-6.243303
   },
   {
-    "lineId":"TJ09",
     "stationId":173,
     "stationName":"cawang ciliwung 1",
-    "positioner":33
+    "lat":106.85793,
+    "lng":-6.243063
   },
   {
-    "lineId":"TJ09",
     "stationId":174,
     "stationName":"taman mini",
-    "positioner":34
+    "lat":106.881137,
+    "lng":-6.290166
   },
   {
-    "lineId":"TJ09",
     "stationId":175,
     "stationName":"pinang ranti",
-    "positioner":35
+    "lat":106.886429,
+    "lng":-6.291246
   },
   {
-    "lineId":"TJ10",
     "stationId":176,
     "stationName":"terminal priok",
-    "positioner":0
+    "lat":106.88206,
+    "lng":-6.109555
   },
   {
-    "lineId":"TJ10",
     "stationId":177,
     "stationName":"enggano",
-    "positioner":1
+    "lat":106.892381,
+    "lng":-6.11008
   },
   {
-    "lineId":"TJ10",
     "stationId":178,
     "stationName":"permai kota",
-    "positioner":2
+    "lat":106.893089,
+    "lng":-6.113918
   },
   {
-    "lineId":"TJ10",
     "stationId":179,
     "stationName":"walikota jakut",
-    "positioner":3
+    "lat":106.893,
+    "lng":-6.11896
   },
   {
-    "lineId":"TJ10",
     "stationId":180,
     "stationName":"plumpang pertamina",
-    "positioner":4
+    "lat":106.894,
+    "lng":-6.12863
   },
   {
-    "lineId":"TJ10",
     "stationId":181,
     "stationName":"sunter kelapa gading",
-    "positioner":5
+    "lat":106.891,
+    "lng":-6.14265
   },
   {
-    "lineId":"TJ10",
     "stationId":182,
     "stationName":"sudarso kodamar",
-    "positioner":6
+    "lat":106.882,
+    "lng":-6.16206
   },
   {
-    "lineId":"TJ10",
     "stationId":183,
     "stationName":"sudarso cempaka mas",
-    "positioner":7
+    "lat":106.879,
+    "lng":-6.16585
   },
   {
-    "lineId":"TJ10",
     "stationId":184,
     "stationName":"cempaka putih",
-    "positioner":8
+    "lat":106.876,
+    "lng":-6.17435
   },
   {
-    "lineId":"TJ10",
     "stationId":185,
     "stationName":"pulo mas pacuan kuda",
-    "positioner":9
+    "lat":106.876,
+    "lng":-6.17695
   },
   {
-    "lineId":"TJ10",
     "stationId":186,
     "stationName":"kayu putih rawasari",
-    "positioner":10
+    "lat":106.875,
+    "lng":-6.18792
   },
   {
-    "lineId":"TJ10",
     "stationId":187,
     "stationName":"pramuka bpkp 2",
-    "positioner":11
+    "lat":106.875,
+    "lng":-6.19295
   },
   {
-    "lineId":"TJ10",
     "stationId":188,
     "stationName":"utan kayu rawamangun",
-    "positioner":12
+    "lat":106.874,
+    "lng":-6.19761
   },
   {
-    "lineId":"TJ10",
     "stationId":189,
     "stationName":"ahmad yani bea cukai",
-    "positioner":13
+    "lat":106.874,
+    "lng":-6.20526
   },
   {
-    "lineId":"TJ10",
     "stationId":190,
     "stationName":"stasiun jatinegara",
-    "positioner":14
+    "lat":106.874,
+    "lng":-6.21503
   },
   {
-    "lineId":"TJ10",
     "stationId":191,
     "stationName":"prumpung pedati",
-    "positioner":15
+    "lat":106.874,
+    "lng":-6.22034
   },
   {
-    "lineId":"TJ10",
     "stationId":192,
     "stationName":"kebon nanas cipinang",
-    "positioner":16
+    "lat":106.876,
+    "lng":-6.23151
   },
   {
-    "lineId":"TJ10",
     "stationId":193,
     "stationName":"panjaitan penas",
-    "positioner":17
+    "lat":106.878,
+    "lng":-6.23907
   },
   {
-    "lineId":"TJ10",
     "stationId":194,
     "stationName":"soetoyo cawang",
-    "positioner":18
+    "lat":106.876,
+    "lng":-6.24467
   },
   {
-    "lineId":"TJ11",
     "stationId":195,
     "stationName":"walikota jaktim",
-    "positioner":0
+    "lat":106.94545,
+    "lng":-6.2125
   },
   {
-    "lineId":"TJ11",
     "stationId":196,
     "stationName":"penggilingan",
-    "positioner":1
+    "lat":106.939583,
+    "lng":-6.21425
   },
   {
-    "lineId":"TJ11",
     "stationId":197,
     "stationName":"perumnas klender",
-    "positioner":2
+    "lat":106.9309,
+    "lng":-6.2167
   },
   {
-    "lineId":"TJ11",
     "stationId":198,
     "stationName":"flyover radin inten",
-    "positioner":3
+    "lat":106.924483,
+    "lng":-6.215917
   },
   {
-    "lineId":"TJ11",
     "stationId":199,
     "stationName":"buaran",
-    "positioner":4
+    "lat":106.918133,
+    "lng":-6.215167
   },
   {
-    "lineId":"TJ11",
     "stationId":200,
     "stationName":"kampung sumur",
-    "positioner":5
+    "lat":106.911433,
+    "lng":-6.2143
   },
   {
-    "lineId":"TJ11",
     "stationId":201,
     "stationName":"flyover klender",
-    "positioner":6
+    "lat":106.90255,
+    "lng":-6.21355
   },
   {
-    "lineId":"TJ11",
     "stationId":202,
     "stationName":"stasiun klender",
-    "positioner":7
+    "lat":106.898183,
+    "lng":-6.2135
   },
   {
-    "lineId":"TJ11",
     "stationId":203,
     "stationName":"cipinang",
-    "positioner":8
+    "lat":106.8898,
+    "lng":-6.21365
   },
   {
-    "lineId":"TJ11",
     "stationId":204,
     "stationName":"imigrasi jaktim",
-    "positioner":9
+    "lat":106.88205,
+    "lng":-6.214667
   },
   {
-    "lineId":"TJ11",
     "stationId":205,
     "stationName":"ps.enjo",
-    "positioner":10
+    "lat":106.877983,
+    "lng":-6.214867
   },
   {
-    "lineId":"TJ11",
     "stationId":206,
     "stationName":"flyover jatinegara",
-    "positioner":11
+    "lat":106.873583,
+    "lng":-6.2151
   },
   {
-    "lineId":"TJ11",
     "stationId":207,
     "stationName":"stasiun jatinegara 2",
-    "positioner":12
+    "lat":106.868867,
+    "lng":-6.21545
   },
   {
-    "lineId":"TJ11",
     "stationId":208,
     "stationName":"jatinegara rs premier",
-    "positioner":13
+    "lat":106.868333,
+    "lng":-6.22195
   }
 ]

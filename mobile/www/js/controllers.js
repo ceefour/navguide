@@ -33,22 +33,9 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('PublicTransportCtrl', function($scope, $log, OSM, JasaMarga, MoreData, Settings) {
+.controller('PublicTransportCtrl', function($scope, $log, OSM, JasaMarga, TransJakarta, MoreData, Settings) {
     
     $scope.form = {};
-    $scope.fuelEfficiency = 9.91; // 23.3 mpg
-    $scope.vehicle = Settings.getVehicle();
-    if ($scope.vehicle != null) {
-        $log.info('Saved vehicle is', $scope.vehicle);
-        $scope.fuelEfficiency = $scope.vehicle.fuelEfficiency;
-    } else {
-        MoreData.vehicles().success(function(data) {
-            $scope.vehicle = data[0];
-            $log.info('Setting default vehicle as', $scope.vehicle.vehicleId);
-            Settings.setVehicle($scope.vehicle);
-            $scope.fuelEfficiency = $scope.vehicle.fuelEfficiency;
-        });
-    }
 
     OSM.setUp('mapdash', -6.6, 107.0, 8);
 
@@ -75,10 +62,15 @@ angular.module('starter.controllers', [])
         }
     });
 
-    JasaMarga.tollRoute().success(function(data) {
-        $scope.tollRoutes = data;
-        $scope.form = {gateIn: JasaMarga.getGate($scope.tollRoutes, 'JM5', 7),
-            gateOut: JasaMarga.getGate($scope.tollRoutes, 'JM6', 10)};
+    TransJakarta.stations().success(function(data) {
+        $scope.stations = data;
+        $scope.form = {
+            gateIn: $scope.stations[0],
+            gateOut: $scope.stations[1]
+        };
+    });
+    TransJakarta.routes().success(function(data) {
+        $scope.routes = data;
     });
     JasaMarga.tollFare().success(function(data) {
         $scope.tollFares = data;

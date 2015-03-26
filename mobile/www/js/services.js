@@ -148,6 +148,154 @@ angular.module('starter.services', [])
     };
 })
 
+.factory('Krl', function($http, $log) {
+    return {
+        lines: function() {
+            return $http({url: 'data/krl-lines.json'});
+        },
+        stations: function() {
+            return $http({url: 'data/krl-stations.json'});
+        },
+        waypoints: function() {
+            return $http({url: 'data/krl-waypoints.json'});
+        },
+        /**
+         * Get a Waypoint (lineId + positioner)
+         * based on stationId
+         */
+        findWaypoint: function(routes, stationId) {
+            var routePoint = _.find(routes, function(x) { return x.stationId == stationId; });
+            return routePoint || null;
+        },
+        /**
+         * Get station based on lineId and positioner.
+         */
+        getStation: function(stations, routes, lineId, positioner) {
+            var waypoint = _.find(routes, function(el) {
+                return el.lineId == lineId && el.positioner == positioner; });
+            var station = _.find(stations, function(x) { return x.id == waypoint.stationId; });
+            if (station == null) {
+                throw "Cannot find station " + lineId + " position " + positioner;
+            }
+            return station;
+        },
+        /**
+         * get the passes as array, excluding both origin and dest
+         */
+        getPasses: function(stations, routes, origin, dest) {
+            var passes = [];
+            if (dest.positioner > origin.positioner) {
+                for (var gtseq = origin.positioner + 1; gtseq < dest.positioner; gtseq++) {
+                    var station = _.clone(this.getStation(stations, routes, origin.lineId, gtseq));
+                    station.lineId = origin.lineId;
+                    station.positioner = gtseq;
+                    passes.push({kind: 'pass', station: station});
+                }
+            }
+            if (dest.positioner < origin.positioner) {
+                for (var gtseq = origin.positioner - 1; gtseq > dest.positioner; gtseq--) {
+                    var station = _.clone(this.getStation(stations, routes, origin.lineId, gtseq));
+                    station.lineId = origin.lineId;
+                    station.positioner = gtseq;
+                    passes.push({kind: 'pass', station: station});
+                }
+            }
+            return passes;
+        },
+        /**
+         * Both origin and dest must be _.extend() with station+routepoint
+         * visitedLines must contain, at least, the origin's lineId
+         */
+        findRouteNest: function(lines, stations, routes, origin, dest, visitedLines) {
+            // if origin and dest is the same segment then simply iterate:
+            if (origin.lineId == dest.lineId) {
+                $log.debug('same origin at', origin.lineId, origin.positioner, '->', dest.positioner,
+                           'visited', visitedLines);
+                var route = this.getPasses(stations, routes, origin, dest);
+                route.push({kind: 'out', station: dest});
+                return route; // got it!
+            } else {
+                // if different segments then check if what other segments we can use, and find the shortest route
+                var bestRoute = null;
+                var bestGateCount = null;
+                var bestExitGate = null;
+                var bestTransitGate = null;
+                var bestNewVisitedSegments = null;
+                var stopCount = _.find(lines, function(l) { return l.id == origin.lineId; }).stopCount;
+                for (var exitSeq = 1; exitSeq <= stopCount; exitSeq++) {
+                    var exitGate = this.getGate(tollRoutes, origin.ruas_tol_id, exitSeq);
+                    if (exitGate.ruas_tol_intersection) {
+                        for (var i in exitGate.ruas_tol_intersection) {
+                            var el = exitGate.ruas_tol_intersection[i];
+
+                            var visited = visitedSegments.indexOf(el.ruas_tol_id) >= 0;
+                            if (!visited) {
+                                var transitGate = this.getGate(tollRoutes, el.ruas_tol_id, el.gt_sequence);
+                                var newVisitedSegments = visitedSegments.slice(0);
+                                //$log.debug(el, newVisitedSegments);
+                                newVisitedSegments.push(el.ruas_tol_id);
+                                $log.debug('Exiting', exitGate.ruas_tol_id, exitGate.gt_sequence,
+                                           'transiting', transitGate.ruas_tol_id, transitGate.gt_sequence,
+                                           'visited', newVisitedSegments);
+                                var transitRoute = this.findRouteNest(tollRoutes, transitGate, dest, newVisitedSegments);
+                                var gateCount = _.filter(transitRoute, function(r) { return r.kind == 'in'; }).length;
+                                if (transitRoute != null && (bestRoute == null || gateCount < bestGateCount)) {
+                                    var route = this.getPasses(tollRoutes, origin, exitGate);
+                                    route.push({kind: 'out', gate: exitGate}, {kind: 'in', gate: transitGate});
+                                    route = route.concat(transitRoute);
+//                                    $log.debug('Got', gateCount, 'gates route exiting',
+//                                               exitGate.ruas_tol_id, exitGate.gt_sequence,
+//                                           'transiting', transitGate.ruas_tol_id, transitGate.gt_sequence,
+//                                           'visited', newVisitedSegments);
+                                    bestRoute = route;
+                                    bestGateCount = gateCount;
+                                    bestExitGate = exitGate;
+                                    bestTransitGate = transitGate;
+                                    bestNewVisitedSegments = newVisitedSegments;
+                                }
+                            }
+                        }
+                    }
+                }
+                // either bestRoute or failed
+                if (bestRoute != null) {
+                    $log.debug('Got', bestGateCount, 'gates route exiting', bestExitGate.ruas_tol_id, bestExitGate.gt_sequence,
+                           'transiting', bestTransitGate.ruas_tol_id, bestTransitGate.gt_sequence,
+                           'visited', bestNewVisitedSegments);
+                }
+                return bestRoute;
+            }
+        },
+        /**
+         * Find the best route from origin route-point to dest route-point.
+         */
+        findRoute: function(lines, stations, routes, originLineId, originPositioner,
+                             destLineId, destPositioner) {
+            var originStation = _.clone(this.getStation(stations, routes, originLineId, originPositioner));
+            originStation.lineId = originLineId;
+            originStation.positioner = originPositioner;
+            var destStation = _.clone(this.getStation(stations, routes, destLineId, destPositioner));
+            destStation.lineId = destLineId;
+            destStation.positioner = destPositioner;
+            $log.debug('Origin:', originStation.id, originStation.name,
+                       'Dest:', destStation.id, destStation.name);
+            var visitedLines = [originLineId];
+            var route = this.findRouteNest(lines, stations, routes,
+                                           originStation, destStation,
+                                           visitedLines);
+            if (route != null) {
+                route.unshift({kind: 'in', station: originStation});
+                $log.info('Found route:', _.map(route, function(cp) {
+                    return cp.kind + ' ' + cp.station.lineId + '_' + cp.station.positioner;
+                }));
+                return route;
+            } else {
+                $log.error('Route not found!');
+            }
+        },
+    };
+})
+
 .factory('JasaMarga', function($http, $log) {
     var segmentGateCounts = {
         'JM1': 11,

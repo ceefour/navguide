@@ -45,6 +45,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       }
     })
+    .state('app.krl', {
+      url: '/krl',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/app-krl.html',
+          controller: 'KrlCtrl'
+        }
+      }
+    })
 
     .state('app.highway', {
       url: '/highway',

@@ -33,7 +33,7 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('PublicTransportCtrl', function($scope, $log, OSM, JasaMarga, TransJakarta, MoreData, Settings) {
+.controller('PublicTransportCtrl', function($scope, $log, OSM, TransJakarta, MoreData, Settings) {
     
     $scope.form = {};
 
@@ -131,6 +131,116 @@ angular.module('starter.controllers', [])
         OSM.addLayer(polyline);
         OSM.map().fitBounds(polyline.getBounds());
         var avgSpeed = 20;
+        $scope.duration = (distance / 1000) / avgSpeed;
+        $scope.durationHours = parseInt($scope.duration, 10);
+        $scope.durationMins = Math.round($scope.duration * 60) % 60;
+        $log.info('Distance over', route.length, 'checkpoints is', distance, 'm',
+                 'Duration', $scope.duration, '(', $scope.durationHours, ':', $scope.durationMins, ')');
+        $scope.distanceKm = distance / 1000;
+        $scope.steps = route;
+        $log.debug('Steps:', $scope.steps);
+    };
+})
+
+.controller('KrlCtrl', function($scope, $log, OSM, Krl, MoreData, Settings) {
+
+    $scope.form = {};
+
+    OSM.setUp('mapkrl', -6.21, 106.8, 11);
+
+    $scope.$watch('form.gateIn', function(newV, oldV) {
+        if ($scope.form.gateIn) {
+            OSM.setGateInLayer($scope.form.gateIn.lat, $scope.form.gateIn.lng, $scope.form.gateIn.name);
+            // too edge!
+//            var latlngs = [
+//                new L.LatLng($scope.form.gateIn.lat, $scope.form.gateIn.long, true),
+//                new L.LatLng($scope.form.gateOut.lat, $scope.form.gateOut.long, true) ];
+//            var polyline = L.polyline(latlngs, {color: 'red'});
+//            OSM.map().fitBounds(polyline.getBounds());
+        }
+    });
+    $scope.$watch('form.gateOut', function(newV, oldV) {
+        if ($scope.form.gateOut) {
+            OSM.setGateOutLayer($scope.form.gateOut.lat, $scope.form.gateOut.lng, $scope.form.gateOut.name);
+            // too edge!
+//            var latlngs = [
+//                new L.LatLng($scope.form.gateIn.lat, $scope.form.gateIn.long, true),
+//                new L.LatLng($scope.form.gateOut.lat, $scope.form.gateOut.long, true) ];
+//            var polyline = L.polyline(latlngs, {color: 'red'});
+//            OSM.map().fitBounds(polyline.getBounds());
+        }
+    });
+
+    Krl.lines().success(function(data) {
+        $scope.lines = data;
+    });
+    Krl.stations().success(function(data) {
+        $scope.stations = data;
+        $scope.form = {
+            gateIn: $scope.stations[0],
+            gateOut: $scope.stations[10]
+        };
+    });
+    Krl.waypoints().success(function(data) {
+        $scope.waypoints = data;
+    });
+
+    $scope.calcRoute = function() {
+        $log.info('Calculating', $scope.form.gateIn.id, $scope.form.gateIn.name, '-->',
+                            $scope.form.gateOut.id, $scope.form.gateOut.name);
+        OSM.clear();
+
+        var inPoint = Krl.findWaypoint($scope.waypoints, $scope.form.gateIn.id);
+        var outPoint = Krl.findWaypoint($scope.waypoints, $scope.form.gateOut.id);
+        $log.info('Route points:', inPoint, '-->', outPoint);
+
+        var route = Krl.findRoute(
+            $scope.lines, $scope.stations, $scope.waypoints,
+            inPoint.lineId, inPoint.positioner,
+            outPoint.lineId, outPoint.positioner);
+        var latlngs = [];
+        var lastCp = null;
+        var distance = 0;
+        for (var i = 0; i < route.length; i++) {
+            var r = route[i];
+            var latlng = new L.LatLng(r.station.lat, r.station.lng, true);
+            latlngs.push(latlng);
+            if (i == 0) {
+                OSM.addMarker(latlng,
+                    {title: 'Awal ' + r.station.lineId + '-' + r.station.positioner + ': ' + r.station.name,
+                    icon: OSM.originIcon()});
+            } else if (i == route.length - 1) {
+                OSM.addMarker(latlng,
+                    {title: 'Tujuan ' + r.station.lineId + '-' + r.station.positioner + ': ' + r.station.name,
+                    icon: OSM.destIcon()});
+            } else if (i > 0 && i < route.length - 1) {
+                var icon;
+                switch (r.kind) {
+                case 'in':
+                    icon = OSM.inIcon();
+                    break;
+                case 'out':
+                    icon = OSM.outIcon();
+                    break;
+                default:
+                    icon = OSM.passXsIcon();
+                }
+                OSM.addLayer(new L.Marker(latlng,
+                    {title: r.kind + ' km ' + r.station.lineId + '-' + r.station.positioner +
+                     ': ' + r.station.name,
+                    icon: icon}));
+            }
+            // calc distance
+            if (lastCp != null) {
+                distance += lastCp.distance( new geo.Point([r.station.lat, r.station.lng]) );
+            }
+            lastCp = new geo.Point([r.station.lat, r.station.lng]);
+        }
+        var polyline = L.polyline(latlngs, {color: 'red'});
+        OSM.addLayer(polyline);
+        $log.debug('Fitting bounds', polyline.getBounds());
+        OSM.map().fitBounds(polyline.getBounds());
+        var avgSpeed = 40;
         $scope.duration = (distance / 1000) / avgSpeed;
         $scope.durationHours = parseInt($scope.duration, 10);
         $scope.durationMins = Math.round($scope.duration * 60) % 60;

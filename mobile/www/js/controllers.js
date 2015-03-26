@@ -37,7 +37,7 @@ angular.module('starter.controllers', [])
     
     $scope.form = {};
 
-    OSM.setUp('mappubtrans', -6.6, 107.0, 8);
+    OSM.setUp('mappubtrans', -6.21, 106.8, 11);
 
     $scope.$watch('form.gateIn', function(newV, oldV) {
         if ($scope.form.gateIn) {
